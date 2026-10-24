@@ -1,0 +1,21 @@
+{
+  "USA": [
+    "http://rss.cnn.com/rss/edition_world.rss",
+    "http://feeds.foxnews.com/foxnews/world"
+  ],
+  "China": [
+    "http://www.xinhuanet.com/english/rss.xml"
+  ],
+  "Russia": [
+    "https://tass.com/rss/v2.xml"
+  ],
+  "UK": [
+    "http://feeds.bbci.co.uk/news/world/rss.xml"
+  ],
+  "India": [
+    "https://www.thehindu.com/news/feeder/default.rss"
+  ],
+  "Middle East": [
+    "https://www.aljazeera.com/xml/rss/all.xml"
+  ]
+}
