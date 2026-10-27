@@ -1,0 +1,22 @@
+url,publisher,country,status,chars_extracted,metadata_found,failure_reason
+https://www.cnn.com/business/live-news/stock-market-bank-earnings/index.html,USA,USA,successful,2090,title|author|date,
+https://www.cnn.com/2023/04/13/success/tax-filing-tips/index.html,USA,USA,unavailable,0,,download_timeout
+https://www.cnn.com/2023/04/14/economy/march-retail-sales/index.html,USA,USA,unavailable,0,,connection_error
+https://www.cnn.com/2023/04/14/media/fox-news-dominion-hnk-intl/index.html,USA,USA,unavailable,0,,connection_error
+https://www.cnn.com/2023/04/13/business/silicon-valley-bank-entrepreneurs-of-color-reaj/in,USA,USA,unavailable,0,,connection_error
+https://tass.com/rss/v2.xml,Russia,Russia,unavailable,0,,feed_returned_0_entries_on_recheck
+https://www.bbc.co.uk/news/articles/ckly0xpxp243o,UK,UK,unavailable,0,,connection_error
+https://www.bbc.co.uk/news/articles/c6vgj813mlelo,UK,UK,unavailable,0,,connection_error
+https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo,UK,UK,unavailable,0,,download_timeout
+https://www.bbc.co.uk/news/articles/c6x2qgyqr79wo,UK,UK,unavailable,0,,connection_error
+https://www.bbc.co.uk/news/articles/cv62yg0erp8zo,UK,UK,successful,6825,title|author|date,
+https://www.thehindu.com/news/international/brazilsflavio-bolsonaro-headed-to-us-after-losing-election-sources-say/article71633165.ece,India,India,successful,3006,title|author|date,
+https://www.thehindu.com/news/national/uttar-pradesh/a-delhi-event-unveils-fault-lines-in-the-dalit-obc-formulation-of-sp-politics/article71632477.ece,India,India,successful,5928,title|author|date,
+https://www.thehindu.com/news/national/karnataka/jain-seer-gives-karnataka-govt-10-day-deadline-to-meet-demands-threatens-sallekhana-in-december-if-demands-remain-unmet/article71631286.ece,India,India,successful,2663,title|author|date,
+https://www.thehindu.com/news/national/cyclone-arnab-flights-trains-cancelled-as-rain-batters-ap-30000-boats-brought-ashore-southern-odisha-on-edge/article71632559.ece,India,India,successful,5168,title|author|date,
+https://www.thehindu.com/news/cities/chennai/radhatri-nethralaya-conducts-workshop-on-first-aid-for-firecracker-related-eye-injuries/article71631900.ece,India,India,successful,835,title|author|date,
+https://www.aljazeera.com/news/2026/10/27/the-whatsapp-general-behind-lulas-election-comeback-in-brazil?traffic_source=rss,Middle East,Middle East,successful,6648,title|author|date,
+https://www.aljazeera.com/news/2026/10/27/if-theyre-honest-trump-casts-latest-suspicion-on-us-midterm-elections?traffic_source=rss,Middle East,Middle East,successful,3975,title|author|date,
+https://www.aljazeera.com/video/newsfeed/2026/10/27/jerusalem-daily-israeli-elections-underway?traffic_source=rss,Middle East,Middle East,successful,376,title|date,
+https://www.aljazeera.com/news/2026/10/27/arab-parties-in-israel-accuse-netanyahu-of-inciting-hatred-to-scare-voters?traffic_source=rss,Middle East,Middle East,successful,2417,title|author|date,
+https://www.aljazeera.com/news/2026/10/27/protesters-storm-serbian-pro-vucic-tv-station-after-his-loss-at-polls?traffic_source=rss,Middle East,Middle East,successful,3615,title|author|date,

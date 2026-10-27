@@ -1,0 +1,8 @@
+name,country,url,http_status_or_error,entries_returned,pct_with_title,pct_with_url,pct_with_summary,pct_with_date,response_time_s
+USA,USA,http://rss.cnn.com/rss/edition_world.rss,200,29,100.00%,100.00%,68.97%,79.31%,1.66
+USA,USA,http://feeds.foxnews.com/foxnews/world,timeout,0,0.00%,0.00%,0.00%,0.00%,15.07
+China,China,http://www.xinhuanet.com/english/rss.xml,404,0,0.00%,0.00%,0.00%,0.00%,0.56
+Russia,Russia,https://tass.com/rss/v2.xml,200,100,100.00%,100.00%,100.00%,100.00%,1.88
+UK,UK,http://feeds.bbci.co.uk/news/world/rss.xml,200,23,100.00%,100.00%,100.00%,100.00%,0.8
+India,India,https://www.thehindu.com/news/feeder/default.rss,200,60,100.00%,100.00%,65.00%,100.00%,0.69
+Middle East,Middle East,https://www.aljazeera.com/xml/rss/all.xml,200,25,100.00%,100.00%,100.00%,100.00%,0.72

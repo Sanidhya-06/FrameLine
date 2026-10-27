@@ -1,21 +1,59 @@
 {
   "USA": [
-    "http://rss.cnn.com/rss/edition_world.rss",
-    "http://feeds.foxnews.com/foxnews/world"
+    {
+      "url": "http://rss.cnn.com/rss/edition_world.rss",
+      "publisher": "CNN",
+      "language": "en",
+      "enabled": true
+    },
+    {
+      "url": "http://feeds.foxnews.com/foxnews/world",
+      "publisher": "Fox News",
+      "language": "en",
+      "enabled": false,
+      "disabled_reason": "Phase 0 audit 2026-10-28: feed timed out (15s) in runner. URL may be dead or rate-limiting. Re-enable after verifying."
+    }
   ],
   "China": [
-    "http://www.xinhuanet.com/english/rss.xml"
+    {
+      "url": "http://www.xinhuanet.com/english/rss.xml",
+      "publisher": "Xinhua",
+      "language": "en",
+      "enabled": false,
+      "disabled_reason": "Phase 0 audit 2026-10-28: returns HTTP 404. Xinhua English RSS endpoint is defunct from non-CN IPs."
+    }
   ],
   "Russia": [
-    "https://tass.com/rss/v2.xml"
+    {
+      "url": "https://tass.com/rss/v2.xml",
+      "publisher": "TASS",
+      "language": "en",
+      "enabled": true
+    }
   ],
   "UK": [
-    "http://feeds.bbci.co.uk/news/world/rss.xml"
+    {
+      "url": "http://feeds.bbci.co.uk/news/world/rss.xml",
+      "publisher": "BBC News",
+      "language": "en",
+      "enabled": true,
+      "note": "HTTP URL; server redirects to HTTPS. Consider pinning https://feeds.bbci.co.uk/news/world/rss.xml."
+    }
   ],
   "India": [
-    "https://www.thehindu.com/news/feeder/default.rss"
+    {
+      "url": "https://www.thehindu.com/news/feeder/default.rss",
+      "publisher": "The Hindu",
+      "language": "en",
+      "enabled": true
+    }
   ],
   "Middle East": [
-    "https://www.aljazeera.com/xml/rss/all.xml"
+    {
+      "url": "https://www.aljazeera.com/xml/rss/all.xml",
+      "publisher": "Al Jazeera",
+      "language": "en",
+      "enabled": true
+    }
   ]
 }
