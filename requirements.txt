@@ -1,5 +1,6 @@
-fastapi
-feedparser
-pydantic
-requests
-trafilatura
+fastapi==0.162.0
+feedparser==6.0.14
+pydantic==2.14.1
+requests==2.34.2
+trafilatura==2.2.0
+sentence-transformers>=5.1,<6

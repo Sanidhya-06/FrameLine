@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Any
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field
 
@@ -19,6 +19,20 @@ class Article(BaseModel):
     extraction_status: str
     language: str
     translation_status: str = "not_requested"
+    matched_terms: list[str] = Field(default_factory=list)
+    relevance_score: float | None = None
+    relevance_components: dict[str, float] = Field(default_factory=dict)
+    relevance_method: Literal["hybrid", "lexical_fallback"] = "lexical_fallback"
+    relevance_label: Literal["relevant", "weak_match"] = "relevant"
+
+
+class FeedStatus(BaseModel):
+    feed: str
+    url: str
+    status: str
+    error_text: str | None = None
+    entry_count: int
+    response_time_ms: float
 
 
 class Signal(BaseModel):
@@ -52,4 +66,7 @@ class AnalyzeResponse(BaseModel):
     country_groups: dict[str, CountryGroup] = Field(default_factory=dict)
     signals: list[Signal] = Field(default_factory=list)
     methodology_version: str
+    relevance_method: Literal["hybrid", "lexical_fallback"] = "hybrid"
     development_only: bool = False
+    explanation: str | None = None
+    feed_statuses: list[FeedStatus] = Field(default_factory=list)

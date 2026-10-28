@@ -125,7 +125,11 @@ Preserve and reuse existing working ingestion code, including `src/fetch.py` and
 ### FR-2: Real RSS retrieval
 - Load configured feeds with source name and source country/region metadata.
 - Retrieve current entries from real feeds, using timeouts and a descriptive User-Agent.
-- Filter retrieved entries by query relevance because many RSS feeds do not provide arbitrary topic search.
+- Filter retrieved entries using a documented hybrid relevance score: weighted title/RSS-summary lexical overlap plus cosine similarity from `sentence-transformers/all-MiniLM-L6-v2`. Capitalized proper-noun query anchors must appear in the title or summary.
+- Return relevance score, score components, matched terms, method, and label per article. Keep borderline `weak_match` articles visible in the article list, but exclude them from country groups by default.
+- If the embedding model is unavailable, use the weighted lexical relevance score and disclose `relevance_method=lexical_fallback`.
+- Cache article embeddings in SQLite by URL and model name. Validate relevance-score weights and the threshold with a human-labeled gold set, reporting held-out precision, recall, and F1.
+- Disclose that relevance uses short RSS text and that full text is unavailable or restricted for most sources.
 - Deduplicate entries by canonical URL and, where useful, normalized title.
 - Continue when an individual feed fails and record its status.
 - Return partial results if only some feeds succeed.
@@ -210,6 +214,7 @@ Preserve and reuse existing working ingestion code, including `src/fetch.py` and
 ### FR-14: Methodology and transparency
 - Provide a methodology screen reachable from the main UI.
 - Explain retrieval sources, query filtering, extraction status, model names/versions, signal definitions, baseline provenance, and limitations.
+- For relevance scoring, disclose lexical/title/summary weights, semantic model name, threshold, weak-match band, lexical fallback, and the short-text/full-text limitations.
 - Disclose translation if added.
 - Clearly distinguish real retrieved data from any development-only fixtures.
 - No composite bias/framing score in this prototype.
