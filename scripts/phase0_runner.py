@@ -22,10 +22,10 @@ import requests
 import feedparser
 
 try:
-    from src.extract import extract_article
+    from backend.article_extractor import extract_article
     SRC_EXTRACT_OK = True
 except Exception as e:
-    print(f"[WARN] Could not import src.extract: {e}")
+    print(f"[WARN] Could not import backend.article_extractor: {e}")
     SRC_EXTRACT_OK = False
 
 # configuration

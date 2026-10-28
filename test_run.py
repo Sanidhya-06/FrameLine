@@ -5,8 +5,8 @@ Uses data/rss_feeds.json (canonical config) instead of hardcoded URLs.
 """
 import json
 from pathlib import Path
-from src.fetch import fetch_all_feeds
-from src.extract import extract_article
+from backend.article_extractor import extract_article
+from backend.news_fetcher import fetch_all_feeds
 
 # Use the canonical feed config, not hardcoded URLs
 FEEDS_PATH = Path(__file__).parent / "data" / "rss_feeds.json"

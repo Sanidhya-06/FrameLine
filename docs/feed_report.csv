@@ -1,8 +1,27 @@
-name,country,url,http_status_or_error,entries_returned,pct_with_title,pct_with_url,pct_with_summary,pct_with_date,response_time_s
-USA,USA,http://rss.cnn.com/rss/edition_world.rss,200,29,100.00%,100.00%,68.97%,79.31%,1.66
-USA,USA,http://feeds.foxnews.com/foxnews/world,timeout,0,0.00%,0.00%,0.00%,0.00%,15.07
-China,China,http://www.xinhuanet.com/english/rss.xml,404,0,0.00%,0.00%,0.00%,0.00%,0.56
-Russia,Russia,https://tass.com/rss/v2.xml,200,100,100.00%,100.00%,100.00%,100.00%,1.88
-UK,UK,http://feeds.bbci.co.uk/news/world/rss.xml,200,23,100.00%,100.00%,100.00%,100.00%,0.8
-India,India,https://www.thehindu.com/news/feeder/default.rss,200,60,100.00%,100.00%,65.00%,100.00%,0.69
-Middle East,Middle East,https://www.aljazeera.com/xml/rss/all.xml,200,25,100.00%,100.00%,100.00%,100.00%,0.72
+region,country,publisher,url,enabled,language,fulltext_allowed,geo_reliable,flaky,fetch_status,entries_returned,pct_with_title,pct_with_url,pct_with_summary,pct_with_date,response_time_s,newest_entry_age_h,access_note
+USA,United States,CNN,http://rss.cnn.com/rss/edition_world.rss,true,en,false,true,false,200/200,29,100.0,100.0,68.97%,79.31%,1.668,27256.18,Tested from India-based network egress; article access was previously blocked/intermittent.
+USA,United States,Fox News,http://feeds.foxnews.com/foxnews/world,true,en,false,true,true,200/200,25,100.0,100.0,100.00%,100.00%,5.889,1.14,"Tested from India-based network egress; earlier fetch timed out, but both verification rounds returned 200."
+USA,United States,NPR,https://feeds.npr.org/1004/rss.xml,true,en,false,true,false,200/200,10,100.0,100.0,100.00%,100.00%,1.326,4.44,Tested from India-based network egress; terms prohibit scraping/republishing content.
+USA,United States,The New York Times,https://rss.nytimes.com/services/xml/rss/nyt/World.xml,true,en,false,true,false,200/200,57,100.0,100.0,84.21%,100.00%,6.308,0.1,Tested from India-based network egress; terms restrict automated access.
+China,China,Xinhua,http://www.xinhuanet.com/english/rss.xml,false,en,false,false,false,404/404,0,0,0,0,0,0.476,,Phase 0.5 verification 2026-10-28: HTTP 404 in both fetch rounds.
+China,China,CGTN,https://www.cgtn.com/subscribe/rss/section/world.xml,true,en,false,true,false,200/200,50,100.0,100.0,100.00%,100.00%,1.982,17.35,Tested from India-based network egress; CGTN terms prohibit automated data gathering.
+China,China,Global Times,https://www.globaltimes.cn/rss/outbrain.xml,true,en,false,true,false,200/200,50,100.0,100.0,0.00%,100.00%,1.812,436.89,Tested from India-based network egress.
+China,China,China Daily,https://www.chinadaily.com.cn/rss/world_rss.xml,false,en,false,false,false,404/404,0,0,0,0,0,1.983,,Phase 0.5 verification 2026-10-28: HTTP 404 in both fetch rounds.
+China,China,China Daily China,https://www.chinadaily.com.cn/rss/china_rss.xml,false,en,false,false,false,404/404,0,0,0,0,0,1.816,,Phase 0.5 verification 2026-10-28: HTTP 404 in both fetch rounds.
+Russia,Russia,TASS,https://tass.com/rss/v2.xml,false,en,false,false,true,403/403,0,0,0,0,0,2.036,,Phase 0.5 verification 2026-10-28: HTTP 403 in both fetch rounds.
+Russia,Russia,The Moscow Times,https://www.themoscowtimes.com/rss/news,true,en,false,true,false,200/200,50,100.0,100.0,100.00%,100.00%,2.07,3.01,Tested from India-based network egress.
+Russia,Russia,RT,https://rt-english.com/rss/news/,true,en,false,true,false,200/200,100,100.0,100.0,100.00%,100.00%,5.287,0.46,Tested from India-based network egress.
+Russia,Russia,RIA Novosti,https://ria.ru/export/rss2/index.xml,false,ru,false,true,false,200/200,20,100.0,100.0,0.00%,100.00%,5.535,0.02,needs translation
+Russia,Russia,Vedomosti,https://www.vedomosti.ru/rss/news,false,ru,false,true,false,200/200,200,100.0,100.0,3.00%,100.00%,2.485,0.16,needs translation
+Russia,Russia,Meduza,https://meduza.io/rss/all,false,ru,false,true,false,200/200,30,100.0,100.0,100.00%,100.00%,1.848,0.13,needs translation
+Russia,Russia,Interfax,https://interfax.com/rss.asp,false,en,false,false,false,403/403,0,0,0,0,0,1.389,,Phase 0.5 verification 2026-10-28: HTTP 403 in both fetch rounds.
+UK,United Kingdom,BBC News,http://feeds.bbci.co.uk/news/world/rss.xml,true,en,true,true,false,200/200,24,100.0,100.0,100.00%,100.00%,1.258,0.11,Tested from India-based network egress.
+UK,United Kingdom,The Guardian,https://www.theguardian.com/international/rss,true,en,false,true,true,200/200,111,100.0,100.0,100.00%,100.00%,24.38,0.31,"Tested from India-based network egress; second World-feed fetch failed, international feed passed."
+UK,United Kingdom,Sky News,https://feeds.skynews.com/feeds/rss/world.xml,false,en,false,true,false,200/200,9,100.0,100.0,100.00%,100.00%,0.707,6.12,fewer than 10 entries
+UK,United Kingdom,Sky News Top,https://feeds.skynews.com/feeds/rss/home.xml,false,en,false,false,false,200/200,9,100.0,100.0,100.00%,100.00%,0.893,2.33,Phase 0.5 verification 2026-10-28: only 9 entries in both fetch rounds (below 10-entry threshold).
+India,India,The Hindu,https://www.thehindu.com/news/feeder/default.rss,true,en,false,true,false,200/200,60,100.0,100.0,70.00%,100.00%,0.726,0.07,Tested from India-based network egress.
+India,India,The Indian Express,https://indianexpress.com/section/world/feed/,true,en,false,true,false,200/200,200,100.0,100.0,0.00%,100.00%,0.799,8.89,Tested from India-based network egress.
+Middle East,Qatar,Al Jazeera,https://www.aljazeera.com/xml/rss/all.xml,true,en,false,true,false,200/200,25,100.0,100.0,100.00%,100.00%,0.925,0.26,Tested from India-based network egress.
+Middle East,Israel,The Jerusalem Post,https://www.jpost.com/rss/rssfeedsheadlines.aspx,true,en,false,true,false,200/200,30,100.0,100.0,100.00%,100.00%,1.94,11954.48,Tested from India-based network egress.
+Middle East,United Kingdom,The New Arab,https://www.newarab.com/rss.xml,true,en,false,true,false,200/200,90,100.0,100.0,100.00%,100.00%,1.918,1.2,Tested from India-based network egress.
+Middle East,United Kingdom,Middle East Eye,https://www.middleeasteye.net/rss,true,en,false,true,false,200/200,20,100.0,100.0,100.00%,100.00%,8.025,0.11,Tested from India-based network egress.

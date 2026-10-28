@@ -16,19 +16,14 @@ sys.path.insert(0, str(ROOT))
 
 import requests
 import feedparser
-from src.extract import extract_article
+from backend.article_extractor import extract_article
+from backend.config import get_settings
 
 EXTRACT_REPORT = ROOT / "docs" / "extraction_report.csv"
 FIXTURES_DIR   = ROOT / "tests" / "fixtures"
 FIXTURES_DIR.mkdir(parents=True, exist_ok=True)
 
-HEADERS_UA = {
-    "User-Agent": (
-        "FrameLine/1.0 (academic news-framing research prototype; "
-        "https://github.com/Sanidhya-06/FrameLine) "
-        "python-requests/2.x feedparser/6.x"
-    )
-}
+HEADERS_UA = {"User-Agent": get_settings().user_agent}
 
 SAMPLE_PER_FEED = 5
 

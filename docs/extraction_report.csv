@@ -1,22 +1,37 @@
-url,publisher,country,status,chars_extracted,metadata_found,failure_reason
-https://www.cnn.com/business/live-news/stock-market-bank-earnings/index.html,USA,USA,successful,2090,title|author|date,
-https://www.cnn.com/2023/04/13/success/tax-filing-tips/index.html,USA,USA,unavailable,0,,download_timeout
-https://www.cnn.com/2023/04/14/economy/march-retail-sales/index.html,USA,USA,unavailable,0,,connection_error
-https://www.cnn.com/2023/04/14/media/fox-news-dominion-hnk-intl/index.html,USA,USA,unavailable,0,,connection_error
-https://www.cnn.com/2023/04/13/business/silicon-valley-bank-entrepreneurs-of-color-reaj/in,USA,USA,unavailable,0,,connection_error
-https://tass.com/rss/v2.xml,Russia,Russia,unavailable,0,,feed_returned_0_entries_on_recheck
-https://www.bbc.co.uk/news/articles/ckly0xpxp243o,UK,UK,unavailable,0,,connection_error
-https://www.bbc.co.uk/news/articles/c6vgj813mlelo,UK,UK,unavailable,0,,connection_error
-https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo,UK,UK,unavailable,0,,download_timeout
-https://www.bbc.co.uk/news/articles/c6x2qgyqr79wo,UK,UK,unavailable,0,,connection_error
-https://www.bbc.co.uk/news/articles/cv62yg0erp8zo,UK,UK,successful,6825,title|author|date,
-https://www.thehindu.com/news/international/brazilsflavio-bolsonaro-headed-to-us-after-losing-election-sources-say/article71633165.ece,India,India,successful,3006,title|author|date,
-https://www.thehindu.com/news/national/uttar-pradesh/a-delhi-event-unveils-fault-lines-in-the-dalit-obc-formulation-of-sp-politics/article71632477.ece,India,India,successful,5928,title|author|date,
-https://www.thehindu.com/news/national/karnataka/jain-seer-gives-karnataka-govt-10-day-deadline-to-meet-demands-threatens-sallekhana-in-december-if-demands-remain-unmet/article71631286.ece,India,India,successful,2663,title|author|date,
-https://www.thehindu.com/news/national/cyclone-arnab-flights-trains-cancelled-as-rain-batters-ap-30000-boats-brought-ashore-southern-odisha-on-edge/article71632559.ece,India,India,successful,5168,title|author|date,
-https://www.thehindu.com/news/cities/chennai/radhatri-nethralaya-conducts-workshop-on-first-aid-for-firecracker-related-eye-injuries/article71631900.ece,India,India,successful,835,title|author|date,
-https://www.aljazeera.com/news/2026/10/27/the-whatsapp-general-behind-lulas-election-comeback-in-brazil?traffic_source=rss,Middle East,Middle East,successful,6648,title|author|date,
-https://www.aljazeera.com/news/2026/10/27/if-theyre-honest-trump-casts-latest-suspicion-on-us-midterm-elections?traffic_source=rss,Middle East,Middle East,successful,3975,title|author|date,
-https://www.aljazeera.com/video/newsfeed/2026/10/27/jerusalem-daily-israeli-elections-underway?traffic_source=rss,Middle East,Middle East,successful,376,title|date,
-https://www.aljazeera.com/news/2026/10/27/arab-parties-in-israel-accuse-netanyahu-of-inciting-hatred-to-scare-voters?traffic_source=rss,Middle East,Middle East,successful,2417,title|author|date,
-https://www.aljazeera.com/news/2026/10/27/protesters-storm-serbian-pro-vucic-tv-station-after-his-loss-at-polls?traffic_source=rss,Middle East,Middle East,successful,3615,title|author|date,
+publisher,country,region,url,status,chars_extracted,metadata_found,failure_reason,access_decision
+Global Times,China,China,https://www.globaltimes.cn/page/202610/1371820.shtml,successful,5362,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Global Times,China,China,https://www.globaltimes.cn/page/202608/1368830.shtml,successful,11356,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Global Times,China,China,https://www.globaltimes.cn/page/202606/1363810.shtml,successful,2678,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Moscow Times,Russia,Russia,https://www.themoscowtimes.com/2026/10/27/it-worker-jailed-13-years-in-russia-after-binance-revealed-he-donated-money-to-ukraine-a94098,successful,3580,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Moscow Times,Russia,Russia,https://www.themoscowtimes.com/2026/10/27/kremlin-linked-businessman-joined-donald-trump-jr-on-mongolian-hunting-trip-this-summer-ft-a94096,successful,2981,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Moscow Times,Russia,Russia,https://www.themoscowtimes.com/2026/10/27/us-brokered-truce-appears-to-hold-in-ukrainian-town-close-to-starvation-a94092,successful,3460,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+RT News,Russia,Russia,https://rt-english.com/news/647831-russiagate-fbi-chief-comey-charged-leak/?utm_source=rss&utm_medium=rss&utm_campaign=RSS,successful,2472,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+RT News,Russia,Russia,https://rt-english.com/news/647822-french-dissatisfied-macron-riot-response/?utm_source=rss&utm_medium=rss&utm_campaign=RSS,successful,2397,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+RT News,Russia,Russia,https://rt-english.com/news/647818-russian-slovak-intergovernmental-commission/?utm_source=rss&utm_medium=rss&utm_campaign=RSS,successful,9298,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+BBC News,United Kingdom,UK,https://www.bbc.co.uk/news/articles/c6vgj813mlelo?at_medium=RSS&at_campaign=rss,successful,4122,title|author|date,,fulltext_allowed=true
+BBC News,United Kingdom,UK,https://www.bbc.co.uk/news/articles/ck20wjnv3w0jo?at_medium=RSS&at_campaign=rss,successful,6857,title|author|date,,fulltext_allowed=true
+BBC News,United Kingdom,UK,https://www.bbc.co.uk/news/articles/c6x2qgyqr79wo?at_medium=RSS&at_campaign=rss,successful,4059,title|author|date,,fulltext_allowed=true
+The Hindu,India,India,https://www.thehindu.com/news/national/cyclone-arnab-civil-aviation-ministry-reviews-situation-to-ensure-safety-of-flight-operations/article71633204.ece,successful,1782,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Hindu,India,India,https://www.thehindu.com/news/national/kerala/sreedharan-tells-keralam-govt-to-ignore-technical-panels-objections-over-high-speed-rail-project/article71632175.ece,successful,3287,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Hindu,India,India,https://www.thehindu.com/news/cities/Coimbatore/two-escape-from-police-station-in-salem/article71632967.ece,successful,692,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Indian Express,India,India,https://indianexpress.com/article/world/us-news/us-midterms-h1b-visa-rules-green-card-bills-indian-workers-impact-10933397/,successful,4552,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Indian Express,India,India,https://indianexpress.com/article/world/us-news/donald-trump-barack-obama-saddam-hussein-iraq-cheesecake-factory-white-house-renovations-us-midterm-elections-10938616/,successful,1759,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Indian Express,India,India,https://indianexpress.com/article/world/as-netanyahu-faces-biggest-political-test-five-possible-outcomes-for-israel-10937938/,successful,4388,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Al Jazeera,Qatar,Middle East,https://www.aljazeera.com/video/newsfeed/2026/10/27/deadly-tornado-strikes-construction-site-in-turkiye?traffic_source=rss,successful,257,title|date,,historical sample before cleanup; current fulltext_allowed=false
+Al Jazeera,Qatar,Middle East,https://www.aljazeera.com/news/2026/10/27/russia-jails-it-worker-for-13-years-for-donating-money-to-ukraine?traffic_source=rss,successful,3394,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Al Jazeera,Qatar,Middle East,https://www.aljazeera.com/video/newsfeed/2026/10/27/indonesia-wildfires-rain-toxic-haze-southeast-asia?traffic_source=rss,successful,275,title|date,,historical sample before cleanup; current fulltext_allowed=false
+The Jerusalem Post,Israel,Middle East,https://www.jpost.com/breaking-news/article-857933,partial,168,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Jerusalem Post,Israel,Middle East,https://www.jpost.com/breaking-news/article-856900,successful,413,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The Jerusalem Post,Israel,Middle East,https://www.jpost.com/breaking-news/article-856899,successful,454,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The New Arab,United Kingdom,Middle East,https://www.newarab.com/news/russian-satellites-help-irans-allies-strike-saudi-arabia,successful,8044,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The New Arab,United Kingdom,Middle East,https://www.newarab.com/news/iraq-drone-shot-down-near-us-embassy-baghdad,successful,2771,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+The New Arab,United Kingdom,Middle East,https://www.newarab.com/news/nearly-5000-palestinians-displaced-israels-hebron-siege,successful,4823,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Middle East Eye,United Kingdom,Middle East,https://www.middleeasteye.net/news/autocratic-capture-rights-groups-say-uae-diplomat-lana-nusseibeh-too-dangerous-lead-un,successful,7489,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+Middle East Eye,United Kingdom,Middle East,https://www.middleeasteye.net/live-blog/live-blog-update/israel-election-commission-rejects-netanyahu-party-bid-extend-voting,successful,421,title|date,,historical sample before cleanup; current fulltext_allowed=false
+Middle East Eye,United Kingdom,Middle East,https://www.middleeasteye.net/news/oman-calls-gulf-iraq-and-iran-unite-under-one-security-pact,successful,3698,title|author|date,,historical sample before cleanup; current fulltext_allowed=false
+CNN,United States,USA,http://rss.cnn.com/rss/edition_world.rss,skipped_access_restricted,0,,Tested from India-based network egress; article access was previously blocked/intermittent.,fulltext_allowed=false
+Fox News,United States,USA,http://feeds.foxnews.com/foxnews/world,skipped_access_restricted,0,,"Tested from India-based network egress; earlier fetch timed out, but both verification rounds returned 200.",fulltext_allowed=false
+NPR,United States,USA,https://feeds.npr.org/1004/rss.xml,skipped_access_restricted,0,,Tested from India-based network egress; terms prohibit scraping/republishing content.,fulltext_allowed=false
+The New York Times,United States,USA,https://rss.nytimes.com/services/xml/rss/nyt/World.xml,skipped_access_restricted,0,,Tested from India-based network egress; terms restrict automated access.,fulltext_allowed=false
+CGTN,China,China,https://www.cgtn.com/subscribe/rss/section/world.xml,skipped_access_restricted,0,,Tested from India-based network egress; CGTN terms prohibit automated data gathering.,fulltext_allowed=false
+The Guardian,United Kingdom,UK,https://www.theguardian.com/international/rss,skipped_access_restricted,0,,"Tested from India-based network egress; second World-feed fetch failed, international feed passed.",fulltext_allowed=false
