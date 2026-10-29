@@ -1,32 +1,26 @@
-# React + TypeScript + Vite
+# FrameLine frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Screen A (search) and Screen B (collection) are built with React 18, TypeScript, Vite, Tailwind CSS, React Router, Framer Motion, and Zustand. `/map` and `/methodology` are later-phase placeholders.
 
-Currently, two official plugins are available:
+## Run frontend and backend together
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+From the repository root, create/configure `.env` from `.env.example` and ensure `FRAMELINE_CONTACT_URL` is set. The backend CORS allowlist includes `http://localhost:5173` by default.
 
-## React Compiler
+Terminal 1, from the repository root:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```powershell
+.\venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8000
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Terminal 2:
+
+```powershell
+cd frontend
+npm install
+$env:VITE_API_URL = "http://localhost:8000"
+npm run dev
+```
+
+Open `http://localhost:5173`. The browser communicates only with FastAPI. Set `VITE_API_URL` to the backend origin when it runs elsewhere. Search starts `POST /analyze/jobs`; the collection screen polls `GET /analyze/jobs/{job_id}` until the backend reports a terminal stage.
+
+Build the static frontend bundle with `npm run build`.

@@ -3,6 +3,7 @@ from __future__ import annotations
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from time import monotonic
 from datetime import datetime, timezone
+from typing import Callable
 
 import feedparser
 import requests
@@ -35,10 +36,15 @@ def _fetch(feed: dict, settings: Settings) -> tuple[list[dict], FeedStatus]:
     return [], FeedStatus(feed=label, url=feed.get("url", ""), status=state, error_text=error, entry_count=0, response_time_ms=round((monotonic()-start)*1000, 2))
 
 
-def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: dict | None = None) -> AnalyzeResponse:
+def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: dict | None = None, progress: Callable[[str, dict], None] | None = None) -> AnalyzeResponse:
     settings = settings or get_settings()
     feeds_config = feeds_config if feeds_config is not None else load_feed_config(settings)
     feeds = [dict(f, _group=group) for group, items in feeds_config.items() for f in items if isinstance(f, dict) and f.get("enabled", True) and f.get("url")]
+    def emit(stage: str, **values):
+        if progress:
+            progress(stage, values)
+    emit("connecting_feeds", feeds_total=len(feeds), feeds_completed=0, articles_extracted=0, articles_total=0, feed_statuses=[])
+    emit("retrieving_headlines", feeds_total=len(feeds), feeds_completed=0, articles_extracted=0, articles_total=0, feed_statuses=[])
     results = {}
     with ThreadPoolExecutor(max_workers=max(1, len(feeds))) as pool:
         futures = {pool.submit(_fetch, f, settings): f for f in feeds}
@@ -47,11 +53,15 @@ def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: 
             try: results[id(f)] = future.result()
             except Exception as exc:
                 results[id(f)] = ([], FeedStatus(feed=f.get("publisher", f["url"]), url=f["url"], status="failed", error_text=str(exc), entry_count=0, response_time_ms=0))
+            emit("connecting_feeds", feeds_completed=len(results), feeds_total=len(feeds), feed_statuses=[status.model_dump(mode="json") for _, status in results.values()])
+    emit("checking_relevance", feeds_completed=len(results), feeds_total=len(feeds), feed_statuses=[status.model_dump(mode="json") for _, status in results.values()])
     feed_statuses, articles, seen_urls, seen_titles = [], [], set(), set()
     relevance_method = "hybrid"
     for f in feeds:
         entries, fs = results[id(f)]; feed_statuses.append(fs)
+        emit("checking_relevance", feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
         selected, feed_relevance_method = score_entries(entries, query)
+        emit("extracting_text", articles_extracted=len(articles), articles_total=len(articles)+len(selected), feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
         if feed_relevance_method == "lexical_fallback":
             relevance_method = "lexical_fallback"
         count = 0
@@ -64,11 +74,13 @@ def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: 
             retrieved = e.get("published_parsed")
             extraction = {"text": None, "extraction_status": "unavailable"}
             if f.get("fulltext_allowed") is True and count < 5 and url:
+                emit("extracting_text", articles_extracted=len(articles), articles_total=len(articles)+1, feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
                 try: extraction = extract_article(url, feed_config=f, rss_summary=e.get("rss_summary", ""), published=e.get("published", ""), settings=settings)
                 except Exception as exc: extraction = {"text": None, "extraction_status": "unavailable", "error": str(exc)}
             articles.append(Article(article_id=canonical or title_key, title=e.get("title", ""), url=url, publisher=f.get("publisher", "Unknown"), source_country=f.get("country", ""), iso_code=f.get("iso_code", ""), published_at=parse_published_at(e.get("published", ""), retrieved), published_raw=e.get("published", ""), rss_summary=e.get("rss_summary", ""), article_text=extraction.get("text"), retrieved_at=datetime.now(timezone.utc), extraction_status=extraction.get("extraction_status", "unavailable"), language=f.get("language", ""), matched_terms=e["matched_terms"], relevance_score=e["relevance_score"], relevance_components=e["relevance_components"], relevance_method=e["relevance_method"], relevance_label=e["relevance_label"]))
             if f.get("fulltext_allowed") is True and url:
                 count += 1
+            emit("extracting_text", articles_extracted=len(articles), articles_total=len(articles), feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
     groups = {}
     for article in articles:
         if not article.iso_code or article.relevance_label == "weak_match": continue
@@ -78,4 +90,5 @@ def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: 
     country_groups = {code: CountryGroup(**g, article_count=len(g["articles"]), coverage_status="insufficient coverage" if len(g["articles"]) < 3 else "available") for code, g in groups.items()}
     successes = sum(s.status in {"ok", "empty"} for s in feed_statuses)
     status = "no_results" if not articles else ("partial" if successes < len(feed_statuses) else "ok")
-    return AnalyzeResponse(query=query, status=status, explanation="No relevant entries appeared in the current RSS feed windows. RSS feeds expose only a limited recent set of items, so this does not mean the topic has no coverage." if not articles else None, methodology_version=settings.methodology_version, relevance_method=relevance_method, articles=articles, country_groups=country_groups, feed_statuses=feed_statuses)
+    emit("preparing_map", articles_extracted=len(articles), articles_total=len(articles), feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
+    return AnalyzeResponse(query=query, status=status, explanation="No relevant entries appeared in the current RSS feed windows. RSS feeds expose only a limited recent set of items, so this does not mean the topic has no coverage." if not articles else None, methodology_version=settings.methodology_version, relevance_method=relevance_method, articles=articles, country_groups=country_groups, feed_statuses=feed_statuses, generated_at=datetime.now(timezone.utc))

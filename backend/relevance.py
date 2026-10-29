@@ -245,6 +245,8 @@ def score_entries(
     load_model: bool = True,
     embedding_cache_path: Path = DEFAULT_EMBEDDING_CACHE,
     minimum_score: float = WEAK_MATCH_MIN_SCORE,
+    enforce_anchors: bool = True,
+    include_unmatched: bool = False,
 ) -> tuple[list[dict], str]:
     """Score entries and return relevant plus borderline weak-match candidates."""
     query_terms = terms(query)
@@ -260,7 +262,7 @@ def score_entries(
     for entry in entries:
         title, summary = _article_text(entry)
         components = _lexical_components(title, summary, query_terms, anchors)
-        if components["anchors_match"]:
+        if not enforce_anchors or components["anchors_match"]:
             prepared.append((entry, title, summary, components))
 
     semantic_scores = [0.0] * len(prepared)
@@ -313,7 +315,11 @@ def score_entries(
             relevance_score = lexical_score
         if relevance_method == "hybrid" and relevance_score < minimum_score:
             continue
-        if relevance_method == "lexical_fallback" and not components["matched_terms"]:
+        if (
+            relevance_method == "lexical_fallback"
+            and not components["matched_terms"]
+            and not include_unmatched
+        ):
             continue
         item = dict(entry)
         item["matched_terms"] = components["matched_terms"]
@@ -323,6 +329,7 @@ def score_entries(
             "title_lexical": round(float(components["title_lexical"]), 4),
             "summary_lexical": round(float(components["summary_lexical"]), 4),
             "semantic": round(semantic_score, 4),
+            "anchors_match": bool(components["anchors_match"]),
         }
         item["relevance_method"] = relevance_method
         is_relevant = (

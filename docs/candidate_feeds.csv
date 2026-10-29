@@ -1,0 +1,182 @@
+﻿publisher,section,url,language,region,directory_status_note
+BBC News – Top Stories,Global / International,https://feeds.bbci.co.uk/news/rss.xml,english,Global / International,Test before production
+BBC News – World,Global / International,https://feeds.bbci.co.uk/news/world/rss.xml,english,Global / International,Test before production
+BBC News – UK,Global / International,https://feeds.bbci.co.uk/news/uk/rss.xml,english,Global / International,Test before production
+BBC News – Business,Global / International,https://feeds.bbci.co.uk/news/business/rss.xml,english,Global / International,Test before production
+BBC News – Technology,Global / International,https://feeds.bbci.co.uk/news/technology/rss.xml,english,Global / International,Test before production
+BBC News – Science & Environment,Global / International,https://feeds.bbci.co.uk/news/science_and_environment/rss.xml,english,Global / International,Test before production
+The Guardian – World,Global / International,https://www.theguardian.com/world/rss,english,Global / International,Test before production
+The Guardian – UK,Global / International,https://www.theguardian.com/uk/rss,english,Global / International,Test before production
+The Guardian – Politics,Global / International,https://www.theguardian.com/politics/rss,english,Global / International,Test before production
+The Guardian – Environment,Global / International,https://www.theguardian.com/environment/rss,english,Global / International,Test before production
+The Guardian – Technology,Global / International,https://www.theguardian.com/technology/rss,english,Global / International,Test before production
+Al Jazeera – All News,Global / International,https://www.aljazeera.com/xml/rss/all.xml,english,Global / International,Test before production
+Deutsche Welle – English All,Global / International,https://rss.dw.com/rdf/rss-en-all,english,Global / International,Test before production
+Deutsche Welle – English World,Global / International,https://rss.dw.com/rdf/rss-en-world,english,Global / International,Test before production
+Deutsche Welle – English Business,Global / International,https://rss.dw.com/atom/rss-en-bus,english,Global / International,Test before production
+France 24 – English,Global / International,https://www.france24.com/en/rss,english,Global / International,Test before production
+France 24 – Europe,Global / International,https://www.france24.com/en/europe/rss,english,Global / International,Test before production
+France 24 – Business & Tech,Global / International,https://www.france24.com/en/business-tech/rss,english,Global / International,Test before production
+Euronews,Global / International,https://www.euronews.com/rss,english,Global / International,Test before production
+NPR – News,Global / International,https://feeds.npr.org/1001/rss.xml,english,Global / International,Test before production
+NPR – World,Global / International,https://feeds.npr.org/1004/rss.xml,english,Global / International,Test before production
+New York Times – World,Global / International,https://rss.nytimes.com/services/xml/rss/nyt/World.xml,english,Global / International,Test before production
+New York Times – Home Page,Global / International,https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml,english,Global / International,Test before production
+New York Times – U.S.,Global / International,https://rss.nytimes.com/services/xml/rss/nyt/US.xml,english,Global / International,Test before production
+New York Times – Politics,Global / International,https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml,english,Global / International,Test before production
+Sky News – Home,Global / International,https://feeds.skynews.com/feeds/rss/home.xml,english,Global / International,Test before production
+Sky News – World,Global / International,https://feeds.skynews.com/feeds/rss/world.xml,english,Global / International,Test before production
+Sky News – Business,Global / International,https://feeds.skynews.com/feeds/rss/business.xml,english,Global / International,Test before production
+Sky News – Technology,Global / International,https://feeds.skynews.com/feeds/rss/technology.xml,english,Global / International,Test before production
+The Independent – News,Global / International,https://www.independent.co.uk/news/rss,english,Global / International,Test before production
+The Independent – World,Global / International,https://www.independent.co.uk/news/world/rss,english,Global / International,Test before production
+The Independent – UK,Global / International,https://www.independent.co.uk/news/uk/rss,english,Global / International,Test before production
+Politico Europe,Global / International,https://www.politico.eu/feed/,english,Global / International,Test before production
+Der Spiegel – International,Global / International,https://www.spiegel.de/international/index.rss,english,Global / International,Test before production
+CBC – Top Stories,Global / International,https://www.cbc.ca/webfeed/rss/rss-topstories,english,Global / International,Test before production
+CBC – World,Global / International,https://www.cbc.ca/webfeed/rss/rss-world,english,Global / International,Test before production
+CBC – Business,Global / International,https://www.cbc.ca/webfeed/rss/rss-business,english,Global / International,Test before production
+CBC – Technology,Global / International,https://www.cbc.ca/webfeed/rss/rss-technology,english,Global / International,Test before production
+ABC Australia – Top Stories,Global / International,https://www.abc.net.au/news/feed/45910/rss.xml,english,Global / International,Test before production
+ABC Australia – Just In,Global / International,https://www.abc.net.au/news/feed/51120/rss.xml,english,Global / International,Test before production
+ABC Australia – Business,Global / International,https://www.abc.net.au/news/feed/51892/rss.xml,english,Global / International,Test before production
+RFI – English,Global / International,https://www.rfi.fr/en/rss,english,Global / International,Test before production
+VOA – English,Global / International,https://www.voanews.com/api/zq$omx$evi,english,Global / International,Test before production; dropped: obviously corrupted/incomplete URL (encoded endpoint path); not probed
+Associated Press via Flipboard – Top Stories,Global / International,https://flipboard.com/@associatedpress/top-stories-u7govdf1z.rss,english,Global / International,Test before production
+Times of India – Top Stories,India,https://timesofindia.indiatimes.com/rssfeedstopstories.cms,english,India,Test before production
+Times of India – World,India,https://timesofindia.indiatimes.com/rssfeeds/296589292.cms,english,India,Test before production
+Times of India – Business,India,https://timesofindia.indiatimes.com/rssfeeds/1898055.cms,english,India,Test before production
+Times of India – Technology,India,https://timesofindia.indiatimes.com/rssfeeds/66949542.cms,english,India,Test before production
+The Hindu – National,India,https://www.thehindu.com/news/national/feeder/default.rss,english,India,Test before production
+The Hindu – International,India,https://www.thehindu.com/news/international/feeder/default.rss,english,India,Test before production
+The Hindu – Business,India,https://www.thehindu.com/business/feeder/default.rss,english,India,Test before production
+The Hindu – Science,India,https://www.thehindu.com/sci-tech/feeder/default.rss,english,India,Test before production
+The Indian Express – Main,India,https://indianexpress.com/feed/,english,India,Test before production
+NDTV – Top Stories,India,https://feeds.feedburner.com/ndtvnews-top-stories,english,India,Test before production
+Business Standard – Latest,India,https://www.business-standard.com/rss/latest.rss,english,India,Test before production
+The Economic Times – News,India,https://economictimes.indiatimes.com/rssfeedstopstories.cms,english,India,Test before production
+The Economic Times – World News,India,https://economictimes.indiatimes.com/news/international/rssfeeds/1373380680.cms,english,India,Test before production
+Mint – Latest News,India,https://www.livemint.com/rss/news,english,India,Test before production
+Scroll.in,India,https://scroll.in/feeds/all,english,India,Test before production
+The Wire – Latest,India,https://thewire.in/feed,english,India,Test before production
+Firstpost – Latest,India,https://www.firstpost.com/commonfeeds/v1/mfp/rss/news.xml,english,India,Test before production
+The Print – Latest,India,https://theprint.in/feed/,english,India,Test before production
+Deccan Herald,India,https://www.deccanherald.com/rss-feeds,english,India,Test before production
+Hindustan Times – India,India,https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml,english,India,Test before production
+Hindustan Times – World,India,https://www.hindustantimes.com/feeds/rss/world-news/rssfeed.xml,english,India,Test before production
+ABC News – Top Stories,United States,https://abcnews.go.com/abcnews/topstories,english,United States,Test before production
+ABC News – U.S.,United States,https://abcnews.go.com/abcnews/usheadlines,english,United States,Test before production
+CBS News – Latest,United States,https://www.cbsnews.com/latest/rss/main,english,United States,Test before production
+Fox News – Latest,United States,https://moxie.foxnews.com/google-publisher/latest.xml,english,United States,Test before production
+NBC News – Top Stories,United States,https://feeds.nbcnews.com/feeds/topstories,english,United States,Test before production
+NBC News – World,United States,https://feeds.nbcnews.com/feeds/worldnews,english,United States,Test before production
+NPR – Politics,United States,https://feeds.npr.org/1014/rss.xml,english,United States,Test before production
+NPR – U.S.,United States,https://feeds.npr.org/1003/rss.xml,english,United States,Test before production
+PBS NewsHour,United States,https://www.pbs.org/newshour/feeds/rss/headlines,english,United States,Test before production
+USA Today – Top Stories,United States,https://rssfeeds.usatoday.com/usatoday-NewsTopStories,english,United States,Test before production
+Politico – Politics,United States,https://www.politico.com/rss/politics08.xml,english,United States,Test before production
+The Hill,United States,https://thehill.com/feed/,english,United States,Test before production
+ProPublica,United States,https://www.propublica.org/feeds/propublica/main,english,United States,Test before production
+RTÉ News,United Kingdom & Ireland,https://www.rte.ie/feeds/rss/?index=/news/,english,United Kingdom & Ireland,Test before production
+The Telegraph,United Kingdom & Ireland,https://www.telegraph.co.uk/rss.xml,english,United Kingdom & Ireland,Test before production
+The Daily Mail,United Kingdom & Ireland,https://www.dailymail.co.uk/articles.rss,english,United Kingdom & Ireland,Test before production
+The Register,United Kingdom & Ireland,https://www.theregister.com/headlines.atom,english,United Kingdom & Ireland,Test before production
+The Conversation – UK,United Kingdom & Ireland,https://theconversation.com/uk/articles.atom,english,United Kingdom & Ireland,Test before production
+The Conversation – Global,United Kingdom & Ireland,https://theconversation.com/articles.atom,english,United Kingdom & Ireland,Test before production
+France 24 – Français,France,https://www.france24.com/fr/rss,fr,France,Test before production
+Le Monde – Une,France,https://www.lemonde.fr/rss/une.xml,fr,France,Test before production
+Le Monde – International,France,https://www.lemonde.fr/international/rss_full.xml,fr,France,Test before production
+Le Figaro – Actualités,France,https://www.lefigaro.fr/rss/figaro_actualites.xml,fr,France,Test before production
+franceinfo – Monde,France,https://www.francetvinfo.fr/monde.rss,fr,France,Test before production
+RFI – Français,France,https://www.rfi.fr/fr/rss,fr,France,Test before production
+L’Obs,France,https://www.nouvelobs.com/rss.xml,fr,France,Test before production
+La Tribune,France,https://www.latribune.fr/rss/rss.xml,fr,France,Test before production
+tagesschau,Germany,https://www.tagesschau.de/index~rss2.xml,de,Germany,Test before production
+Der Spiegel – Headlines,Germany,https://www.spiegel.de/schlagzeilen/index.rss,de,Germany,Test before production
+Der Spiegel – Top Headlines,Germany,https://www.spiegel.de/schlagzeilen/tops/index.rss,de,Germany,Test before production
+ZEIT Online,Germany,https://newsfeed.zeit.de/all,de,Germany,Test before production
+FAZ – Aktuell,Germany,https://www.faz.net/rss/aktuell/,de,Germany,Test before production
+Stern,Germany,https://www.stern.de/feed/standard/all/,de,Germany,Test before production
+n-tv,Germany,https://www.n-tv.de/rss,de,Germany,Test before production
+Deutsche Welle – Deutsch,Germany,https://rss.dw.com/rdf/rss-de-all,de,Germany,Test before production
+Heise – Technology,Germany,https://www.heise.de/rss/heise-top-atom.xml,de,Germany,Test before production
+BBC Mundo,Spain,https://feeds.bbci.co.uk/mundo/rss.xml,es,Spain,Test before production
+El País – Portada,Spain,https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada,es,Spain,Test before production
+El País – Internacional,Spain,https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada,es,Spain,Test before production
+France 24 – Español,Spain,https://www.france24.com/es/rss,es,Spain,Test before production
+RTVE – Noticias,Spain,https://www.rtve.es/rss/temas_noticias.xml,es,Spain,Test before production
+La Vanguardia – International,Spain,https://www.lavanguardia.com/mvc/feed/rss/internacional,es,Spain,Test before production
+El Mundo,Spain,https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml,es,Spain,Test before production
+ANSA – Top News,Italy,https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml,it,Italy,Test before production
+ANSA – World,Italy,https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml,it,Italy,Test before production
+ANSA – Politics,Italy,https://www.ansa.it/sito/notizie/politica/politica_rss.xml,it,Italy,Test before production
+Rai News,Italy,https://www.rainews.it/dl/rainews/website/rainews24/rainews24_rss.xml,it,Italy,Test before production
+Euronews – Italiano,Italy,https://it.euronews.com/rss,it,Italy,Test before production
+NHK World – Global Newsroom,Japan,https://www3.nhk.or.jp/rssxml/news/globalnewsroom.xml,en,Japan,Test before production
+NHK News – Japanese (candidate),Japan,https://www3.nhk.or.jp/rss/news/cat0.xml,ja,Japan,Candidate: verify
+The Japan Times,Japan,https://www.japantimes.co.jp/feed/,en,Japan,Test before production
+The Mainichi,Japan,https://mainichi.jp/rss/etc/mainichi-flash.rss,ja,Japan,Test before production
+Asahi Shimbun – English,Japan,https://www.asahi.com/ajw/rss/,en,Japan,Test before production
+Nikkei Asia (candidate),Japan,https://asia.nikkei.com/rss/feed/nar,en,Japan,Candidate: verify
+China Daily – World,China,https://www.chinadaily.com.cn/rss/world_rss.xml,zh,China,Test before production
+China Daily – China,China,https://www.chinadaily.com.cn/rss/china_rss.xml,zh,China,Test before production
+China Daily – Business,China,https://www.chinadaily.com.cn/rss/biz_rss.xml,zh,China,Test before production
+Global Times – World (candidate),China,https://www.globaltimes.cn/rss/outbrain.xml,en,China,Candidate: verify
+CGTN – World (candidate),China,https://www.cgtn.com/subscribe/rss/section/world.xml,en,China,Candidate: verify
+South China Morning Post – World (candidate),China,https://www.scmp.com/rss/91/feed,en,China,Candidate: verify
+TASS – World (candidate),Russia,https://tass.com/rss/v2.xml,ru,Russia,Candidate: verify
+The Moscow Times,Russia,https://www.themoscowtimes.com/rss/news,en,Russia,Test before production
+Meduza – Latest,Russia,https://meduza.io/rss/all,ru,Russia,Test before production
+RT – News (candidate),Russia,https://www.rt.com/rss/,en,Russia,Candidate: verify
+Al Jazeera – Arabic (candidate),Middle East,https://www.aljazeera.net/aljazeerarss,ar,Middle East,Candidate: verify
+Al Arabiya – Latest (candidate),Middle East,https://www.alarabiya.net/tools/rss,ar,Middle East,Candidate: verify
+Asharq Al-Awsat (candidate),Middle East,https://aawsat.com/feed,ar,Middle East,Candidate: verify
+The National – UAE,Middle East,https://www.thenationalnews.com/arc/outboundfeeds/rss/,en,Middle East,Test before production
+Arab News,Middle East,https://www.arabnews.com/rss.xml,en,Middle East,Test before production
+Daily Sabah – World,Middle East,https://www.dailysabah.com/rssFeed/world,en,Middle East,Test before production
+Anadolu Agency – English (candidate),Middle East,https://www.aa.com.tr/en/rss/default?cat=world,en,Middle East,Candidate: verify
+TRT World – News (candidate),Middle East,https://www.trtworld.com/rss,en,Middle East,Candidate: verify
+Iran International (candidate),Middle East,https://www.iranintl.com/en/rss,en,Middle East,Candidate: verify
+Daily Maverick – South Africa,Africa,https://www.dailymaverick.co.za/dmrss/,en,Africa,Test before production
+News24 – South Africa (candidate),Africa,https://feeds.news24.com/articles/news24/TopStories/rss,en,Africa,Candidate: verify
+The Africa Report (candidate),Africa,https://www.theafricareport.com/feed/,en,Africa,Candidate: verify
+Africanews – English,Africa,https://www.africanews.com/feed/rss,en,Africa,Test before production
+Africanews – French,Africa,https://fr.africanews.com/feed/rss,fr,Africa,Test before production
+AllAfrica – Headlines,Africa,https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf,en,Africa,Test before production
+Premium Times – Nigeria,Africa,https://www.premiumtimesng.com/feed,en,Africa,Test before production
+The East African (candidate),Africa,https://www.theeastafrican.co.ke/tea/rss,en,Africa,Candidate: verify
+Agência Brasil – English (candidate),Latin America,https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml,en,Latin America,Candidate: verify
+Agência Brasil – Português (candidate),Latin America,https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml,pt,Latin America,Candidate: verify
+Folha de S.Paulo (candidate),Latin America,https://feeds.folha.uol.com.br/emcimadahora/rss091.xml,pt,Latin America,Candidate: verify
+G1 – Brasil (candidate),Latin America,https://g1.globo.com/rss/g1/,pt,Latin America,Candidate: verify
+El Universal – México (candidate),Latin America,https://www.eluniversal.com.mx/rss.xml,es,Latin America,Candidate: verify
+La Jornada – México (candidate),Latin America,https://www.jornada.com.mx/rss/,es,Latin America,Candidate: verify
+Clarín – Argentina (candidate),Latin America,https://www.clarin.com/rss/lo-ultimo/,es,Latin America,Candidate: verify
+Página/12 – Argentina (candidate),Latin America,https://www.pagina12.com.ar/rss/portada,es,Latin America,Candidate: verify
+Prensa Latina – English (candidate),Latin America,https://www.plenglish.com/feed/,en,Latin America,Candidate: verify
+Global News Canada,Canada / Australia / New Zealand,https://globalnews.ca/feed/,en,Canada / Australia / New Zealand,Test before production
+The Globe and Mail (candidate),Canada / Australia / New Zealand,https://www.theglobeandmail.com/arc/outboundfeeds/rss/,en,Canada / Australia / New Zealand,Candidate: verify
+The Conversation – Australia,Canada / Australia / New Zealand,https://theconversation.com/au/articles.atom,en,Canada / Australia / New Zealand,Test before production
+SBS News – Australia,Canada / Australia / New Zealand,https://www.sbs.com.au/news/feed,en,Canada / Australia / New Zealand,Test before production
+RNZ – Latest,Canada / Australia / New Zealand,https://www.rnz.co.nz/rss/news.xml,en,Canada / Australia / New Zealand,Test before production
+Stuff NZ (candidate),Canada / Australia / New Zealand,https://www.stuff.co.nz/rss,en,Canada / Australia / New Zealand,Candidate: verify
+Korea Herald,South Korea / Southeast Asia,https://www.koreaherald.com/rss/,en,South Korea / Southeast Asia,Test before production
+Korea JoongAng Daily (candidate),South Korea / Southeast Asia,https://koreajoongangdaily.joins.com/section/rss,ko,South Korea / Southeast Asia,Candidate: verify
+The Straits Times – Singapore (candidate),South Korea / Southeast Asia,https://www.straitstimes.com/news/world/rss.xml,en,South Korea / Southeast Asia,Candidate: verify
+CNA – Singapore,South Korea / Southeast Asia,https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml,en,South Korea / Southeast Asia,Test before production
+The Jakarta Post (candidate),South Korea / Southeast Asia,https://www.thejakartapost.com/feed,ko,South Korea / Southeast Asia,Candidate: verify
+Bangkok Post – World (candidate),South Korea / Southeast Asia,https://www.bangkokpost.com/rss/data/world.xml,ko,South Korea / Southeast Asia,Candidate: verify
+The Hindu – Sri Lanka / region via South Asia feed,South Korea / Southeast Asia,https://www.thehindu.com/news/international/feeder/default.rss,ko,South Korea / Southeast Asia,Test before production
+BBC – Science & Environment,Science / Technology / Climate,https://feeds.bbci.co.uk/news/science_and_environment/rss.xml,english,Science / Technology / Climate,Test before production
+BBC – Technology,Science / Technology / Climate,https://feeds.bbci.co.uk/news/technology/rss.xml,english,Science / Technology / Climate,Test before production
+The Guardian – Environment,Science / Technology / Climate,https://www.theguardian.com/environment/rss,english,Science / Technology / Climate,Test before production
+The Guardian – Technology,Science / Technology / Climate,https://www.theguardian.com/technology/rss,english,Science / Technology / Climate,Test before production
+Sky News – Technology,Science / Technology / Climate,https://feeds.skynews.com/feeds/rss/technology.xml,english,Science / Technology / Climate,Test before production
+CBC – Technology,Science / Technology / Climate,https://www.cbc.ca/webfeed/rss/rss-technology,english,Science / Technology / Climate,Test before production
+Wired,Science / Technology / Climate,https://www.wired.com/feed/rss,english,Science / Technology / Climate,Test before production
+The Verge,Science / Technology / Climate,https://www.theverge.com/rss/index.xml,english,Science / Technology / Climate,Test before production
+Ars Technica,Science / Technology / Climate,https://feeds.arstechnica.com/arstechnica/index,english,Science / Technology / Climate,Test before production
+TechCrunch,Science / Technology / Climate,https://techcrunch.com/feed/,english,Science / Technology / Climate,Test before production
+Engadget,Science / Technology / Climate,https://www.engadget.com/rss.xml,english,Science / Technology / Climate,Test before production
+MIT Technology Review (candidate),Science / Technology / Climate,https://www.technologyreview.com/feed/,english,Science / Technology / Climate,Candidate: verify
+Nature – News,Science / Technology / Climate,https://www.nature.com/subjects/scientific-community-and-society.rss,english,Science / Technology / Climate,Test before production

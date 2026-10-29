@@ -70,3 +70,5 @@ class AnalyzeResponse(BaseModel):
     development_only: bool = False
     explanation: str | None = None
     feed_statuses: list[FeedStatus] = Field(default_factory=list)
+    cached: bool = False
+    generated_at: datetime | None = None

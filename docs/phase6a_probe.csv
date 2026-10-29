@@ -1,0 +1,34 @@
+publisher,url,status1,status2,time1,time2,entries1,entries2,title_pct,url_pct,summary_pct,date_pct,newest_age_h
+Deutsche Welle,https://rss.dw.com/rdf/rss-en-all,200,200,2.85,1.3,126,126,100.0,100.0,100.0,0.0,
+France 24,https://www.france24.com/en/rss,200,200,0.97,0.73,24,24,100.0,100.0,100.0,100.0,0.72
+RFI,https://www.rfi.fr/en/rss,200,200,1.32,0.72,22,22,100.0,100.0,100.0,100.0,3.21
+Euronews,https://www.euronews.com/rss,200,ReadTimeout,1.26,15,50,0,0,0,0,0,
+NHK World,https://www3.nhk.or.jp/rssxml/news/globalnewsroom.xml,404,404,1.23,1.18,0,0,0,0,0,0,
+The Japan Times,https://www.japantimes.co.jp/feed/,200,200,2.02,1.42,30,30,100.0,100.0,100.0,100.0,5.88
+Asahi Shimbun,https://www.asahi.com/ajw/rss/,404,404,1.18,1.28,0,0,0,0,0,0,
+Daily Sabah,https://www.dailysabah.com/rssFeed/world,200,200,0.95,1.1,46,46,100.0,100.0,100.0,100.0,1.6
+Arab News,https://www.arabnews.com/rss.xml,403,403,0.52,0.65,0,0,0,0,0,0,
+The National,https://www.thenationalnews.com/arc/outboundfeeds/rss/,404,404,0.81,0.7,0,0,0,0,0,0,
+Anadolu Agency,https://www.aa.com.tr/en/rss/default?cat=world,200,200,2.5,1.63,30,30,100.0,100.0,100.0,100.0,0.23
+TRT World,https://www.trtworld.com/rss,404,404,0.57,1.38,0,0,0,0,0,0,
+Daily Maverick,https://www.dailymaverick.co.za/dmrss/,200,200,0.53,0.99,50,50,100.0,100.0,90.0,100.0,-1.52
+Premium Times,https://www.premiumtimesng.com/feed,200,200,2.05,2.33,15,15,100.0,100.0,100.0,100.0,0.11
+Africanews,https://www.africanews.com/feed/rss,200,200,0.86,5.39,50,50,100.0,100.0,100.0,100.0,1.24
+ABC Australia,https://www.abc.net.au/news/feed/45910/rss.xml,200,200,0.6,0.83,25,25,100.0,100.0,100.0,100.0,2.08
+CBC,https://www.cbc.ca/webfeed/rss/rss-world,ReadTimeout,ReadTimeout,15,15,0,0,0,0,0,0,
+SBS News,https://www.sbs.com.au/news/feed,200,200,0.96,1.24,25,25,100.0,100.0,100.0,100.0,1551.91
+RNZ,https://www.rnz.co.nz/rss/news.xml,200,200,2.24,1.51,55,55,100.0,100.0,100.0,100.0,0.5
+Korea Herald,https://www.koreaherald.com/rss/,200,200,1.35,1.23,0,0,0,0,0,0,
+CNA,https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml,200,200,0.51,0.51,20,20,100.0,100.0,15.0,100.0,0.24
+RTÉ,https://www.rte.ie/feeds/rss/?index=/news/,200,200,0.74,0.66,60,60,100.0,100.0,100.0,100.0,0.22
+Agência Brasil,https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml,200,200,1.67,2.84,10,10,100.0,100.0,100.0,100.0,1.36
+tagesschau,https://www.tagesschau.de/index~rss2.xml,200,200,1.05,1.83,69,69,100.0,100.0,100.0,100.0,0.24
+ZEIT Online,https://newsfeed.zeit.de/all,200,200,3.21,7.3,15,15,100.0,100.0,100.0,100.0,0.55
+Le Monde,https://www.lemonde.fr/international/rss_full.xml,200,200,0.64,0.72,20,20,100.0,100.0,100.0,100.0,0.16
+franceinfo,https://www.francetvinfo.fr/monde.rss,200,200,1.26,1.26,20,20,100.0,100.0,100.0,100.0,0.09
+El País,https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada,200,200,1.33,1.35,24,24,100.0,100.0,100.0,100.0,1.51
+ANSA,https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml,200,200,1.26,1.11,48,48,100.0,100.0,89.58,100.0,0.25
+Folha de S.Paulo,https://feeds.folha.uol.com.br/emcimadahora/rss091.xml,200,200,2.91,4.46,100,100,100.0,100.0,100.0,100.0,0.18
+El Universal,https://www.eluniversal.com.mx/rss.xml,404,404,0.62,1.93,0,0,0,0,0,0,
+Al Arabiya,https://www.alarabiya.net/tools/rss,403,403,0.77,0.56,0,0,0,0,0,0,
+Amar Ujala,https://www.amarujala.com/rss/india-news.xml,200,200,0.49,0.51,40,40,100.0,100.0,100.0,100.0,12.07

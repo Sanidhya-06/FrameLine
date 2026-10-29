@@ -1,203 +1,62 @@
-// ============================================
-// MAP PAGE (Screen C)
-// ============================================
-
-import { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate, Link } from 'react-router-dom';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, Clock3, Globe2, Search, X } from 'lucide-react';
 import { useAppStore } from '../store/appStore';
-import { MOCK_COVERAGE } from '../data/mockData';
-import type { CountryCoverage } from '../types';
-import Navbar from '../components/Navbar';
-import WorldMap from '../components/WorldMap';
-import MapLegend from '../components/MapLegend';
-import CountryDetailsPanel from '../components/CountryDetailsPanel';
-import DemoDataBadge from '../components/DemoDataBadge';
+import { CountryMap } from '../components/CountryMap';
+import type { CountryGroup } from '../types';
 
-export default function MapPage() {
-  const { query, selectedCountryCode, setSelectedCountry } = useAppStore();
-  const navigate = useNavigate();
-  const [selectedCoverage, setSelectedCoverage] = useState<CountryCoverage | null>(
-    selectedCountryCode ? MOCK_COVERAGE[selectedCountryCode] ?? null : null
-  );
+function countryFrom(groups: Record<string, CountryGroup>, code?: string) { return Object.values(groups).find((group) => group.iso_code.toLowerCase() === code?.toLowerCase()) || null; }
+function FeedSummary({ result }: { result: NonNullable<ReturnType<typeof useAppStore.getState>['result']> }) {
+  const succeeded = result.feed_statuses.filter((feed) => !['failed', 'timeout', 'error'].includes(feed.status)).length;
+  const failures = result.feed_statuses.filter((feed) => ['failed', 'timeout', 'error'].includes(feed.status));
+  return <details className="feed-summary"><summary>{succeeded} of {result.feed_statuses.length} feeds returned results{failures.length ? ` · ${failures.length} failed` : ''}</summary>{failures.length > 0 && <ul>{failures.map((feed) => <li key={feed.url}>{feed.feed}: {feed.error_text || feed.status}</li>)}</ul>}</details>;
+}
+function CountryDetails({ group, weakArticles, onClose }: { group: CountryGroup; weakArticles: CountryGroup['articles']; onClose: () => void }) {
+  const [showWeak, setShowWeak] = useState(false);
+  const articles = [...group.articles, ...(showWeak ? weakArticles : [])];
+  const weakCount = weakArticles.length;
+  return <aside className="country-panel" aria-label={`${group.display_name} country details`}>
+    <div className="panel-title"><div><span className="panel-kicker">SOURCE GROUP / {group.iso_code}</span><h2>{group.display_name}</h2></div><button className="icon-control panel-close" onClick={onClose} aria-label="Close country details"><X size={17}/></button></div>
+    <div className="country-stat"><strong>{group.article_count}</strong><span>articles analyzed</span></div>
+    <div className="source-block"><span className="section-label">PUBLISHERS</span><div className="source-chips">{group.sources.map((source) => <span key={source}>{source}</span>)}</div></div>
+    {group.article_count < 3 && <div className="coverage-notice"><span>INSUFFICIENT COVERAGE</span><p>Fewer than 3 articles are available for meaningful aggregation.</p></div>}
+    <section className="article-section"><div className="article-heading"><span className="section-label">ARTICLE EVIDENCE</span><span>{articles.length} shown</span></div>
+      {weakCount > 0 && <label className="weak-toggle"><input type="checkbox" checked={showWeak} onChange={(event) => setShowWeak(event.target.checked)}/> Show weak matches ({weakCount})</label>}
+      <div className="article-list">{articles.map((article) => <article className="article-card" key={article.article_id || article.url}>
+        <div className="article-meta"><span>{article.publisher}</span>{article.published_at && <time>{new Date(article.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</time>}</div>
+        <h3><a href={article.url} target="_blank" rel="noreferrer">{article.title}<ArrowRight size={13}/></a></h3>
+        <p>{article.article_text || article.rss_summary || 'No RSS summary or extracted snippet is available.'}</p>
+        <span className={`extract-badge status-${article.extraction_status.toLowerCase()}`}>{article.extraction_status.replaceAll('_', ' ')}</span>
+      </article>)}</div>
+    </section>
+    <section className="signals-placeholder"><span className="section-label">ANALYSIS SIGNALS</span><p>Analysis signals not yet available</p></section>
+    <p className="country-disclaimer">Results describe the sources analyzed, not the country as a whole.</p>
+  </aside>;
+}
 
-  const handleCountrySelect = useCallback((coverage: CountryCoverage) => {
-    setSelectedCoverage(coverage);
-    setSelectedCountry(coverage.code);
-  }, [setSelectedCountry]);
-
-  const handleCountryDeselect = useCallback(() => {
-    setSelectedCoverage(null);
-    setSelectedCountry(null);
-    navigate('/map', { replace: true });
-  }, [setSelectedCountry, navigate]);
-
-  // Handle direct /map access with no query
-  if (!query) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        background: 'var(--color-bg-main)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '20px',
-        padding: '24px',
-      }}>
-        <h2 style={{ fontFamily: 'Space Grotesk, sans-serif', color: '#EAF4FF', fontSize: '1.3rem', fontWeight: 600 }}>
-          No search query
-        </h2>
-        <p style={{ color: '#8CA3B8', textAlign: 'center', maxWidth: '360px', lineHeight: 1.6 }}>
-          Please start from the home page and enter a topic to analyse.
-        </p>
-        <Link to="/" className="btn-primary">Start a new search</Link>
+export function MapPage() {
+  const { result, query } = useAppStore(); const { code } = useParams(); const navigate = useNavigate();
+  const [selectedCode, setSelectedCode] = useState<string | null>(code || null);
+  const countryGroups = result?.country_groups || {};
+  const available = useMemo(() => Object.values(countryGroups).filter((group) => group.articles.length > 0), [countryGroups]);
+  useEffect(() => { if (!result) return; const next = code ? countryFrom(countryGroups, code) : null; setSelectedCode(next?.iso_code || null); }, [code, result, countryGroups]);
+  if (!result) return <Navigate to="/" replace />;
+  const select = (countryCode: string | null) => { setSelectedCode(countryCode); navigate(countryCode ? `/country/${encodeURIComponent(countryCode)}` : '/map'); };
+  const selected = countryFrom(countryGroups, selectedCode || undefined);
+  const failures = result.feed_statuses.filter((feed) => ['failed', 'timeout', 'error'].includes(feed.status)).length;
+  return <main className="coverage-shell">
+    <header className="coverage-topbar"><Link className="coverage-brand" to="/"><span><Globe2 size={16}/></span>FRAME<span>LINE</span></Link><div className="coverage-breadcrumb"><span>FIELD 03</span><i/> GLOBAL COVERAGE MAP</div><Link className="new-search" to="/" onClick={() => useAppStore.getState().setError(null)}><Search size={15}/> New search</Link></header>
+    <section className="coverage-heading"><div><div className="coverage-kicker"><i/> COVERAGE INTELLIGENCE <i/></div><h1>Stories, seen <em>worldwide.</em></h1><p><span>QUERY</span> “{query || result.query}”</p></div><div className="cache-info"><span>{result.cached ? 'CACHED RESULT' : 'LIVE RESULT'}</span><small><Clock3 size={12}/> {result.generated_at ? new Date(result.generated_at).toLocaleString() : 'Time unavailable'}</small></div></section>
+    <div className="feed-strip"><span className={`feed-light ${failures ? 'feed-light-warn' : ''}`}/><FeedSummary result={result}/>{result.status && <span className="result-status">{result.status.replaceAll('_', ' ')}</span>}</div>
+    {result.articles.length === 0 ? <section className="map-empty"><Globe2 size={33}/><h2>No country coverage returned</h2><p>{result.explanation || 'No relevant articles were found for this query.'}</p><Link className="new-search" to="/">Start a new search <ArrowRight size={15}/></Link></section> : <>
+      <div className={`coverage-layout ${selected ? 'has-country' : ''}`}>
+        <section className="map-column"><CountryMap groups={countryGroups} selected={selected?.iso_code || null} onSelect={(countryCode) => select(countryCode)}/>
+          <section className="country-list-panel"><div className="country-list-heading"><span className="section-label">COUNTRY / SOURCE GROUPS</span><span>{available.length} GROUPS</span></div><div className="country-list">{available.map((group) => <button key={group.iso_code} className={`country-button ${selected?.iso_code === group.iso_code ? 'is-active' : ''}`} onClick={() => select(group.iso_code)}><span className="country-pip"/><strong>{group.display_name}</strong><span>{group.article_count} {group.article_count === 1 ? 'article' : 'articles'}</span><ArrowRight size={14}/></button>)}</div></section>
+        </section>
+        {selected && <CountryDetails group={selected} weakArticles={result.articles.filter((article) => article.iso_code === selected.iso_code && article.relevance_label === 'weak_match')} onClose={() => select(null)}/>}
       </div>
-    );
-  }
-
-  const panelOpen = selectedCoverage !== null;
-
-  return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'var(--color-bg-main)',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      {/* Grid overlay */}
-      <div className="grid-overlay" />
-
-      {/* Navbar */}
-      <Navbar showSearch={true} showStatus={true} />
-
-      {/* Map workspace */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        style={{
-          position: 'fixed',
-          inset: 0,
-          top: '60px',
-          right: panelOpen ? '420px' : '0',
-          transition: 'right 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-          background: 'linear-gradient(180deg, #050B14 0%, #060E1A 50%, #050B14 100%)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-        {/* Subtle ocean colour for the map background */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'radial-gradient(ellipse at 50% 60%, rgba(6, 18, 36, 1) 0%, rgba(5, 11, 20, 1) 70%)',
-        }} />
-
-        {/* Map container */}
-        <div style={{
-          position: 'relative',
-          width: '100%',
-          height: '100%',
-          zIndex: 1,
-        }}>
-          <WorldMap
-            selectedCode={selectedCoverage?.code ?? null}
-            onCountrySelect={handleCountrySelect}
-            onCountryDeselect={handleCountryDeselect}
-          />
-        </div>
-
-        {/* Bottom-left controls */}
-        <div style={{
-          position: 'absolute',
-          bottom: '20px',
-          left: '20px',
-          zIndex: 10,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '10px',
-          pointerEvents: 'none',
-        }}>
-          {/* Legend */}
-          <div style={{ pointerEvents: 'auto' }}>
-            <MapLegend />
-          </div>
-
-          {/* Demo badge */}
-          <div style={{ pointerEvents: 'auto' }}>
-            <DemoDataBadge />
-          </div>
-        </div>
-
-        {/* Top-left coverage count */}
-        <div style={{
-          position: 'absolute',
-          top: '16px',
-          left: '16px',
-          zIndex: 10,
-          background: 'rgba(10, 20, 34, 0.8)',
-          border: '1px solid rgba(54, 215, 245, 0.15)',
-          borderRadius: '10px',
-          padding: '10px 14px',
-          backdropFilter: 'blur(12px)',
-        }}>
-          <div style={{
-            fontFamily: 'JetBrains Mono, monospace',
-            fontSize: '0.6rem',
-            color: '#4A6174',
-            letterSpacing: '0.1em',
-            textTransform: 'uppercase',
-            marginBottom: '4px',
-          }}>
-            Coverage
-          </div>
-          <div style={{ display: 'flex', alignItems: 'baseline', gap: '4px' }}>
-            <span style={{
-              fontFamily: 'JetBrains Mono, monospace',
-              fontSize: '1.3rem',
-              color: '#36D7F5',
-              fontWeight: 700,
-            }}>
-              {Object.keys(MOCK_COVERAGE).length}
-            </span>
-            <span style={{ fontSize: '0.7rem', color: '#8CA3B8' }}>countries</span>
-          </div>
-        </div>
-
-        {/* Hint text when no country selected */}
-        {!panelOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5 }}
-            style={{
-              position: 'absolute',
-              top: '16px',
-              right: '16px',
-              zIndex: 10,
-              background: 'rgba(10, 20, 34, 0.7)',
-              border: '1px solid rgba(54, 215, 245, 0.1)',
-              borderRadius: '8px',
-              padding: '8px 12px',
-              backdropFilter: 'blur(10px)',
-              fontFamily: 'JetBrains Mono, monospace',
-              fontSize: '0.62rem',
-              color: '#4A6174',
-              letterSpacing: '0.05em',
-            }}
-          >
-            Click a highlighted country to explore coverage
-          </motion.div>
-        )}
-      </motion.div>
-
-      {/* Country details panel */}
-      <CountryDetailsPanel
-        coverage={selectedCoverage}
-        onClose={handleCountryDeselect}
-      />
-    </div>
-  );
+      {failures > 0 && <p className="partial-notice">Partial results: {failures} feed {failures === 1 ? 'could not' : 'feeds could not'} be reached. Country counts include returned articles only.</p>}
+    </>}
+    <footer className="coverage-footer"><span>FRAMELINE / SOURCE MONITOR</span><Link to="/">NEW QUERY <ArrowLeft size={12}/></Link></footer>
+  </main>;
 }

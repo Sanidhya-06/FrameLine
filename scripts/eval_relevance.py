@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import csv
+import argparse
+import random
 import sys
 from pathlib import Path
 
@@ -76,7 +78,9 @@ def metrics(rows: list[dict], predictions: list[bool]) -> dict[str, float | int]
     }
 
 
-def prepare_scores(rows: list[dict[str, str]]) -> tuple[dict[int, dict], str]:
+def prepare_scores(
+    rows: list[dict[str, str]], *, enforce_anchors: bool = True,
+) -> tuple[dict[int, dict], str]:
     scored: dict[int, dict] = {}
     method = "hybrid"
     for query in sorted({row["query"] for row in rows}):
@@ -95,6 +99,8 @@ def prepare_scores(rows: list[dict[str, str]]) -> tuple[dict[int, dict], str]:
             query,
             minimum_score=0.0,
             embedding_cache_path=DEFAULT_EMBEDDING_CACHE,
+            enforce_anchors=enforce_anchors,
+            include_unmatched=not enforce_anchors,
         )
         scored.update({item["_gold_index"]: item for item in results})
     return scored, method
@@ -115,6 +121,9 @@ def predictions_for(
             predictions.append(False)
             continue
         components = result["relevance_components"]
+        if not components["anchors_match"]:
+            predictions.append(False)
+            continue
         score = (
             components["lexical"]
             if method == "lexical_fallback"
@@ -169,9 +178,86 @@ def report(
     return result
 
 
+def print_error_scores(
+    rows: list[dict[str, str]],
+    scored: dict[int, dict],
+    predictions: list[bool],
+) -> None:
+    print("\nHybrid false positives/negatives (all labeled rows):")
+    for index, (row, predicted) in enumerate(zip(rows, predictions)):
+        expected = row["relevant"] == "1"
+        if expected == predicted:
+            continue
+        result = scored[index]
+        components = result["relevance_components"]
+        combined = (
+            LEXICAL_WEIGHT * components["lexical"]
+            + (1 - LEXICAL_WEIGHT) * components["semantic"]
+        )
+        error_type = "FN" if expected else "FP"
+        print(
+            f"{error_type} | {row['query']} | {row['title']} | "
+            f"lexical={components['lexical']:.4f} "
+            f"semantic={components['semantic']:.4f} combined={combined:.4f} "
+            f"anchor={components['anchors_match']}"
+        )
+
+
+def sample_candidates(
+    rows: list[dict[str, str]],
+    scored: dict[int, dict],
+    queries: list[str],
+) -> None:
+    rng = random.Random(20261028)
+    print("\nCandidate headlines for labeling:")
+    for query in queries:
+        indexes = [index for index, row in enumerate(rows) if row["query"] == query]
+        print(f"\n[{query}]")
+        if not indexes:
+            print("  No rows found in the gold file.")
+            continue
+        old_matches = [
+            index for index in indexes
+            if legacy_rule_matches(
+                {"title": rows[index]["title"], "rss_summary": rows[index]["summary"]},
+                query,
+            )
+        ]
+        near_threshold = [
+            index for index in indexes
+            if index in scored
+            and abs(
+                LEXICAL_WEIGHT * scored[index]["relevance_components"]["lexical"]
+                + (1 - LEXICAL_WEIGHT)
+                * scored[index]["relevance_components"]["semantic"]
+                - RELEVANCE_SCORE_THRESHOLD
+            ) <= 0.10
+        ]
+        random_indexes = rng.sample(indexes, min(3, len(indexes)))
+        selected: list[tuple[str, int]] = []
+        for label, candidates in (
+            ("old-rule", old_matches),
+            ("near-threshold", near_threshold),
+            ("random", random_indexes),
+        ):
+            for index in candidates:
+                if index not in {item[1] for item in selected}:
+                    selected.append((label, index))
+        for label, index in selected:
+            print(f"  {label}: {rows[index]['title']}")
+
+
 def main() -> None:
-    rows = load_gold()
-    scored, method = prepare_scores(rows)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--sample-candidates",
+        nargs=5,
+        metavar="QUERY",
+        help="Print candidate headlines for exactly five queries in the gold file.",
+    )
+    args = parser.parse_args()
+    rows = load_gold(validate_queries=not args.sample_candidates)
+    scored, method = prepare_scores(rows, enforce_anchors=False)
     train_rows = [row for row in rows if row["query"] in TRAIN_QUERIES]
     test_rows = [row for row in rows if row["query"] in TEST_QUERIES]
     print(f"Gold set: {len(rows)} rows; model={MODEL_NAME}; scoring method={method}")
@@ -197,40 +283,47 @@ def main() -> None:
     report("Old rule, train", train_rows, baseline_train)
     report("Old rule, held-out", test_rows, baseline_test)
 
-    lexical_weight, threshold, train_metrics = tune(rows, scored, method)
-    all_predictions = predictions_for(
+    default_predictions = predictions_for(
         rows,
         scored,
-        lexical_weight=lexical_weight,
-        threshold=threshold,
-        method=method,
+        lexical_weight=LEXICAL_WEIGHT,
+        threshold=RELEVANCE_SCORE_THRESHOLD,
+        method="hybrid",
     )
     test_indexes = [
         index for index, row in enumerate(rows) if row["query"] in TEST_QUERIES
     ]
-    test_predictions = [all_predictions[index] for index in test_indexes]
+    test_predictions = [default_predictions[index] for index in test_indexes]
+    train_predictions = [
+        default_predictions[index]
+        for index, row in enumerate(rows)
+        if row["query"] in TRAIN_QUERIES
+    ]
     if method == "hybrid":
-        print(
-            f"Tuned on training queries: lexical_weight={lexical_weight:.2f}, "
-            f"semantic_weight={1 - lexical_weight:.2f}, "
-            f"relevance_score_threshold={threshold:.2f}, "
-            f"training_F1={train_metrics['f1']:.3f}"
-        )
+        report("Hybrid rule, train", train_rows, train_predictions)
         report("Hybrid rule, held-out", test_rows, test_predictions)
     else:
-        print(
-            f"Semantic model unavailable; lexical fallback threshold tuned on training "
-            f"queries={threshold:.2f}, training_F1={train_metrics['f1']:.3f}. "
-            "Hybrid component weights cannot be tuned from this run."
-        )
-        report(
-            "Lexical fallback, train",
-            train_rows,
-            [all_predictions[index] for index, row in enumerate(rows) if row["query"] in TRAIN_QUERIES],
-        )
-        report("Lexical fallback, held-out", test_rows, test_predictions)
+        print("Hybrid rule: unavailable because the embedding model did not load.")
+
+    lexical_predictions = predictions_for(
+        rows,
+        scored,
+        lexical_weight=LEXICAL_WEIGHT,
+        threshold=RELEVANCE_SCORE_THRESHOLD,
+        method="lexical_fallback",
+    )
+    report(
+        "Lexical fallback, train",
+        train_rows,
+        [lexical_predictions[index] for index, row in enumerate(rows) if row["query"] in TRAIN_QUERIES],
+    )
+    report("Lexical fallback, held-out", test_rows, [lexical_predictions[index] for index in test_indexes])
+    if method == "hybrid":
+        print_error_scores(rows, scored, default_predictions)
+    if args.sample_candidates:
+        sample_candidates(rows, scored, args.sample_candidates)
     print(
-        f"Runtime defaults before applying any tuning: lexical_weight={LEXICAL_WEIGHT:.2f}, "
+        f"No tuning applied; runtime defaults: lexical_weight={LEXICAL_WEIGHT:.2f}, "
         f"semantic_weight={1 - LEXICAL_WEIGHT:.2f}, "
         f"relevance_score_threshold={RELEVANCE_SCORE_THRESHOLD:.2f}, "
         f"weak_match_min_score={WEAK_MATCH_MIN_SCORE:.2f}"

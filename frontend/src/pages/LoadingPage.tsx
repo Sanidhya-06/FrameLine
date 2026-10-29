@@ -1,211 +1,145 @@
-// ============================================
-// LOADING PAGE (Screen B)
-// ============================================
-
-import { useEffect, useState, useRef } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Globe, ArrowLeft } from 'lucide-react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { ArrowRight, Check, CircleAlert, Globe2, LoaderCircle, Radio, RotateCcw } from 'lucide-react';
+import { getAnalysisJob, startAnalysis } from '../api/client';
 import { useAppStore } from '../store/appStore';
-import CollectionAnimation from '../components/CollectionAnimation';
-import ProgressIndicator from '../components/ProgressIndicator';
-import { LOADING_STAGES } from '../data/mockData';
+import type { AnalyzeJob, FeedStatus, JobStage } from '../types';
 
-const STAGE_DURATIONS = [1000, 1200, 1200, 1000, 900]; // ms per stage
+const STAGE_LABELS: Record<JobStage, string> = {
+  connecting_feeds: 'Connecting to feeds', retrieving_headlines: 'Retrieving headlines',
+  checking_relevance: 'Checking topic relevance', extracting_text: 'Extracting article text',
+  preparing_map: 'Preparing coverage map', done: 'Collection complete', failed: 'Analysis stopped',
+};
+const STAGE_ORDER: JobStage[] = ['connecting_feeds', 'retrieving_headlines', 'checking_relevance', 'extracting_text', 'preparing_map', 'done'];
+
+function CollectionField({ job, reduce }: { job: AnalyzeJob | null; reduce: boolean }) {
+  const feeds = job?.feed_statuses ?? [];
+  const articles = job?.result?.articles ?? [];
+  const items = useMemo(() => {
+    const items = articles.slice(0, 8).map((article, index) => ({
+      key: article.article_id || article.url || `article-${index}`, label: article.publisher,
+      code: article.iso_code || article.source_country || 'SOURCE', title: article.title,
+      detail: article.rss_summary || article.extraction_status,
+      state: 'article' as const,
+    }));
+    if (items.length) return items;
+    return feeds.slice(0, 8).map((feed, index) => ({
+      key: `${feed.url}-${index}`, label: feed.feed, code: feed.status.toUpperCase(),
+      title: feed.status === 'failed' || feed.status === 'timeout' ? 'Feed could not be reached' : 'Headlines retrieved',
+      detail: feed.error_text || `${feed.entry_count} entries · ${Math.round(feed.response_time_ms)} ms`,
+      state: feed.status === 'failed' || feed.status === 'timeout' ? 'failed' as const : 'feed' as const,
+    }));
+  }, [articles, feeds]);
+  const stageIndex = job ? Math.max(0, STAGE_ORDER.indexOf(job.stage)) : 0;
+  const isActive = job?.status === 'running';
+  return <div className="collection-field" aria-hidden="true">
+    <div className="field-grain" />
+    <div className="field-rays" />
+    <motion.div className="collection-core" animate={reduce ? undefined : { scale: [1, 1.035, 1] }} transition={{ duration: 3.8, repeat: Infinity, ease: 'easeInOut' }}>
+      <div className="core-ring core-ring-outer" /><div className="core-ring core-ring-inner" />
+      <div className="core-glyph"><Globe2 size={24} strokeWidth={1.3} /></div>
+      <span>FL / {String(stageIndex + 1).padStart(2, '0')}</span>
+    </motion.div>
+    <div className="field-path path-a" /><div className="field-path path-b" /><div className="field-path path-c" />
+    <AnimatePresence>
+      {items.map((card, index) => {
+        const angle = (Math.PI * 2 * index) / Math.max(items.length, 1) - Math.PI / 2;
+        const radius = items.length < 4 ? 30 : 37;
+        const x = `${50 + Math.cos(angle) * radius}%`; const y = `${49 + Math.sin(angle) * radius}%`;
+        const arrived = job?.stage === 'done';
+        return <motion.article key={card.key} className={`news-window ${card.state === 'failed' ? 'news-window-failed' : ''}`}
+          initial={{ opacity: 0, x: '50vw', y: '30vh', scale: .7 }}
+          animate={{ opacity: arrived ? .55 : isActive ? [.32, .74, .32] : .68, left: x, top: y, scale: 1, y: reduce ? 0 : [0, index % 2 ? 8 : -7, 0], rotate: index % 2 ? 1.2 : -1.2 }}
+          exit={{ opacity: 0, scale: .65 }}
+          transition={{ duration: reduce ? .01 : arrived ? .5 : 4.5 + (index % 3), delay: index * .12, repeat: isActive && !reduce ? Infinity : 0, ease: 'easeInOut' }}>
+          <div className="news-window-top"><span className="news-source"><i />{card.label || 'NEWS FEED'}</span><span>{card.code}</span></div>
+          <h3>{card.title}</h3><p>{card.detail}</p><div className="news-window-data"><i /><i /><i /></div>
+        </motion.article>;
+      })}
+    </AnimatePresence>
+    {job && <div className="field-meta"><span><Radio size={12} /> {job.feeds_completed}/{job.feeds_total} FEEDS</span><span>{job.articles_extracted}/{job.articles_total} ARTICLES</span></div>}
+  </div>;
+}
+
+function FeedFailures({ statuses }: { statuses: FeedStatus[] }) {
+  const failures = statuses.filter((feed) => ['failed', 'timeout'].includes(feed.status));
+  if (!failures.length) return null;
+  return <details className="feed-failures"><summary>{failures.length} feed {failures.length === 1 ? 'connection' : 'connections'} failed</summary><ul>{failures.map((feed) => <li key={feed.url}><strong>{feed.feed}</strong><span>{feed.error_text || feed.status}</span></li>)}</ul></details>;
+}
 
 export default function LoadingPage() {
-  const { query } = useAppStore();
-  const navigate = useNavigate();
-  const [stage, setStage] = useState(0);
-  const [done, setDone] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { query, job, setJob, result, setError } = useAppStore();
+  const navigate = useNavigate(); const reduce = useReducedMotion();
+  const [requestError, setRequestError] = useState<string | null>(null);
+  const [starting, setStarting] = useState(false);
+  const mounted = useRef(true); const startedFor = useRef<string | null>(null);
+  const activeJob = job?.job_id && job.status !== 'finished' && job.status !== 'failed' ? job : null;
 
-  // Announce loading status for screen readers
-  const [announcement, setAnnouncement] = useState('');
+  const begin = useCallback(async () => {
+    if (!query.trim() || starting) return;
+    setStarting(true); setRequestError(null); setError(null);
+    try {
+      const started = await startAnalysis(query);
+      if ('stage' in started) {
+        setJob(started);
+        if (started.result) useAppStore.getState().setResult(started.result);
+        if (started.status === 'finished' && started.result) { navigate('/map', { replace: true }); return; }
+      } else {
+        startedFor.current = started.job_id;
+        setJob({ job_id: started.job_id, status: 'running', stage: 'connecting_feeds', feeds_completed: 0, feeds_total: 0, articles_extracted: 0, articles_total: 0, feed_statuses: [], result: null, error: null });
+      }
+    } catch (err) { setRequestError(err instanceof Error ? err.message : 'Could not start analysis.'); }
+    finally { if (mounted.current) setStarting(false); }
+  }, [query, starting, setError, setJob, navigate]);
+
+  useEffect(() => { mounted.current = true; return () => { mounted.current = false; }; }, []);
+  useEffect(() => {
+    if (!query) return;
+    if (result && job?.status === 'finished' && result.articles.length > 0) { navigate('/map', { replace: true }); return; }
+    if (!job && !requestError) void begin();
+  }, [query, job, result, requestError, begin, navigate]);
 
   useEffect(() => {
-    // If no query (direct URL access), don't start animation
-    if (!query) return;
-
-    let currentStage = 0;
-
-    const advance = () => {
-      currentStage += 1;
-      if (currentStage < LOADING_STAGES.length) {
-        setStage(currentStage);
-        setAnnouncement(LOADING_STAGES[currentStage]);
-        timerRef.current = setTimeout(advance, STAGE_DURATIONS[currentStage] ?? 1000);
-      } else {
-        setDone(true);
-        timerRef.current = setTimeout(() => {
-          navigate('/map', { replace: true });
-        }, 600);
+    const id = activeJob?.job_id; if (!id) return;
+    let cancelled = false; let timer: ReturnType<typeof setTimeout>;
+    const poll = async () => {
+      try {
+        const next = await getAnalysisJob(id);
+        if (cancelled) return;
+        setJob(next);
+        if (next.result) useAppStore.getState().setResult(next.result);
+        if (next.stage === 'done' && next.result) { navigate('/map', { replace: true }); return; }
+        if (next.stage !== 'failed') timer = setTimeout(poll, 800);
+      } catch (err) {
+        if (!cancelled) { setRequestError(err instanceof Error ? err.message : 'Could not retrieve analysis progress.'); }
       }
     };
+    void poll(); return () => { cancelled = true; clearTimeout(timer); };
+  }, [activeJob?.job_id, setJob, navigate]);
 
-    setAnnouncement(LOADING_STAGES[0]);
-    timerRef.current = setTimeout(advance, STAGE_DURATIONS[0]);
+  const stage = job?.stage;
+  const stageLabel = stage ? STAGE_LABELS[stage] : starting ? 'Starting analysis' : 'Waiting to begin';
+  const failed = Boolean(requestError || job?.stage === 'failed');
+  const noResults = Boolean(job?.stage === 'done' && job.result && job.result.articles.length === 0);
+  const retry = () => { startedFor.current = null; setRequestError(null); setJob({ job_id: '', status: 'running', stage: 'connecting_feeds', feeds_completed: 0, feeds_total: 0, articles_extracted: 0, articles_total: 0, feed_statuses: [], result: null, error: null }); void begin(); };
 
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current);
-    };
-  }, [query, navigate]);
+  if (!query) return <main className="loading-empty"><Globe2 /><h1>No topic to collect</h1><p>Start with a story so we can retrieve its coverage.</p><Link className="action-secondary" to="/">Back to search</Link></main>;
 
-  // Handle missing query
-  if (!query) {
-    return (
-      <div style={{
-        minHeight: '100vh',
-        background: 'var(--color-bg-main)',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: '20px',
-        padding: '24px',
-      }}>
-        <Globe size={40} color="#36D7F5" />
-        <h2 style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontSize: '1.3rem',
-          fontWeight: 600,
-          color: '#EAF4FF',
-        }}>
-          No search query found
-        </h2>
-        <p style={{ color: '#8CA3B8', textAlign: 'center', maxWidth: '360px', lineHeight: 1.6 }}>
-          Please start from the home page and enter a topic to analyse.
-        </p>
-        <Link to="/" className="btn-primary">
-          <ArrowLeft size={15} />
-          Back to Search
-        </Link>
-      </div>
-    );
-  }
-
-  return (
-    <div style={{
-      minHeight: '100vh',
-      background: 'var(--color-bg-main)',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
-      {/* Grid overlay */}
-      <div className="grid-overlay" />
-      <div className="ambient-orb ambient-orb-1" />
-      <div className="ambient-orb ambient-orb-2" />
-      <div className="scan-line" aria-hidden="true" />
-
-      {/* Screen reader announcement */}
-      <div
-        role="status"
-        aria-live="polite"
-        aria-atomic="true"
-        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}
-      >
-        {announcement}
-      </div>
-
-      {/* Collection animation canvas (full screen) */}
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        zIndex: 0,
-      }}>
-        <CollectionAnimation stage={stage} />
-      </div>
-
-      {/* Bottom HUD */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          zIndex: 10,
-          padding: '24px',
-          background: 'linear-gradient(to top, rgba(5, 11, 20, 0.95) 0%, rgba(5, 11, 20, 0.5) 60%, transparent 100%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '16px',
-        }}
-      >
-        {/* Query display */}
-        <div style={{
-          background: 'rgba(14, 28, 45, 0.8)',
-          border: '1px solid rgba(54, 215, 245, 0.2)',
-          borderRadius: '10px',
-          padding: '10px 20px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-          backdropFilter: 'blur(12px)',
-          maxWidth: '600px',
-          width: '100%',
-        }}>
-          <Globe size={14} color="#36D7F5" />
-          <span style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.62rem', color: '#4A6174', letterSpacing: '0.08em', textTransform: 'uppercase', flexShrink: 0 }}>
-            Analysing:
-          </span>
-          <span style={{ color: '#EAF4FF', fontSize: '0.85rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            {query}
-          </span>
-        </div>
-
-        {/* Progress indicator */}
-        <div style={{ maxWidth: '480px', width: '100%' }}>
-          <ProgressIndicator
-            stage={stage}
-            stageLabel={done ? 'Complete — loading map…' : LOADING_STAGES[stage]}
-          />
-        </div>
-      </motion.div>
-
-      {/* Top branding */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        style={{
-          position: 'fixed',
-          top: '24px',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          zIndex: 10,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-        }}
-      >
-        <div style={{
-          width: '28px',
-          height: '28px',
-          background: 'linear-gradient(135deg, #36D7F5, #368BFF)',
-          borderRadius: '7px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <Globe size={14} color="#050B14" strokeWidth={2.5} />
-        </div>
-        <span style={{
-          fontFamily: 'Space Grotesk, sans-serif',
-          fontWeight: 700,
-          fontSize: '1rem',
-          color: '#EAF4FF',
-        }}>
-          Frame<span style={{ color: '#36D7F5' }}>Line</span>
-        </span>
-        <div className="status-badge">
-          <div className="dot" />
-          Collecting
-        </div>
-      </motion.div>
-    </div>
-  );
+  return <main className="loading-shell">
+    <CollectionField job={job} reduce={Boolean(reduce)} />
+    <header className="loading-topbar"><Link to="/" className="wordmark"><span className="wordmark-icon"><Globe2 size={16} /></span><span>FRAME<span className="cyan">LINE</span></span></Link><span className="collection-tag"><span className={failed ? 'status-dot status-dot-error' : 'status-dot'} />{failed ? 'ATTENTION' : stage === 'done' ? 'COLLECTION READY' : 'LIVE COLLECTION'}</span></header>
+    <section className="collection-console" aria-live="polite">
+      <div className="collection-eyebrow"><span>FIELD 02</span><i /> SOURCE COLLECTION</div>
+      <h1>{failed ? 'The connection broke.' : noResults ? 'No matching headlines found.' : 'Gathering the world’s coverage.'}</h1>
+      <p className="collection-query"><span>QUERY</span> “{query}”</p>
+      <div className={`stage-status ${failed ? 'stage-error' : ''}`}><span className="stage-icon">{failed ? <CircleAlert size={16} /> : stage === 'done' ? <Check size={16} /> : <LoaderCircle size={16} className={reduce ? '' : 'spin'} />}</span><div><strong>{failed ? 'Analysis could not be completed' : stageLabel}</strong><small>{job ? `${job.feeds_completed} of ${job.feeds_total} feeds · ${job.articles_extracted} of ${job.articles_total} articles` : 'Connecting to the configured news feeds'}</small></div></div>
+      <FeedFailures statuses={job?.feed_statuses ?? []} />
+      {(failed || noResults) && <div className="collection-actions"><button className="action-primary" onClick={retry}><RotateCcw size={15} /> Try again</button><Link className="action-secondary" to="/" onClick={() => setError(null)}>New search <ArrowRight size={15} /></Link></div>}
+      {noResults && <p className="result-note">{job?.result?.explanation || 'The current feeds did not return relevant headlines for this topic.'}</p>}
+      {requestError && <p className="request-error" role="alert">{requestError}</p>}
+      {job?.stage === 'done' && !noResults && <p className="ready-note">Coverage collected. Opening the map…</p>}
+    </section>
+    <footer className="loading-footer"><span>FRAMELINE / SOURCE MONITOR</span><span>{job?.result?.cached ? 'CACHED RESULT' : stage === 'done' ? 'FEED WINDOW COMPLETE' : 'PROGRESS FROM LIVE JOB'}</span></footer>
+  </main>;
 }

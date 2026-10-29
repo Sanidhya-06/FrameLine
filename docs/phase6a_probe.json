@@ -1,0 +1,332 @@
+[
+  {
+    "publisher": "Deutsche Welle",
+    "url": "https://rss.dw.com/rdf/rss-en-all",
+    "status1": 200,
+    "time1": 0.85,
+    "status2": 200,
+    "time2": 0.64,
+    "entries1": 126,
+    "entries2": 126
+  },
+  {
+    "publisher": "France 24",
+    "url": "https://www.france24.com/en/rss",
+    "status1": 200,
+    "time1": 0.84,
+    "status2": 200,
+    "time2": 0.75,
+    "entries1": 24,
+    "entries2": 24
+  },
+  {
+    "publisher": "RFI",
+    "url": "https://www.rfi.fr/en/rss",
+    "status1": 200,
+    "time1": 1.19,
+    "status2": 200,
+    "time2": 0.55,
+    "entries1": 22,
+    "entries2": 22
+  },
+  {
+    "publisher": "Euronews",
+    "url": "https://www.euronews.com/rss",
+    "status1": 200,
+    "time1": 1.66,
+    "status2": 200,
+    "time2": 0.84,
+    "entries1": 50,
+    "entries2": 50
+  },
+  {
+    "publisher": "NHK World",
+    "url": "https://www3.nhk.or.jp/rssxml/news/globalnewsroom.xml",
+    "status1": 404,
+    "time1": 0.94,
+    "status2": 404,
+    "time2": 1.05,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "The Japan Times",
+    "url": "https://www.japantimes.co.jp/feed/",
+    "status1": 200,
+    "time1": 1.07,
+    "status2": 200,
+    "time2": 2.44,
+    "entries1": 30,
+    "entries2": 30
+  },
+  {
+    "publisher": "Asahi Shimbun",
+    "url": "https://www.asahi.com/ajw/rss/",
+    "status1": 404,
+    "time1": 1.16,
+    "status2": 404,
+    "time2": 1.0,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "Daily Sabah",
+    "url": "https://www.dailysabah.com/rssFeed/world",
+    "status1": 200,
+    "time1": 1.17,
+    "status2": 200,
+    "time2": 0.93,
+    "entries1": 46,
+    "entries2": 46
+  },
+  {
+    "publisher": "Arab News",
+    "url": "https://www.arabnews.com/rss.xml",
+    "status1": 403,
+    "time1": 0.58,
+    "status2": 403,
+    "time2": 0.5,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "The National",
+    "url": "https://www.thenationalnews.com/arc/outboundfeeds/rss/",
+    "status1": 404,
+    "time1": 1.13,
+    "status2": 404,
+    "time2": 1.02,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "Anadolu Agency",
+    "url": "https://www.aa.com.tr/en/rss/default?cat=world",
+    "status1": 200,
+    "time1": 2.99,
+    "status2": 200,
+    "time2": 1.66,
+    "entries1": 30,
+    "entries2": 30
+  },
+  {
+    "publisher": "TRT World",
+    "url": "https://www.trtworld.com/rss",
+    "status1": 404,
+    "time1": 1.29,
+    "status2": 404,
+    "time2": 0.59,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "Daily Maverick",
+    "url": "https://www.dailymaverick.co.za/dmrss/",
+    "status1": 200,
+    "time1": 0.59,
+    "status2": 200,
+    "time2": 0.54,
+    "entries1": 50,
+    "entries2": 50
+  },
+  {
+    "publisher": "Premium Times",
+    "url": "https://www.premiumtimesng.com/feed",
+    "status1": 200,
+    "time1": 2.1,
+    "status2": 200,
+    "time2": 1.67,
+    "entries1": 15,
+    "entries2": 15
+  },
+  {
+    "publisher": "Africanews",
+    "url": "https://www.africanews.com/feed/rss",
+    "status1": 200,
+    "time1": 14.37,
+    "status2": 200,
+    "time2": 3.31,
+    "entries1": 50,
+    "entries2": 50
+  },
+  {
+    "publisher": "ABC Australia",
+    "url": "https://www.abc.net.au/news/feed/45910/rss.xml",
+    "status1": 200,
+    "time1": 0.62,
+    "status2": 200,
+    "time2": 0.79,
+    "entries1": 25,
+    "entries2": 25
+  },
+  {
+    "publisher": "CBC",
+    "url": "https://www.cbc.ca/webfeed/rss/rss-world",
+    "status1": "ReadTimeout",
+    "time1": 15,
+    "status2": "ReadTimeout",
+    "time2": 15,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "SBS News",
+    "url": "https://www.sbs.com.au/news/feed",
+    "status1": 200,
+    "time1": 0.99,
+    "status2": 200,
+    "time2": 1.88,
+    "entries1": 25,
+    "entries2": 25
+  },
+  {
+    "publisher": "RNZ",
+    "url": "https://www.rnz.co.nz/rss/news.xml",
+    "status1": 200,
+    "time1": 1.81,
+    "status2": 200,
+    "time2": 1.57,
+    "entries1": 55,
+    "entries2": 55
+  },
+  {
+    "publisher": "Korea Herald",
+    "url": "https://www.koreaherald.com/rss/",
+    "status1": 200,
+    "time1": 2.0,
+    "status2": 200,
+    "time2": 4.72,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "CNA",
+    "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+    "status1": 200,
+    "time1": 0.58,
+    "status2": 200,
+    "time2": 0.54,
+    "entries1": 20,
+    "entries2": 20
+  },
+  {
+    "publisher": "RTÉ",
+    "url": "https://www.rte.ie/feeds/rss/?index=/news/",
+    "status1": 200,
+    "time1": 0.56,
+    "status2": 200,
+    "time2": 0.69,
+    "entries1": 60,
+    "entries2": 60
+  },
+  {
+    "publisher": "Agência Brasil",
+    "url": "https://agenciabrasil.ebc.com.br/en/rss/ultimasnoticias/feed.xml",
+    "status1": 200,
+    "time1": 3.09,
+    "status2": 200,
+    "time2": 3.99,
+    "entries1": 10,
+    "entries2": 10
+  },
+  {
+    "publisher": "tagesschau",
+    "url": "https://www.tagesschau.de/index~rss2.xml",
+    "status1": 200,
+    "time1": 1.54,
+    "status2": 200,
+    "time2": 2.07,
+    "entries1": 69,
+    "entries2": 69
+  },
+  {
+    "publisher": "ZEIT Online",
+    "url": "https://newsfeed.zeit.de/all",
+    "status1": 200,
+    "time1": 0.68,
+    "status2": 200,
+    "time2": 0.52,
+    "entries1": 15,
+    "entries2": 15
+  },
+  {
+    "publisher": "Le Monde",
+    "url": "https://www.lemonde.fr/international/rss_full.xml",
+    "status1": "ReadTimeout",
+    "time1": 15,
+    "status2": 200,
+    "time2": 1.65,
+    "entries1": 0,
+    "entries2": 20
+  },
+  {
+    "publisher": "franceinfo",
+    "url": "https://www.francetvinfo.fr/monde.rss",
+    "status1": 200,
+    "time1": 2.02,
+    "status2": 200,
+    "time2": 1.43,
+    "entries1": 20,
+    "entries2": 20
+  },
+  {
+    "publisher": "El País",
+    "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada",
+    "status1": 200,
+    "time1": 1.86,
+    "status2": 200,
+    "time2": 1.62,
+    "entries1": 24,
+    "entries2": 24
+  },
+  {
+    "publisher": "ANSA",
+    "url": "https://www.ansa.it/sito/notizie/mondo/mondo_rss.xml",
+    "status1": 200,
+    "time1": 1.39,
+    "status2": 200,
+    "time2": 0.85,
+    "entries1": 48,
+    "entries2": 48
+  },
+  {
+    "publisher": "Folha de S.Paulo",
+    "url": "https://feeds.folha.uol.com.br/emcimadahora/rss091.xml",
+    "status1": 200,
+    "time1": 4.03,
+    "status2": 200,
+    "time2": 4.08,
+    "entries1": 100,
+    "entries2": 100
+  },
+  {
+    "publisher": "El Universal",
+    "url": "https://www.eluniversal.com.mx/rss.xml",
+    "status1": 404,
+    "time1": 1.23,
+    "status2": 404,
+    "time2": 2.91,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "Al Arabiya",
+    "url": "https://www.alarabiya.net/tools/rss",
+    "status1": 403,
+    "time1": 0.58,
+    "status2": 403,
+    "time2": 1.05,
+    "entries1": 0,
+    "entries2": 0
+  },
+  {
+    "publisher": "Amar Ujala",
+    "url": "https://www.amarujala.com/rss/india-news.xml",
+    "status1": 200,
+    "time1": 0.52,
+    "status2": 200,
+    "time2": 0.54,
+    "entries1": 40,
+    "entries2": 40
+  }
+]

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Nachrichten: DIE ZEIT Newsfeed</title>
+    <link>https://www.zeit.de/index</link>
+    <description></description>
+    <language>de-de</language>
+    <copyright>Copyright © 2026, Zeitverlag Gerd Bucerius GmbH &amp; Co. KG</copyright>
+    <atom:link href="https://newsfeed.zeit.de/all" rel="self" type="application/rss+xml"/>
+    <docs>https://www.zeit.de/hilfe/rss</docs>
+    <generator>zeit.web 4.622</generator>
+    <managingEditor>online-cr@zeit.de (Chefredaktion DIE ZEIT)</managingEditor>
+    <webMaster>webmaster@zeit.de (Technik DIE ZEIT)</webMaster>
+    <image>
+      <url>https://static.zeit.de/p/zeit.web/icons/rss-feed-icon-96x96.png</url>
+      <title>Nachrichten: DIE ZEIT Newsfeed</title>
+      <link>https://www.zeit.de/index</link>
+    </image>
+    <item>
+      <title>»Was jetzt? – Die Woche«: Scheitert Integration im Klassenzimmer?</title>
+      <link>https://www.zeit.de/politik/2026-10/pisa-studie-migration-integration-an-schulen-was-jetzt-videopodcast</link>
+      <description>Im Unterricht werden Kinder mit Einwanderungsgeschichte zunehmend abgehängt. Wie Integration in der Schule gelingt, in »Was jetzt? – Die Woche«.</description>
+      <enclosure url="https://img.zeit.de/politik/2026-10/pisa-studie-migration-integration-an-schulen-was-jetzt-videopodcast-bild/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Politik</category>
+      <dc:creator>DIE ZEIT: Politik - Kaja Klapsa, Matthias Giordano, Julia Brötz, Martin Spiewak</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 17:25:51 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:bcc8c615-03f4-460f-a06b-48eed832b4ba}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/2026-10/pisa-studie-migration-integration-an-schulen-was-jetzt-videopodcast"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/2026-10/pisa-studie-migration-integration-an-schulen-was-jetzt-videopodcast-bild/wide__148x84"></a> Im Unterricht werden Kinder mit Einwanderungsgeschichte zunehmend abgehängt. Wie Integration in der Schule gelingt, in »Was jetzt? – Die Woche«.]]></content:encoded>
+    </item>
+    <item>
+      <title>Künstliche Intelligenz: Schwarz-Gruppe investiert in kanadisches KI-Unternehmen Cohere</title>
+      <link>https://www.zeit.de/wirtschaft/2026-10/cohere-ki-finanzierung-schwarz-gruppe-nvidia</link>
+      <description>Rund 4,7 Milliarden Euro hat das KI-Start-up Cohere in seiner bislang größten Finanzierungsrunde gesammelt. Angeführt wird diese von der deutschen Schwarz-Gruppe.</description>
+      <enclosure url="https://img.zeit.de/wirtschaft/2026-10/cohere-ki-finanzierung-schwarz-gruppe-nvidia-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Wirtschaft</category>
+      <dc:creator>DIE ZEIT: Wirtschaft - Eric Voigt</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 17:22:03 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:af375feb-00f3-48e2-b13b-ebb90bdef439}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/wirtschaft/2026-10/cohere-ki-finanzierung-schwarz-gruppe-nvidia"><img style="float:left; margin-right:5px" src="https://img.zeit.de/wirtschaft/2026-10/cohere-ki-finanzierung-schwarz-gruppe-nvidia-foto-1/wide__148x84"></a> Rund 4,7 Milliarden Euro hat das KI-Start-up Cohere in seiner bislang größten Finanzierungsrunde gesammelt. Angeführt wird diese von der deutschen Schwarz-Gruppe.]]></content:encoded>
+    </item>
+    <item>
+      <title>AfD Niedersachsen: AfD-Beschwerde gegen Hochstufung durch Verfassungsschutz abgewiesen</title>
+      <link>https://www.zeit.de/politik/deutschland/2026-10/afd-niedersachsen-verfassungsschutz-ovg-beobachtung-rechtsextremismus</link>
+      <description>Der Verfassungsschutz Niedersachsen führt die dortige AfD auf der höchsten Beobachtungsstufe. Eine Beschwerde des Landesverbands wird auch in zweiter Instanz abgewiesen.</description>
+      <enclosure url="https://img.zeit.de/politik/deutschland/2026-10/afd-niedersachsen-verfassungsschutz-ovg-beobachtung-rechtsextremismus-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Deutschland</category>
+      <dc:creator>DIE ZEIT: Deutschland - Bernard  Darko</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 17:16:18 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:2471df76-3e51-447d-a3fc-2d4441be60f4}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/deutschland/2026-10/afd-niedersachsen-verfassungsschutz-ovg-beobachtung-rechtsextremismus"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/deutschland/2026-10/afd-niedersachsen-verfassungsschutz-ovg-beobachtung-rechtsextremismus-foto-1/wide__148x84"></a> Der Verfassungsschutz Niedersachsen führt die dortige AfD auf der höchsten Beobachtungsstufe. Eine Beschwerde des Landesverbands wird auch in zweiter Instanz abgewiesen.]]></content:encoded>
+    </item>
+    <item>
+      <title>Anthropic: Kauft unsere Aktien, werdet Teil von etwas Größerem</title>
+      <link>https://www.zeit.de/digital/2026-10/anthropic-boersengang-aktie-newsletter-kuenstliche-intelligenz</link>
+      <description>Anthropic plant den Gang an die Börse. Microsoft will Zehntausende Mitarbeiter loswerden. Und: Ein Lifehack für Tippfaule. Der KI-Newsletter</description>
+      <enclosure url="https://img.zeit.de/digital/2026-10/ki-newsletter-anthropic-2/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Digital</category>
+      <dc:creator>DIE ZEIT: Digital - David Will</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 16:44:38 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:18ad12b3-83b2-4155-8503-cbdde990642e}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/digital/2026-10/anthropic-boersengang-aktie-newsletter-kuenstliche-intelligenz"><img style="float:left; margin-right:5px" src="https://img.zeit.de/digital/2026-10/ki-newsletter-anthropic-2/wide__148x84"></a> Anthropic plant den Gang an die Börse. Microsoft will Zehntausende Mitarbeiter loswerden. Und: Ein Lifehack für Tippfaule. Der KI-Newsletter]]></content:encoded>
+    </item>
+    <item>
+      <title>Proteste von Generation Z: Neubauer warnt vor »Hyperventilierung« in Protest-Debatte</title>
+      <link>https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/gen-z-regelt-luisa-neubauer-proteste-generationenvertrag-verfassungsschutz</link>
+      <description>Mit Blick auf den Protesttag der Generation Z hat Luisa Neubauer mehr Verständnis für die Anliegen junger Menschen gefordert. Sie hätten immer größere Lasten zu tragen.</description>
+      <enclosure url="https://img.zeit.de/gesellschaft/zeitgeschehen/2026-10/gen-z-regelt-luisa-neubauer-proteste-generationenvertrag-verfassungsschutz-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Zeitgeschehen</category>
+      <dc:creator>DIE ZEIT: Zeitgeschehen - </dc:creator>
+      <pubDate>Thu, 29 Oct 2026 16:32:48 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:8892d136-9fcd-45d3-aaa6-98cbeee7e4b1}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/gen-z-regelt-luisa-neubauer-proteste-generationenvertrag-verfassungsschutz"><img style="float:left; margin-right:5px" src="https://img.zeit.de/gesellschaft/zeitgeschehen/2026-10/gen-z-regelt-luisa-neubauer-proteste-generationenvertrag-verfassungsschutz-foto-1/wide__148x84"></a> Mit Blick auf den Protesttag der Generation Z hat Luisa Neubauer mehr Verständnis für die Anliegen junger Menschen gefordert. Sie hätten immer größere Lasten zu tragen.]]></content:encoded>
+    </item>
+    <item>
+      <title>Gasspeicher in Deutschland: Zielfüllstände deutscher Gasspeicher dürften deutlich verfehlt werden</title>
+      <link>https://www.zeit.de/wirtschaft/2026-10/gasspeicher-deutschland-fuellstand-gesetzliche-vorgabe-bundesnetzagentur</link>
+      <description>Bis 1. November müssen die meisten Gasspeicher einen Mindestfüllstand von 80 Prozent erreichen. Einige werden dieses Ziel verfehlen. Die Versorgung ist dennoch gesichert.</description>
+      <enclosure url="https://img.zeit.de/wirtschaft/2026-10/gasspeicher-deutschland-fuellstand-gesetzliche-vorgabe-bundesnetzagentur-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Wirtschaft</category>
+      <dc:creator>DIE ZEIT: Wirtschaft - Eric Voigt</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 16:21:47 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:c7623876-18c6-4ca5-8aaf-94ea584d64e1}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/wirtschaft/2026-10/gasspeicher-deutschland-fuellstand-gesetzliche-vorgabe-bundesnetzagentur"><img style="float:left; margin-right:5px" src="https://img.zeit.de/wirtschaft/2026-10/gasspeicher-deutschland-fuellstand-gesetzliche-vorgabe-bundesnetzagentur-foto-1/wide__148x84"></a> Bis 1. November müssen die meisten Gasspeicher einen Mindestfüllstand von 80 Prozent erreichen. Einige werden dieses Ziel verfehlen. Die Versorgung ist dennoch gesichert.]]></content:encoded>
+    </item>
+    <item>
+      <title>EU-Kanada-Gipfel: EU-Kanada-Gipfel: Vertane Chance in Montreal?</title>
+      <link>https://www.zeit.de/politik/2026-10/eu-kanada-gipfel-zusammenarbeit-nachrichtenpodcast</link>
+      <description>Die EU und Kanada wollen die Zusammenarbeit vertiefen. Welche Rolle spielt dabei das Verhältnis zu den USA? Und: Elif Eralps Angst vor radikalen Aktivisten.</description>
+      <enclosure url="https://img.zeit.de/politik/ausland/2026-10/eu-kanada/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Politik</category>
+      <dc:creator>DIE ZEIT: Politik - Imre Balzer</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 16:03:39 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:33ff8202-7129-41e5-94cb-63bac50548ac}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/2026-10/eu-kanada-gipfel-zusammenarbeit-nachrichtenpodcast"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/ausland/2026-10/eu-kanada/wide__148x84"></a> Die EU und Kanada wollen die Zusammenarbeit vertiefen. Welche Rolle spielt dabei das Verhältnis zu den USA? Und: Elif Eralps Angst vor radikalen Aktivisten.]]></content:encoded>
+    </item>
+    <item>
+      <title>Weltkunstausstellung: Documenta 16 stellt erweitertes Kuratorenteam vor</title>
+      <link>https://www.zeit.de/feuilleton/kunst/2026-10/documenta-16-kuratorisches-team-raven-chacon-osei-bonsu-noam-segal-timea-junghaus</link>
+      <description>Verstärkung von der Tate Modern und dem Guggenheim-Museum: Vier weitere Fachleute ergänzen das Kuratorenteam der Documenta 16. Im Juni 2027 geht es los.</description>
+      <enclosure url="https://img.zeit.de/feuilleton/kunst/2026-10/documenta-16-kuratorisches-team-raven-chacon-osei-bonsu-noam-segal-timea-junghaus-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Kunst</category>
+      <dc:creator>DIE ZEIT: Kunst - Lena Gärtner</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:54:52 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:3b8fdb49-25f7-439a-8650-185f4425f83f}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/feuilleton/kunst/2026-10/documenta-16-kuratorisches-team-raven-chacon-osei-bonsu-noam-segal-timea-junghaus"><img style="float:left; margin-right:5px" src="https://img.zeit.de/feuilleton/kunst/2026-10/documenta-16-kuratorisches-team-raven-chacon-osei-bonsu-noam-segal-timea-junghaus-foto-1/wide__148x84"></a> Verstärkung von der Tate Modern und dem Guggenheim-Museum: Vier weitere Fachleute ergänzen das Kuratorenteam der Documenta 16. Im Juni 2027 geht es los.]]></content:encoded>
+    </item>
+    <item>
+      <title>EZB-Präsidentin: Christine Lagarde hört vorzeitig als EZB-Präsidentin auf</title>
+      <link>https://www.zeit.de/wirtschaft/2026-10/christine-lagarde-hoert-vorzeitig-als-ezb-praesidentin-auf</link>
+      <description>Die Präsidentin der Europäischen Zentralbank wird ihre Amtszeit vorzeitig beenden. Seit Monaten war über ihren Rücktritt spekuliert worden.</description>
+      <enclosure url="https://img.zeit.de/wirtschaft/2026-10/christine-lagarde-bild-2/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Wirtschaft</category>
+      <dc:creator>DIE ZEIT: Wirtschaft - Pia Packmohr</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:44:26 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:ea8b8006-2d1f-4fbb-9225-4ce896c53ae0}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/wirtschaft/2026-10/christine-lagarde-hoert-vorzeitig-als-ezb-praesidentin-auf"><img style="float:left; margin-right:5px" src="https://img.zeit.de/wirtschaft/2026-10/christine-lagarde-bild-2/wide__148x84"></a> Die Präsidentin der Europäischen Zentralbank wird ihre Amtszeit vorzeitig beenden. Seit Monaten war über ihren Rücktritt spekuliert worden.]]></content:encoded>
+    </item>
+    <item>
+      <title>Drohnenangriff auf Handelsschiff: Bulgarien meldet Untergang von Handelsschiff nach Drohnenangriff</title>
+      <link>https://www.zeit.de/politik/deutschland/2026-10/drohnenangriff-handelsschiff-rotes-meer-jemen</link>
+      <description>Erneut ist ein Schiff nach einem Drohnenangriff im Schwarzen Meer untergegangen. Bulgarien nennt keinen Schuldigen, Bürger protestieren vor Russlands Botschaft in Sofia.</description>
+      <enclosure url="https://img.zeit.de/politik/deutschland/2026-10/drohnenangriff-handelsschiff-rotes-meer-jemen-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Deutschland</category>
+      <dc:creator>DIE ZEIT: Deutschland - Bernard  Darko</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:36:52 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:5d4b20ec-4b5d-43c5-b725-7a34c03174e9}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/deutschland/2026-10/drohnenangriff-handelsschiff-rotes-meer-jemen"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/deutschland/2026-10/drohnenangriff-handelsschiff-rotes-meer-jemen-foto-1/wide__148x84"></a> Erneut ist ein Schiff nach einem Drohnenangriff im Schwarzen Meer untergegangen. Bulgarien nennt keinen Schuldigen, Bürger protestieren vor Russlands Botschaft in Sofia.]]></content:encoded>
+    </item>
+    <item>
+      <title>Parlamentswahl in Serbien: Serbische Studentenliste fordert nach Wahlsieg baldige Machtübergabe</title>
+      <link>https://www.zeit.de/politik/ausland/2026-10/serbien-studentenbewegung-wahl-machtuebergabe-aleksandar-vucic</link>
+      <description>Nach dem Sieg bei der Parlamentswahl in Serbien verlangt das Studentenbündnis die offizielle Anerkennung des Ergebnisses. Zudem fordert es Rücktritte in Institutionen.</description>
+      <enclosure url="https://img.zeit.de/politik/ausland/2026-10/serbien-studentenbewegung-wahl-machtuebergabe-aleksandar-vucic-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Ausland</category>
+      <dc:creator>DIE ZEIT: Ausland - Yannick von Eisenhart Rothe</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:34:41 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:2f876fc7-1c9a-4684-9500-4a65ea24edeb}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/ausland/2026-10/serbien-studentenbewegung-wahl-machtuebergabe-aleksandar-vucic"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/ausland/2026-10/serbien-studentenbewegung-wahl-machtuebergabe-aleksandar-vucic-foto-1/wide__148x84"></a> Nach dem Sieg bei der Parlamentswahl in Serbien verlangt das Studentenbündnis die offizielle Anerkennung des Ergebnisses. Zudem fordert es Rücktritte in Institutionen.]]></content:encoded>
+    </item>
+    <item>
+      <title>Kathleen Kennedy: Ehemalige Lucasfilm-Chefin wird Olympiazeremonien 2028 produzieren</title>
+      <link>https://www.zeit.de/sport/2026-10/kathleen-kennedy-la28-olympische-spiele-2028-los-angeles</link>
+      <description>Kathleen Kennedy produzierte für Lucasfilm große Hollywood-Produktionen. 2028 soll sie die Zeremonien für die Olympischen und Paralympischen Spiele inszenieren.</description>
+      <enclosure url="https://img.zeit.de/sport/2026-10/kathleen-kennedy-la28-olympische-spiele-2028-los-angeles-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Sport</category>
+      <dc:creator>DIE ZEIT: Sport - </dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:16:20 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:c4b8f4f0-fa97-48c7-addd-14fe3e9e8a48}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/sport/2026-10/kathleen-kennedy-la28-olympische-spiele-2028-los-angeles"><img style="float:left; margin-right:5px" src="https://img.zeit.de/sport/2026-10/kathleen-kennedy-la28-olympische-spiele-2028-los-angeles-foto-1/wide__148x84"></a> Kathleen Kennedy produzierte für Lucasfilm große Hollywood-Produktionen. 2028 soll sie die Zeremonien für die Olympischen und Paralympischen Spiele inszenieren.]]></content:encoded>
+    </item>
+    <item>
+      <title>Sabotagevorwürfe in Litauen: Mutmaßliche Starlink-Saboteure in Deutschland in U-Haft</title>
+      <link>https://www.zeit.de/politik/ausland/2026-10/litauen-starlink-sabotage-brandanschlag-vilnius-gxe</link>
+      <description>Saboteure sollen in Litauen Starlink-Anlagen in Brand gesetzt haben. Sie sitzen in Deutschland in Untersuchungshaft. Auch Starlink-Antennen in Bulgarien brannten.</description>
+      <enclosure url="https://img.zeit.de/politik/ausland/2026-10/litauen-starlink-sabotage-brandanschlag-vilnius-gxe-foto-1/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Ausland</category>
+      <dc:creator>DIE ZEIT: Ausland - Bernard  Darko</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:12:02 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:cd2381e2-990b-4b2b-984d-6f4df9ecca2d}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/politik/ausland/2026-10/litauen-starlink-sabotage-brandanschlag-vilnius-gxe"><img style="float:left; margin-right:5px" src="https://img.zeit.de/politik/ausland/2026-10/litauen-starlink-sabotage-brandanschlag-vilnius-gxe-foto-1/wide__148x84"></a> Saboteure sollen in Litauen Starlink-Anlagen in Brand gesetzt haben. Sie sitzen in Deutschland in Untersuchungshaft. Auch Starlink-Antennen in Bulgarien brannten.]]></content:encoded>
+    </item>
+    <item>
+      <title>Tod von Elke Sommer: Markus Söder und Wolfgang Weimer würdigen Schauspielerin Elke Sommer</title>
+      <link>https://www.zeit.de/feuilleton/film/2026-10/elke-sommer-tot-schauspielerin-hollywood-bel-air</link>
+      <description>Elke Sommer sei eine »Botschafterin des deutschen Films in Hollywood« gewesen, schreibt der Kulturstaatsminister. Der CSU-Chef nennt sie eine »wahre Schauspiel-Ikone«.</description>
+      <enclosure url="https://img.zeit.de/gesellschaft/2026-10/elke-sommer-bild/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Film</category>
+      <dc:creator>DIE ZEIT: Film - Eric Voigt</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:05:37 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:17655851-5212-4ffa-9019-03a5f948e292}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/feuilleton/film/2026-10/elke-sommer-tot-schauspielerin-hollywood-bel-air"><img style="float:left; margin-right:5px" src="https://img.zeit.de/gesellschaft/2026-10/elke-sommer-bild/wide__148x84"></a> Elke Sommer sei eine »Botschafterin des deutschen Films in Hollywood« gewesen, schreibt der Kulturstaatsminister. Der CSU-Chef nennt sie eine »wahre Schauspiel-Ikone«.]]></content:encoded>
+    </item>
+    <item>
+      <title>Ebola-Ausbruch: Lässt sich das Virus noch einfangen?</title>
+      <link>https://www.zeit.de/gesundheit/2026-10/ebola-ausbruch-dr-kongo-afrika-impfstoff</link>
+      <description>Der Ebola-Ausbruch breitet sich in der Demokratischen Republik Kongo immer weiter aus. Es könnte der größte jemals werden. Impfstoffe sollen nun die Wende bringen.</description>
+      <enclosure url="https://img.zeit.de/gesundheit/2026-10/ebola-ausbruch-dr-kongo-afrika-impfstoff-bild-3/original__640x360" length="20480" type="image/jpeg"/>
+      <category>Gesundheit</category>
+      <dc:creator>DIE ZEIT: Gesundheit - Anna Carthaus, Jakob Simmank</dc:creator>
+      <pubDate>Thu, 29 Oct 2026 15:01:32 -0000</pubDate>
+      <guid isPermaLink="false">{urn:uuid:7eb7e250-219e-40c9-a63d-f77906b7a42b}</guid>
+      <content:encoded><![CDATA[<a href="https://www.zeit.de/gesundheit/2026-10/ebola-ausbruch-dr-kongo-afrika-impfstoff"><img style="float:left; margin-right:5px" src="https://img.zeit.de/gesundheit/2026-10/ebola-ausbruch-dr-kongo-afrika-impfstoff-bild-3/wide__148x84"></a> Der Ebola-Ausbruch breitet sich in der Demokratischen Republik Kongo immer weiter aus. Es könnte der größte jemals werden. Impfstoffe sollen nun die Wende bringen.]]></content:encoded>
+    </item>
+  </channel>
+</rss>

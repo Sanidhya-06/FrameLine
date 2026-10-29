@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:media="http://search.yahoo.com/mrss/"
+        xmlns:jto="http://www.japantimes.co.jp/rss/1.0/jto">
+        
+    <channel>
+        <title>Latest articles - The Japan Times</title>
+	<link>https://www.japantimes.co.jp/</link>
+	<atom:link href="https://www.japantimes.co.jp/feed/" rel="self" type="application/rss+xml" />
+	<description>News on Japan, Business News, Opinion, Sports, Entertainment and More</description>
+	<category>Newspaper</category>
+	<language>en-US</language>
+	<sy:updatePeriod>hourly</sy:updatePeriod>
+	<sy:updateFrequency>1</sy:updateFrequency>
+	<pubDate>Fri, 30 Oct 2026 02:56:32 +0900</pubDate>
+	<lastBuildDate>Fri, 30 Oct 2026 02:56:32 +0900</lastBuildDate>
+	<managingEditor>webmaster@japantimes.co.jp (Web Master)</managingEditor>
+        
+        <item>
+            <title><![CDATA[ ‘Horrific’ Russian drone strike kills 14 at Ukraine train station ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/world/ukraine-dnipro-train-strike/</link>
+            <category>WORLD</category>
+            <pubDate>Thu, 29 Oct 2026 21:06:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ AFP-Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Ukraine, Russia, Russia-Ukraine war, U.S., Dnipro, Volodymyr Zelenskyy, WAR CRIMES ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648431/</guid>
+            <description><![CDATA[Images released by Ukrainian emergency services showed bodies on the platform and rescuers helping victims to safety.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571330.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571330.JPG" medium="image">
+                <media:credit><![CDATA[STATE EMERGENCY SERVICE OF UKRAINE IN DNIPROPETROVSK REGION / VIA REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Japan to aid wildfire recovery efforts in Mongolia ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/japan-aid-mongolia-wildfire/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 20:26:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Sanae Takaichi, Mongolia, Mongolia-Japan relations, wildfires, KDDI, Mobicom, Nyam-Osor Uchral ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648430/</guid>
+            <description><![CDATA[Takaichi said Japan will offer an aid package featuring plans to provide equipment and help develop human resources for environmental restoration.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571328.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571328.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Hong Kong leader apologizes for deadly Tai Po fire, pledges reform ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/asia-pacific/hong-kong-fire-apology/</link>
+            <category>ASIA PACIFIC</category>
+            <pubDate>Thu, 29 Oct 2026 20:19:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Hong Kong, John Lee ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648429/</guid>
+            <description><![CDATA[Lee promised swift but extensive reforms to the city's building industry and regulatory system.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571327.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571327.jpg" medium="image">
+                <media:credit><![CDATA[AFP-JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ ECB President Lagarde resigns at time of mounting challenges for Europe ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/ecb-lagarde-resignation/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 20:09:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Christine Lagarde, EU, ECB, EUROPE ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648428/</guid>
+            <description><![CDATA[The move comes as the ECB battles inflation risks from an Iran-driven oil shock while a sharp rise in bond yields threatens to dampen growth.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571323.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571323.jpg" medium="image">
+                <media:credit><![CDATA[AFP-JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Toyota monthly sales fall as China slump enters eighth month ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/toyota-monthly-sales-slump/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 20:01:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Bloomberg ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Toyota, cars, carmakers, China, FINANCIAL RESULTS ]]></jto:tag>
+                
+            <jto:author>Nicholas Takahashi</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648427/</guid>
+            <description><![CDATA[China, the global auto industry's leading market, has proven difficult for the world's biggest carmaker.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571319.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571319.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ ANA holdings to fully acquire parent of two midsize airlines ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/companies/ana-acquisitions-midsize-airlines/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 19:58:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ ANA, Solaseed, Airdo, aviation, airlines, acquisitions ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648426/</guid>
+            <description><![CDATA[ANA Holdings is exploring the possibility of operating the two airlines under the ANA brand in the medium term.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571318.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571318.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Kyoto prosecutors appeal acquittal over 2013 murder of Ohsho president ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/crime-legal/kyoto-prosecutors-appeal-ohsho-case/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 19:51:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Japanese courts, Kyoto, Yukio Tanaka, Takayuki Ohigashi, Gyoza no Ohsho, restaurants, ORGANIZED CRIME, YAKUZA ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648425/</guid>
+            <description><![CDATA[In its Oct. 16 ruling, Kyoto District Court found that reasonable doubt remained over whether Yukio Tanaka was the shooter.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571317.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571317.jpg" medium="image">
+                <media:credit><![CDATA[JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Spooky, scary, gory: Anime selection for the season ]]></title>
+            <link>https://www.japantimes.co.jp/culture/2026/10/29/tv-streaming/scary-horror-anime-list/</link>
+            <category>CULTURE</category>
+            <pubDate>Thu, 29 Oct 2026 18:55:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ CONTRIBUTING WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ anime, manga, J-horror, Shigeru MIZUKI, Halloween ]]></jto:tag>
+                
+            <jto:author>Matt Schley</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648403/</guid>
+            <description><![CDATA[Decades of spooky anime offer plenty of choices for your viewing pleasure this Halloween season, from ghostly folklore to gory horror.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571032.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571032.jpg" medium="image">
+                <media:credit><![CDATA[©GO NAGAI /DEVILMAN CRYBABY PROJECT]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ A cruise ship was their home. Now residents of Villa Vie Odyssey must leave. ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/world/society/cruise-ship-home-villa-vie-residents/</link>
+            <category>WORLD</category>
+            <pubDate>Thu, 29 Oct 2026 18:54:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ BLOOMBERG ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ cruise ships, cambodia, DONALD Trump, Middle East, Iran, Strait of Hormuz, oil, persian gulf, OIL ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648423/</guid>
+            <description><![CDATA[The ship's hundreds of residents have been ordered to disembark in Sihanoukville, Cambodia, where it has been stranded because it can't afford fuel.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571248.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571248.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Ex-Takenaka manager admits breach of trust over Osaka Expo ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/takenaka-breach-trust-osaka-expo/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 17:54:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Japanese courts, Takenaka, 2025 Osaka Expo, CORRUPTION, CORPORATE GOVERNANCE, CONSTRUCTION INDUSTRY ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648422/</guid>
+            <description><![CDATA[The former manager acknowledged having a subcontractor submit inflated bills for construction work related to last year's World Exposition.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571260.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571260.jpg" medium="image">
+                <media:credit><![CDATA[GETTY IMAGES]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Japan’s Sumitomo Mitsui Trust Bank buys stake in Indian PE firm ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/sumitomo-mitsui-investments-india/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 17:49:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Bloomberg ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Sumitomo Mitsui, banks, India, investments, INDIA-JAPAN RELATIONS ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648421/</guid>
+            <description><![CDATA[The investment underscores Japanese institutional investor interest in Indian companies across financial services, manufacturing and real estate.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571274.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571274.jpg" medium="image">
+                <media:credit><![CDATA[BLOOMBERG]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ LDP, JIP and DPP plan to cut Lower House seats, ending standoff ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/politics/seat-reduction-agreement/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 17:30:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ STAFF WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ DPP, Nippon Ishin no Kai, LDP, DIET, LOWER HOUSE ]]></jto:tag>
+                
+            <jto:author>Eric Johnston</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648418/</guid>
+            <description><![CDATA[The three parties plan to introduce and pass a related bill by the end of the current session to cut 31 proportional representation seats.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571273.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571273.jpg" medium="image">
+                <media:credit><![CDATA[JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Politician ordered to pay ¥1.1 million for outing author as transgender ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/crime-legal/transgender-outing-rulinig/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 17:17:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Staff writer ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Japanese courts, LGBTQ, Kotomi Li, transgender, SOCIAL MEDIA, HUMAN RIGHTS ]]></jto:tag>
+                
+            <jto:author>Jessica Speed</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648417/</guid>
+            <description><![CDATA[A Tokyo court ruled that the disclosure of the author's assigned gender at birth without her consent was an unlawful invasion of privacy.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571269.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571269.jpg" medium="image">
+                <media:credit><![CDATA[JESSICA SPEED]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Taiwan says Pakistan briefly closed airspace to Taiwanese flights ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/asia-pacific/taiwan-pakistan-airspace/</link>
+            <category>ASIA PACIFIC</category>
+            <pubDate>Thu, 29 Oct 2026 17:06:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ AFP-Jiji ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ China, Taiwan, airlines, Pakistan, aviation ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648416/</guid>
+            <description><![CDATA[The island suspects China of being behind the unprecedented move.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571268.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571268.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Japan must accelerate cyberdefense strategy, former NSA director says ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/crime-legal/nsa-director-michael-rogers-interview/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 16:52:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ STAFF WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ cybersecurity, hacking, internet, Michael Rogers ]]></jto:tag>
+                
+            <jto:author>Ariana King</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648413/</guid>
+            <description><![CDATA[Spending weeks and months on strategy is not conducive to an active cyberdefense posture, according to former intelligence chief Michael Rogers.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571241.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571241.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Sanrio ends ‘Vivant’ collaboration after protest by China’s state media ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/companies/sanrio-china-vivant/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 16:42:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ STAFF WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ SANRIO, CHINA, VIVANT, TBS, JAPANESE TV, CHINA-JAPAN RELATIONS ]]></jto:tag>
+                
+            <jto:author>Kenji Yoshida</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648410/</guid>
+            <description><![CDATA[A commentary in China's Global Times has accused the hit TBS drama series of vilifying the country.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571183.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571183.JPG" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ GMO cybersecurity team finds info critical to identifying hackers, CEO says ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/gmo-hacker-information/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 16:35:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Staff writer ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ GMO INTERNET, hackING, cybersecurity, TECH ]]></jto:tag>
+                
+            <jto:author>Spencer Landers</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648414/</guid>
+            <description><![CDATA[The hacker group has remained publicly silent since its website revealing GMO client personal data was taken down Wednesday.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571261.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571261.jpg" medium="image">
+                <media:credit><![CDATA[BLOOMBERG]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Naomi Osaka upset by 144th-ranked Mia Pohankova at Pan Pacific Open ]]></title>
+            <link>https://www.japantimes.co.jp/sports/2026/10/29/tennis/naomi-osaka-lose-ppo/</link>
+            <category>TENNIS</category>
+            <pubDate>Thu, 29 Oct 2026 16:26:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ STAFF WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Naomi Osaka, Pan Pacific Open, Mia Pohankova ]]></jto:tag>
+                
+            <jto:author>Sam Byford</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648415/</guid>
+            <description><![CDATA[Osaka got off to a good start, but her 18-year-old opponent quickly took control of the match]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571277.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571277.JPG" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Hungary’s post-Orban shakeout ripples through auto industry ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/economy/hungary-orban-auto-industry/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 16:10:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ BLOOMBERG ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Hungary, carmakers, viktor orban, Peter Magyar, Semcorp ]]></jto:tag>
+                
+            <jto:author>Thomas Escritt</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648412/</guid>
+            <description><![CDATA[Its tougher line on environmental enforcement comes at a time when the former prime minister's bet on electric cars is starting to pay off. ]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571198.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571198.jpg" medium="image">
+                <media:credit><![CDATA[BLOOMBERG]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ ‘Stupid Never Dies’: A zombie B-movie resurrected in game form ]]></title>
+            <link>https://www.japantimes.co.jp/life/2026/10/29/digital/stupid-never-dies-game-zombie-roguelike-halloween-b-movie/</link>
+            <category>LIFE</category>
+            <pubDate>Thu, 29 Oct 2026 15:40:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Staff writer ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ video games, stupid never dies, roguelite ]]></jto:tag>
+                
+            <jto:author>Owen Ziegler</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648411/</guid>
+            <description><![CDATA[There's morbid charm to this undead roguelite, but the real terror is in its uneven approach to a genre with plenty of polished gems.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/570818.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/570818.png" medium="image">
+                <media:credit><![CDATA[GPTRACK50]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Taliban’s poppy ban falters as Afghan farmers say they can’t feed their children ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/world/taliban-poppy-ban-afghan-farmers/</link>
+            <category>WORLD</category>
+            <pubDate>Thu, 29 Oct 2026 15:38:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ afghanistan, opium, drugs, taliban ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648424/</guid>
+            <description><![CDATA[In years gone by, Afghanistan's poppy fields produced about 80% of the world's opium, used in the manufacture of morphine as well as heroin.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571258.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571258.JPG" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Company executives and Chinese national held over visa fraud ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/japan/crime-legal/residency-fraud-rich-chinese/</link>
+            <category>JAPAN</category>
+            <pubDate>Thu, 29 Oct 2026 15:24:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ JIJI ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Japanese police, immigration, China, visas, CHINA-JAPAN RELATIONS, CHINESE COMMUNITY ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648409/</guid>
+            <description><![CDATA[One of the executives is believed to have submitted fraudulent applications for visas for between 30 and 40 Chinese nationals beginning in 2020.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571102.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571102.jpg" medium="image">
+                <media:credit><![CDATA[JOHAN BROOKS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Bloomberg and trading firms to pay Truth Social for fast access to Trump’s posts ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/companies/bloomberg-trump-truth-social-posts/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 15:08:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Truth Social, social media, Donald Trump, bloomberg ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648407/</guid>
+            <description><![CDATA[The social media platform founded by the U.S. president is said to sell speedier access to his content for up to $100,000 a month.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571191.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571191.JPG" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Nidec unable to obtain auditor’s opinion on fiscal 2025 report by end of October ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/companies/nidec-miss-audit-opinion-deadline/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 14:26:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ JIJI ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Nidec, PwC Japan, TSE, Michio Kaida, CORPORATE GOVERNANCE ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648405/</guid>
+            <description><![CDATA[The motor manufacturer, mired in an accounting scandal, is unable to complete procedures sought by audit firm PwC Japan Group.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571165.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571165.jpg" medium="image">
+                <media:credit><![CDATA[JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Airbus ready for linkup with GCAP, CEO says ]]></title>
+            <link>https://www.japantimes.co.jp/business/2026/10/29/companies/airbus-ready-gcap-fighter-jet/</link>
+            <category>BUSINESS</category>
+            <pubDate>Thu, 29 Oct 2026 14:14:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ AFP-JIJI ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Airbus, fighter jets, GCAP ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648404/</guid>
+            <description><![CDATA[Joining the British-Japanese-Italian consortium to build a next-generation fighter jet is an option after the collapse of a Franco-German rival.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571178.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571178.JPG" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Chiefs add kicker Justin Tucker to practice squad as Harrison Butker struggles ]]></title>
+            <link>https://www.japantimes.co.jp/sports/2026/10/29/more-sports/chiefs-sign-justin-tucker/</link>
+            <category>MORE SPORTS</category>
+            <pubDate>Thu, 29 Oct 2026 13:56:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Justin Tucker, Kansas City Chiefs, Baltimore Ravens, Andy Reid, NFL, Harrison Butker ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648402/</guid>
+            <description><![CDATA[Tucker was released by the Baltimore Ravens in May 2025 amid declining production and allegations from 16 massage therapists who had accused him of sexual misconduct.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571184.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571184.jpg" medium="image">
+                <media:credit><![CDATA[USA TODAY / VIA REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Tokyo should lead ICC reform, not just defend it ]]></title>
+            <link>https://www.japantimes.co.jp/commentary/2026/10/29/japan/tokyo-should-lead-icc-reform/</link>
+            <category>COMMENTARY</category>
+            <pubDate>Thu, 29 Oct 2026 13:50:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Contributing writer ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ U.S., Donald Trump, ICC, U.N., China, Russia, Middle East, UNSC, WAR CRIMES, HUMAN RIGHTS ]]></jto:tag>
+                
+            <jto:author>Masahiro Matsumura</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648419/</guid>
+            <description><![CDATA[The better path is harder but more defensible: preserve the court, reform its operation and confront the limits of international law honestly.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571284.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571284.jpg" medium="image">
+                <media:credit><![CDATA[REUTERS]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Motor racing-Perez brings Formula One to Mexico City streets before home milestone ]]></title>
+            <link>https://www.japantimes.co.jp/sports/2026/10/29/more-sports/sergio-perez-mexico-city-run/</link>
+            <category>MORE SPORTS</category>
+            <pubDate>Thu, 29 Oct 2026 13:46:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ Reuters ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Sergio Perez, Formula One, Mexico, Cadillac ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648401/</guid>
+            <description><![CDATA[An estimated 100,000 people gathered for the Cadillac driver's showrun, his fourth in Mexico during his Formula One career.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571182.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571182.jpg" medium="image">
+                <media:credit><![CDATA[AFP-JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ At least 68 people dead in Spain’s second major train crash this year ]]></title>
+            <link>https://www.japantimes.co.jp/news/2026/10/29/world/spain-second-train-crash-dead/</link>
+            <category>WORLD</category>
+            <pubDate>Thu, 29 Oct 2026 13:38:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ REUTERS, STAFF REPORT ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ rail accidents, spain, rail ]]></jto:tag>
+                
+            <jto:author></jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648378/</guid>
+            <description><![CDATA[It was Spain's second fatal rail crash this year and Europe's deadliest since 2013.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571073.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571073.jpg" medium="image">
+                <media:credit><![CDATA[AFP-JIJI]]></media:credit>
+            </media:content>
+        </item>
+    
+        <item>
+            <title><![CDATA[ Hawks complete sweep against BayStars to repeat as Japan Series champions ]]></title>
+            <link>https://www.japantimes.co.jp/sports/2026/10/29/baseball/hawks-sweep-japan-series/</link>
+            <category>BASEBALL</category>
+            <pubDate>Thu, 29 Oct 2026 13:27:00 +0900</pubDate>
+                        
+            <jto:credit><![CDATA[ STAFF WRITER ]]></jto:credit>
+                        
+            <jto:tag><![CDATA[ Japan Series, Fukuoka SoftBank Hawks. Yokohama BayStars, Yudai Yamamoto, Tomoya Masaki, Hiroki Kokubo ]]></jto:tag>
+                
+            <jto:author>Jason Coskrey</jto:author>
+            <guid isPermaLink="false">https://www.japantimes.co.jp/article/648399/</guid>
+            <description><![CDATA[The Hawks won their ninth Japan Series title since 2011 and their eighth since 2014 to bolster their status as one of the top dynasties in NPB history.]]></description>
+                
+            <media:thumbnail url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/thumbs/400x400/571163.jpg" />
+            <media:content url="https://www.japantimes.co.jp/japantimes/uploads/images/2026/10/29/571163.jpg" medium="image">
+                <media:credit><![CDATA[JIJI]]></media:credit>
+            </media:content>
+        </item>
+
+    </channel>
+</rss>
