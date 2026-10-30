@@ -11,7 +11,7 @@ function FeedSummary({ result }: { result: NonNullable<ReturnType<typeof useAppS
   const failures = result.feed_statuses.filter((feed) => ['failed', 'timeout', 'error'].includes(feed.status));
   return <details className="feed-summary"><summary>{succeeded} of {result.feed_statuses.length} feeds returned results{failures.length ? ` · ${failures.length} failed` : ''}</summary>{failures.length > 0 && <ul>{failures.map((feed) => <li key={feed.url}>{feed.feed}: {feed.error_text || feed.status}</li>)}</ul>}</details>;
 }
-function CountryDetails({ group, weakArticles, onClose }: { group: CountryGroup; weakArticles: CountryGroup['articles']; onClose: () => void }) {
+function CountryDetails({ group, weakArticles, onClose, onCompare }: { group: CountryGroup; weakArticles: CountryGroup['articles']; onClose: () => void; onCompare: () => void }) {
   const [showWeak, setShowWeak] = useState(false);
   const [showTranslations, setShowTranslations] = useState(false);
   const articles = [...group.articles, ...(showWeak ? weakArticles : [])];
@@ -19,7 +19,7 @@ function CountryDetails({ group, weakArticles, onClose }: { group: CountryGroup;
   const translationCount = articles.filter((article) => article.translation_status === 'translated' || article.translation_status === 'partial').length;
   return <aside className="country-panel" aria-label={`${group.display_name} country details`}>
     <div className="panel-title"><div><span className="panel-kicker">SOURCE GROUP / {group.iso_code}</span><h2>{group.display_name}</h2></div><button className="icon-control panel-close" onClick={onClose} aria-label="Close country details"><X size={17}/></button></div>
-    <div className="country-stat"><strong>{group.article_count}</strong><span>articles analyzed</span></div>
+    <div className="country-stat"><strong>{group.article_count}</strong><span>articles analyzed</span><button className="compare-action" onClick={onCompare}>Compare</button></div>
     <div className="source-block"><span className="section-label">PUBLISHERS</span><div className="source-chips">{group.sources.map((source) => <span key={source}>{source}</span>)}</div></div>
     {group.article_count < 3 && <div className="coverage-notice"><span>INSUFFICIENT COVERAGE</span><p>Fewer than 3 articles are available for meaningful aggregation.</p></div>}
     <section className="article-section"><div className="article-heading"><span className="section-label">ARTICLE EVIDENCE</span><span>{articles.length} shown</span></div>
@@ -57,7 +57,7 @@ export function MapPage() {
         <section className="map-column"><CountryMap groups={countryGroups} selected={selected?.iso_code || null} onSelect={(countryCode) => select(countryCode)}/>
           <section className="country-list-panel"><div className="country-list-heading"><span className="section-label">COUNTRY / SOURCE GROUPS</span><span>{available.length} GROUPS</span></div><div className="country-list">{available.map((group) => <button key={group.iso_code} className={`country-button ${selected?.iso_code === group.iso_code ? 'is-active' : ''}`} onClick={() => select(group.iso_code)}><span className="country-pip"/><strong>{group.display_name}</strong><span>{group.article_count} {group.article_count === 1 ? 'article' : 'articles'}</span><ArrowRight size={14}/></button>)}</div></section>
         </section>
-        {selected && <CountryDetails group={selected} weakArticles={result.articles.filter((article) => article.iso_code === selected.iso_code && article.relevance_label === 'weak_match')} onClose={() => select(null)}/>}
+        {selected && <CountryDetails group={selected} weakArticles={result.articles.filter((article) => article.iso_code === selected.iso_code && article.relevance_label === 'weak_match')} onClose={() => select(null)} onCompare={() => navigate(`/compare?left=${encodeURIComponent(selected.iso_code)}`)}/>}
       </div>
       {failures > 0 && <p className="partial-notice">Partial results: {failures} feed {failures === 1 ? 'could not' : 'feeds could not'} be reached. Country counts include returned articles only.</p>}
     </>}
