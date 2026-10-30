@@ -31,10 +31,11 @@ def test_pipeline_fixture_fetch_filter_group_and_partial_status():
     def get(url, **kwargs):
         if url.endswith("down"): raise ConnectionError("fixture failure")
         return Response(fixture)
+    stages = []
     with patch("backend.pipeline.requests.get", side_effect=get), patch(
         "backend.relevance._get_model", return_value=None
     ):
-        result = run_pipeline("Ukraine", settings=SETTINGS, feeds_config=feeds)
+        result = run_pipeline("Ukraine", settings=SETTINGS, feeds_config=feeds, progress=lambda stage, _values: stages.append(stage))
     assert result.status in {"ok", "partial"}
     assert result.feed_statuses[0].entry_count > 0
     assert result.feed_statuses[1].status == "failed"
@@ -48,6 +49,8 @@ def test_pipeline_fixture_fetch_filter_group_and_partial_status():
         for article in group.articles
     )
     assert "GB" in result.country_groups
+    assert stages.index("translating_text") < stages.index("preparing_map")
+    assert result.translation_stats.status == "not_requested"
 
 
 def test_weak_matches_remain_visible_but_are_excluded_from_country_groups():
@@ -113,11 +116,13 @@ def test_endpoint_rejects_blank_and_uses_pipeline():
     methods = methodology()
     assert methods["relevance_model"] == "sentence-transformers/all-MiniLM-L6-v2"
     assert "relevance score threshold" in methods["relevance_filter"]
+    assert "CC-BY-NC-4.0" in methods["translation_licenses"]
+    assert "research use" in methods["translation_licenses"]
     client = TestClient(app)
     assert client.post("/analyze", json={"query": "  "}).status_code == 422
-    with patch("backend.main.run_pipeline") as pipeline:
+    with patch("backend.main.analyze_blocking") as pipeline:
         from models.schemas import AnalyzeResponse
         pipeline.return_value = AnalyzeResponse(query="Ukraine", status="no_results", methodology_version="test")
         response = client.post("/analyze", json={"query": " Ukraine "})
     assert response.status_code == 200
-    pipeline.assert_called_once_with("Ukraine")
+    pipeline.assert_called_once_with("Ukraine", bypass_cache=False)

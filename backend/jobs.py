@@ -15,7 +15,7 @@ from backend.config import Settings, get_settings, load_feed_config
 from backend.pipeline import run_pipeline
 from models.schemas import AnalyzeResponse
 
-STAGES = {"connecting_feeds", "retrieving_headlines", "checking_relevance", "extracting_text", "preparing_map", "done", "failed"}
+STAGES = {"connecting_feeds", "retrieving_headlines", "checking_relevance", "extracting_text", "translating_text", "preparing_map", "done", "failed"}
 
 
 @dataclass
@@ -27,6 +27,8 @@ class Job:
     feeds_total: int = 0
     articles_extracted: int = 0
     articles_total: int = 0
+    translations_completed: int = 0
+    translations_total: int = 0
     feed_statuses: list[dict] = field(default_factory=list)
     result: AnalyzeResponse | None = None
     error: str | None = None
@@ -34,7 +36,7 @@ class Job:
     finished: float | None = None
 
     def as_dict(self) -> dict[str, Any]:
-        return {"job_id": self.job_id, "status": "finished" if self.stage == "done" else ("failed" if self.stage == "failed" else "running"), "stage": self.stage, "feeds_completed": self.feeds_completed, "feeds_total": self.feeds_total, "articles_extracted": self.articles_extracted, "articles_total": self.articles_total, "feed_statuses": self.feed_statuses, "result": self.result.model_dump(mode="json") if self.result else None, "error": self.error}
+        return {"job_id": self.job_id, "status": "finished" if self.stage == "done" else ("failed" if self.stage == "failed" else "running"), "stage": self.stage, "feeds_completed": self.feeds_completed, "feeds_total": self.feeds_total, "articles_extracted": self.articles_extracted, "articles_total": self.articles_total, "translations_completed": self.translations_completed, "translations_total": self.translations_total, "feed_statuses": self.feed_statuses, "result": self.result.model_dump(mode="json") if self.result else None, "error": self.error}
 
 
 _jobs: dict[str, Job] = {}
@@ -65,7 +67,7 @@ def create_job(query: str, *, bypass_cache: bool = False, settings: Settings | N
     def progress(stage: str, values: dict):
         with _lock:
             job.stage = stage
-            for name in ("feeds_completed", "feeds_total", "articles_extracted", "articles_total", "feed_statuses"):
+            for name in ("feeds_completed", "feeds_total", "articles_extracted", "articles_total", "translations_completed", "translations_total", "feed_statuses"):
                 if name in values:
                     setattr(job, name, values[name])
 

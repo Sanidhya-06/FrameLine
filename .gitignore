@@ -34,6 +34,9 @@ node_modules/
 frontend/dist/
 frontend/.vite/
 *.db
+*.sqlite3
+*.sqlite
+.pytest_tmp/
 
 # IDE and operating-system files
 .vscode/*

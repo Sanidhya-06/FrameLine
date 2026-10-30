@@ -3,7 +3,7 @@ import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simp
 import type { CountryGroup } from '../types';
 import world from 'world-atlas/countries-110m.json';
 
-export const GEO_URL = world;
+export const GEO_URL = world as never;
 const ISO_NUMERIC: Record<string, string> = { USA: '840', GBR: '826', IND: '356', RUS: '643', ISR: '376', PSE: '275', IRN: '364', CHN: '156', JPN: '392', AUS: '036', CAN: '124', DEU: '276', FRA: '250', UKR: '804', TUR: '792', EGY: '818', LBN: '422', ARE: '784', SAU: '682', QAT: '634', KOR: '410', BRA: '076', MEX: '484', ZAF: '710', ITA: '380', ESP: '724', NLD: '528', POL: '616', PAK: '586', BGD: '050', NGA: '566', KEN: '404' };
 export function normalizeIso(value: unknown): string {
   const code = String(value ?? '').trim().toUpperCase();

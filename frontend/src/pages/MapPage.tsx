@@ -13,8 +13,10 @@ function FeedSummary({ result }: { result: NonNullable<ReturnType<typeof useAppS
 }
 function CountryDetails({ group, weakArticles, onClose }: { group: CountryGroup; weakArticles: CountryGroup['articles']; onClose: () => void }) {
   const [showWeak, setShowWeak] = useState(false);
+  const [showTranslations, setShowTranslations] = useState(false);
   const articles = [...group.articles, ...(showWeak ? weakArticles : [])];
   const weakCount = weakArticles.length;
+  const translationCount = articles.filter((article) => article.translation_status === 'translated' || article.translation_status === 'partial').length;
   return <aside className="country-panel" aria-label={`${group.display_name} country details`}>
     <div className="panel-title"><div><span className="panel-kicker">SOURCE GROUP / {group.iso_code}</span><h2>{group.display_name}</h2></div><button className="icon-control panel-close" onClick={onClose} aria-label="Close country details"><X size={17}/></button></div>
     <div className="country-stat"><strong>{group.article_count}</strong><span>articles analyzed</span></div>
@@ -22,10 +24,12 @@ function CountryDetails({ group, weakArticles, onClose }: { group: CountryGroup;
     {group.article_count < 3 && <div className="coverage-notice"><span>INSUFFICIENT COVERAGE</span><p>Fewer than 3 articles are available for meaningful aggregation.</p></div>}
     <section className="article-section"><div className="article-heading"><span className="section-label">ARTICLE EVIDENCE</span><span>{articles.length} shown</span></div>
       {weakCount > 0 && <label className="weak-toggle"><input type="checkbox" checked={showWeak} onChange={(event) => setShowWeak(event.target.checked)}/> Show weak matches ({weakCount})</label>}
+      {translationCount > 0 && <label className="weak-toggle translation-toggle"><input type="checkbox" checked={showTranslations} onChange={(event) => setShowTranslations(event.target.checked)}/> Show English machine translations ({translationCount})</label>}
       <div className="article-list">{articles.map((article) => <article className="article-card" key={article.article_id || article.url}>
         <div className="article-meta"><span>{article.publisher}</span>{article.published_at && <time>{new Date(article.published_at).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</time>}</div>
-        <h3><a href={article.url} target="_blank" rel="noreferrer">{article.title}<ArrowRight size={13}/></a></h3>
-        <p>{article.article_text || article.rss_summary || 'No RSS summary or extracted snippet is available.'}</p>
+        <h3><a href={article.url} target="_blank" rel="noreferrer">{showTranslations && article.translated_title ? article.translated_title : article.title}<ArrowRight size={13}/></a></h3>
+        <p>{showTranslations && article.translated_summary ? article.translated_summary : article.article_text || article.rss_summary || 'No RSS summary or extracted snippet is available.'}</p>
+        {article.translation_status !== 'not_requested' && <span className={`translation-badge translation-${article.translation_status}`}>{article.translation_status === 'translated' || article.translation_status === 'partial' ? `MACHINE TRANSLATED · ${article.translation_backend || 'BACKEND'}` : 'TRANSLATION UNAVAILABLE'}</span>}
         <span className={`extract-badge status-${article.extraction_status.toLowerCase()}`}>{article.extraction_status.replaceAll('_', ' ')}</span>
       </article>)}</div>
     </section>

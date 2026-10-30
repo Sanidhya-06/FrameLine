@@ -3,6 +3,7 @@ import type { AnalyzeResponse } from './types';
 export const fixtureResult: AnalyzeResponse = {
   query: 'Ukraine peace talks', status: 'partial_results', cached: true, generated_at: '2026-10-29T05:15:00Z',
   development_only: true, explanation: null, methodology_version: 'phase5', relevance_method: 'hybrid', signals: [],
+  translation_stats: { status: 'not_requested', elapsed_seconds: 0, model_load_seconds: 0, articles_total: 0, articles_translated: 0, articles_failed: 0, text_segments: 0, cache_hits: 0, fallback_segments: 0, backend_counts: {}, language_counts: {} },
   feed_statuses: [
     { feed: 'BBC World', url: 'https://bbc.example/rss', status: 'ok', error_text: null, entry_count: 8, response_time_ms: 210 },
     { feed: 'Global News Desk', url: 'https://failure.example/rss', status: 'failed', error_text: 'Connection timed out', entry_count: 0, response_time_ms: 15000 },

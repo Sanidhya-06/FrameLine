@@ -12,6 +12,7 @@ from backend.article_extractor import extract_article
 from backend.config import Settings, get_settings, load_feed_config
 from backend.news_fetcher import canonicalize_url, normalize_title, parse_published_at
 from backend.relevance import score_entries
+from backend.translator import translate_articles
 from models.schemas import AnalyzeResponse, Article, CountryGroup, FeedStatus
 
 
@@ -81,6 +82,14 @@ def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: 
             if f.get("fulltext_allowed") is True and url:
                 count += 1
             emit("extracting_text", articles_extracted=len(articles), articles_total=len(articles), feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
+    emit("translating_text", translations_completed=0, translations_total=len(articles), feeds_completed=len(feeds), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
+    articles, translation_stats = translate_articles(
+        articles,
+        cache_path=settings.cache_path,
+        cache_ttl_seconds=settings.translation_cache_ttl_seconds,
+        batch_size=settings.translation_batch_size,
+        progress=lambda done, total: emit("translating_text", translations_completed=done, translations_total=total, feeds_completed=len(feeds), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses]),
+    )
     groups = {}
     for article in articles:
         if not article.iso_code or article.relevance_label == "weak_match": continue
@@ -91,4 +100,4 @@ def run_pipeline(query: str, *, settings: Settings | None = None, feeds_config: 
     successes = sum(s.status in {"ok", "empty"} for s in feed_statuses)
     status = "no_results" if not articles else ("partial" if successes < len(feed_statuses) else "ok")
     emit("preparing_map", articles_extracted=len(articles), articles_total=len(articles), feeds_completed=len(feed_statuses), feeds_total=len(feeds), feed_statuses=[s.model_dump(mode="json") for s in feed_statuses])
-    return AnalyzeResponse(query=query, status=status, explanation="No relevant entries appeared in the current RSS feed windows. RSS feeds expose only a limited recent set of items, so this does not mean the topic has no coverage." if not articles else None, methodology_version=settings.methodology_version, relevance_method=relevance_method, articles=articles, country_groups=country_groups, feed_statuses=feed_statuses, generated_at=datetime.now(timezone.utc))
+    return AnalyzeResponse(query=query, status=status, explanation="No relevant entries appeared in the current RSS feed windows. RSS feeds expose only a limited recent set of items, so this does not mean the topic has no coverage." if not articles else None, methodology_version=settings.methodology_version, relevance_method=relevance_method, articles=articles, country_groups=country_groups, feed_statuses=feed_statuses, translation_stats=translation_stats, generated_at=datetime.now(timezone.utc))

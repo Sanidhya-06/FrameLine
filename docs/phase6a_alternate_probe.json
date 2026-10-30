@@ -1,0 +1,37 @@
+{
+  "Euronews": {
+    "url": "https://www.euronews.com/rss?format=mrss&level=theme&name=news",
+    "status1": 200,
+    "n1": 50,
+    "status2": 200,
+    "n2": 50
+  },
+  "CBC": {
+    "url": "https://www.cbc.ca/webfeed/rss/rss-topstories",
+    "status1": "ReadTimeout",
+    "n1": 0,
+    "status2": "ReadTimeout",
+    "n2": 0
+  },
+  "Korea Herald": {
+    "url": "https://www.koreaherald.com/rss/kh_National",
+    "status1": 200,
+    "n1": 50,
+    "status2": 200,
+    "n2": 50
+  },
+  "Arab News": {
+    "url": "https://www.arabnews.com/rss/world.xml",
+    "status1": 403,
+    "n1": 0,
+    "status2": 403,
+    "n2": 0
+  },
+  "Al Arabiya": {
+    "url": "https://www.alarabiya.net/tools/rss",
+    "status1": 403,
+    "n1": 0,
+    "status2": 403,
+    "n2": 0
+  }
+}

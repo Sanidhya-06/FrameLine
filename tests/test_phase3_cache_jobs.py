@@ -42,7 +42,15 @@ def test_cache_key_accounts_for_methodology_and_feed_config():
 def _settings(tmp_path):
     feeds = tmp_path / "feeds.json"
     feeds.write_text(json.dumps({"UK": [{"url": "https://fixture.test/rss", "publisher": "Fixture"}]}))
-    return Settings(feeds, 1, 1, 86400, "test-v1", "https://example.com")
+    return Settings(
+        feeds,
+        1,
+        1,
+        86400,
+        "test-v1",
+        "https://example.com",
+        cache_path=tmp_path / "analysis_cache.sqlite3",
+    )
 
 
 def test_blocking_cache_miss_then_hit_and_bypass(tmp_path):

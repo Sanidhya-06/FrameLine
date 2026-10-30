@@ -36,3 +36,65 @@ automated extraction. A feed can remain enabled for RSS metadata while
 | The Jerusalem Post | Allowed for the sampled article | Not located during review | false | Robots allowed the path, but terms permission for automated extraction was not confirmed. |
 | The New Arab | Allowed for the sampled article | Not located during review | false | Robots allowed the path, but terms permission for automated extraction was not confirmed. |
 | Middle East Eye | Allowed for the sampled article | https://www.middleeasteye.net/terms-and-conditions | false | Robots allowed the path, but terms permission for automated extraction was not confirmed. |
+
+## Phase 6A additions (2026-10-29)
+
+Candidates were fetched twice with the descriptive FrameLine user agent, with a
+60-second interval between rounds. Article-path permission was not inferred from
+RSS access. `fulltext_allowed` remains false for every addition because terms
+permission for automated article extraction was not clearly confirmed in this
+review. In several cases the publisher's robots endpoint returned 403; that is
+recorded as unavailable evidence, not as permission. Feed metadata may still be
+used under the RSS endpoint's observed availability; article extraction remains
+off.
+
+| Publisher | Article-path robots result | Terms / ownership evidence | fulltext_allowed | Reason |
+|---|---|---|---|---|
+| Deutsche Welle | robots.txt HTTP 200; path-level allowance not established here | https://www.dw.com/en/about-dw | false | Terms permission for automated extraction not confirmed. |
+| France 24 | robots.txt HTTP 403 | https://www.francemediasmonde.com/en/ | false | Robots unavailable and terms permission not confirmed. |
+| RFI | robots.txt HTTP 403 | https://www.francemediasmonde.com/en/ | false | Robots unavailable and terms permission not confirmed. |
+| The Japan Times | robots.txt HTTP 403 | https://www.japantimes.co.jp/about-us/ | false | Robots unavailable and terms permission not confirmed. |
+| Daily Sabah | robots.txt HTTP 200; path-level allowance not established here | https://www.dailysabah.com/about-us | false | Terms permission not confirmed. |
+| Anadolu Agency | robots.txt HTTP 200; path-level allowance not established here | https://www.aa.com.tr/en/corporate/about-us (HTTP 200) | false | Ownership page verified; terms permission for automation not confirmed. |
+| Daily Maverick | robots.txt HTTP 403 | https://www.dailymaverick.co.za/about/ | false | Robots unavailable and terms permission not confirmed. |
+| Premium Times | robots.txt HTTP 200; path-level allowance not established here | https://www.premiumtimesng.com/ (HTTP 200) | false | Terms permission not confirmed. |
+| Africanews | robots.txt HTTP 200; path-level allowance not established here | https://www.euronews.com/about | false | Ownership source; terms permission not confirmed. |
+| ABC Australia | robots.txt HTTP 200; path-level allowance not established here | https://about.abc.net.au/ (HTTP 200) | false | Terms permission not confirmed. |
+| SBS News | robots.txt HTTP 200; path-level allowance not established here | https://www.sbs.com.au/aboutus/ (HTTP 200) | false | Terms permission not confirmed. |
+| RNZ | robots.txt HTTP 200; path-level allowance not established here | https://www.rnz.co.nz/about (HTTP 200) | false | Terms permission not confirmed. |
+| CNA | robots.txt HTTP 200; path-level allowance not established here | https://www.channelnewsasia.com/about-us (HTTP 200) | false | Terms permission not confirmed. |
+| RTÉ | robots.txt HTTP 200; path-level allowance not established here | https://about.rte.ie/ | false | Terms/ownership page request was blocked; permission not confirmed. |
+| Agência Brasil | robots.txt HTTP 200; path-level allowance not established here | https://agenciabrasil.ebc.com.br/ | false | Terms permission not confirmed; homepage request timed out during verification. |
+| tagesschau | robots.txt HTTP 200; path-level allowance not established here | https://www.tagesschau.de/unternehmen/ | false | Translation required; terms permission not confirmed. |
+| ZEIT Online | robots.txt HTTP 200; path-level allowance not established here | https://www.zeit.de/impressum/index | false | Translation required; terms permission not confirmed. |
+| Le Monde | robots.txt HTTP 200; path-level allowance not established here | https://www.lemonde.fr/en/about-us/ | false | Translation required; terms permission not confirmed. |
+| franceinfo | robots.txt HTTP 200; path-level allowance not established here | https://www.francetelevisions.fr/ | false | Translation required; terms permission not confirmed. |
+| El País | robots.txt HTTP 200; path-level allowance not established here | https://elpais.com/estaticos/aviso-legal/ | false | Translation required; terms permission not confirmed. |
+| ANSA | robots.txt HTTP 200; path-level allowance not established here | https://www.ansa.it/english/about_us.html | false | Translation required; terms permission not confirmed. |
+| Folha de S.Paulo | robots.txt HTTP 200; path-level allowance not established here | https://www1.folha.uol.com.br/internacional/en/about/ | false | Translation required; terms permission not confirmed. |
+| Amar Ujala | robots.txt HTTP 200; path-level allowance not established here | https://www.amarujala.com/about-us | false | Hindi feed; translation required and terms permission not confirmed. |
+
+The failed original candidates are recorded disabled in `data/rss_feeds.json`
+with dated, exact verification outcomes: Euronews (200 with 50 entries, then
+timeout), NHK World (404/404), Asahi English (404/404), Arab News (403/403), The
+National (404/404), TRT World (404/404), CBC (timeout/timeout), Korea Herald
+(200/200 but zero entries), El Universal (404/404), and Al Arabiya (403/403).
+Official alternatives were also tested twice: Euronews World News and Korea
+Herald National passed (200/200, 50 entries each); CBC Top Stories timed out
+twice; Arab News World and Al Arabiya English RSS returned 403 twice. The two
+passing alternatives are recorded disabled pending feed selection. The VOA URL
+in the directory is malformed and was excluded from probing.
+
+All `ownership_note` URLs retained in the config were requested and returned
+HTTP 200 (including redirects). Notes whose pages remained blocked or returned
+errors were removed. State/public ownership descriptions are factual: Anadolu
+Agency is state-owned; Daily Sabah is published by Turkuvaz Media Group (private
+ownership; no state ownership asserted); France 24 and RFI are part of the
+publicly funded France Médias Monde; DW is a public broadcaster funded from the
+German federal budget; CGTN is operated by state media group China Media Group;
+RT is Russian state-funded; Global Times is owned by People's Daily.
+
+Africanews is labelled `region_scope: "pan-African"`, stored in the clearly
+labelled `Pan-African` bucket, and has no country ISO code. This keeps the source
+out of country-level map groupings instead of assigning it to the Republic of
+the Congo.

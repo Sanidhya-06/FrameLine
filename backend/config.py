@@ -18,6 +18,8 @@ class Settings:
     cache_path: Path = Path("data/analysis_cache.sqlite3")
     job_ttl_seconds: int = 3600
     cors_origins: tuple[str, ...] = ("http://localhost:5173",)
+    translation_batch_size: int = 8
+    translation_cache_ttl_seconds: int = 2592000
 
     @property
     def user_agent(self) -> str:
@@ -45,12 +47,14 @@ def get_settings() -> Settings:
         ),
         cache_ttl_seconds=int(os.getenv("FRAMELINE_CACHE_TTL", "86400")),
         methodology_version=os.getenv(
-            "FRAMELINE_METHODOLOGY_VERSION", "phase1-v1"
+            "FRAMELINE_METHODOLOGY_VERSION", "phase6b-v1"
         ),
         contact_url=contact_url,
         cache_path=Path(os.getenv("FRAMELINE_CACHE_PATH", "data/analysis_cache.sqlite3")),
         job_ttl_seconds=int(os.getenv("FRAMELINE_JOB_TTL", "3600")),
         cors_origins=tuple(x.strip() for x in os.getenv("FRAMELINE_CORS_ORIGINS", "http://localhost:5173").split(",") if x.strip()),
+        translation_batch_size=max(1, int(os.getenv("FRAMELINE_TRANSLATION_BATCH_SIZE", "8"))),
+        translation_cache_ttl_seconds=int(os.getenv("FRAMELINE_TRANSLATION_CACHE_TTL", "2592000")),
     )
 
 

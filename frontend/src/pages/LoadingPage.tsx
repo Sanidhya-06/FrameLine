@@ -9,9 +9,10 @@ import type { AnalyzeJob, FeedStatus, JobStage } from '../types';
 const STAGE_LABELS: Record<JobStage, string> = {
   connecting_feeds: 'Connecting to feeds', retrieving_headlines: 'Retrieving headlines',
   checking_relevance: 'Checking topic relevance', extracting_text: 'Extracting article text',
+  translating_text: 'Translating headlines and summaries',
   preparing_map: 'Preparing coverage map', done: 'Collection complete', failed: 'Analysis stopped',
 };
-const STAGE_ORDER: JobStage[] = ['connecting_feeds', 'retrieving_headlines', 'checking_relevance', 'extracting_text', 'preparing_map', 'done'];
+const STAGE_ORDER: JobStage[] = ['connecting_feeds', 'retrieving_headlines', 'checking_relevance', 'extracting_text', 'translating_text', 'preparing_map', 'done'];
 
 function CollectionField({ job, reduce }: { job: AnalyzeJob | null; reduce: boolean }) {
   const feeds = job?.feed_statuses ?? [];
@@ -133,7 +134,7 @@ export default function LoadingPage() {
       <div className="collection-eyebrow"><span>FIELD 02</span><i /> SOURCE COLLECTION</div>
       <h1>{failed ? 'The connection broke.' : noResults ? 'No matching headlines found.' : 'Gathering the world’s coverage.'}</h1>
       <p className="collection-query"><span>QUERY</span> “{query}”</p>
-      <div className={`stage-status ${failed ? 'stage-error' : ''}`}><span className="stage-icon">{failed ? <CircleAlert size={16} /> : stage === 'done' ? <Check size={16} /> : <LoaderCircle size={16} className={reduce ? '' : 'spin'} />}</span><div><strong>{failed ? 'Analysis could not be completed' : stageLabel}</strong><small>{job ? `${job.feeds_completed} of ${job.feeds_total} feeds · ${job.articles_extracted} of ${job.articles_total} articles` : 'Connecting to the configured news feeds'}</small></div></div>
+      <div className={`stage-status ${failed ? 'stage-error' : ''}`}><span className="stage-icon">{failed ? <CircleAlert size={16} /> : stage === 'done' ? <Check size={16} /> : <LoaderCircle size={16} className={reduce ? '' : 'spin'} />}</span><div><strong>{failed ? 'Analysis could not be completed' : stageLabel}</strong><small>{job ? `${job.feeds_completed} of ${job.feeds_total} feeds · ${job.articles_extracted} of ${job.articles_total} articles${stage === 'translating_text' && job.translations_total ? ` · ${job.translations_completed || 0} of ${job.translations_total} text segments` : ''}` : 'Connecting to the configured news feeds'}</small></div></div>
       <FeedFailures statuses={job?.feed_statuses ?? []} />
       {(failed || noResults) && <div className="collection-actions"><button className="action-primary" onClick={retry}><RotateCcw size={15} /> Try again</button><Link className="action-secondary" to="/" onClick={() => setError(null)}>New search <ArrowRight size={15} /></Link></div>}
       {noResults && <p className="result-note">{job?.result?.explanation || 'The current feeds did not return relevant headlines for this topic.'}</p>}

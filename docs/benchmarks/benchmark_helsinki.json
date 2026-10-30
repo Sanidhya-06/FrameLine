@@ -1,0 +1,866 @@
+{
+  "models": {
+    "de": "Helsinki-NLP/opus-mt-de-en",
+    "fr": "Helsinki-NLP/opus-mt-fr-en",
+    "es": "Helsinki-NLP/opus-mt-es-en",
+    "ru": "Helsinki-NLP/opus-mt-ru-en",
+    "hi": "Helsinki-NLP/opus-mt-hi-en",
+    "it": "Helsinki-NLP/opus-mt-it-en",
+    "pt": "Helsinki-NLP/opus-mt-ROMANCE-en"
+  },
+  "fixture_counts": {
+    "de": 30,
+    "fr": 20,
+    "es": 24,
+    "ru": 30,
+    "hi": 30,
+    "it": 30,
+    "pt": 30
+  },
+  "runs": {
+    "de": {
+      "model": "Helsinki-NLP/opus-mt-de-en",
+      "count": 30,
+      "load_seconds": 78.214,
+      "translate_seconds": 7.392,
+      "headlines_per_second": 4.058
+    },
+    "fr": {
+      "model": "Helsinki-NLP/opus-mt-fr-en",
+      "count": 20,
+      "load_seconds": 80.416,
+      "translate_seconds": 7.389,
+      "headlines_per_second": 2.707
+    },
+    "es": {
+      "model": "Helsinki-NLP/opus-mt-es-en",
+      "count": 24,
+      "load_seconds": 72.019,
+      "translate_seconds": 5.622,
+      "headlines_per_second": 4.269
+    },
+    "ru": {
+      "model": "Helsinki-NLP/opus-mt-ru-en",
+      "count": 30,
+      "status": "complete",
+      "load_seconds": 81.212,
+      "translate_seconds": 16.628,
+      "headlines_per_second": 1.804
+    },
+    "hi": {
+      "model": "Helsinki-NLP/opus-mt-hi-en",
+      "count": 30,
+      "load_seconds": 73.529,
+      "translate_seconds": 11.007,
+      "headlines_per_second": 2.726
+    },
+    "it": {
+      "model": "Helsinki-NLP/opus-mt-it-en",
+      "count": 30,
+      "status": "complete",
+      "load_seconds": 114.732,
+      "translate_seconds": 10.9,
+      "headlines_per_second": 2.752
+    },
+    "pt": {
+      "model": "Helsinki-NLP/opus-mt-ROMANCE-en",
+      "count": 30,
+      "status": "complete",
+      "load_seconds": 9.178,
+      "translate_seconds": 15.531,
+      "headlines_per_second": 1.932
+    }
+  },
+  "samples": {
+    "de": [
+      {
+        "original": "»Was jetzt? – Die Woche«: Scheitert Integration im Klassenzimmer?",
+        "translation": "»What now? – The week«: Does integration in the classroom fail?"
+      },
+      {
+        "original": "Künstliche Intelligenz: Schwarz-Gruppe investiert in kanadisches KI-Unternehmen Cohere",
+        "translation": "Artificial Intelligence: Black Group invests in Canadian AI company Cohere"
+      },
+      {
+        "original": "AfD Niedersachsen: AfD-Beschwerde gegen Hochstufung durch Verfassungsschutz abgewiesen",
+        "translation": "AfD Lower Saxony: AfD complaint against constitutional protection"
+      },
+      {
+        "original": "Anthropic: Kauft unsere Aktien, werdet Teil von etwas Größerem",
+        "translation": "Anthropic: Buy our shares, become part of something bigger"
+      },
+      {
+        "original": "Proteste von Generation Z: Neubauer warnt vor »Hyperventilierung« in Protest-Debatte",
+        "translation": "Protests by Generation Z: Neubauer warns of »hyperventilation« in protest debate"
+      },
+      {
+        "original": "Gasspeicher in Deutschland: Zielfüllstände deutscher Gasspeicher dürften deutlich verfehlt werden",
+        "translation": "Gas storage in Germany: Target levels of German gas storage facilities are likely to be significantly missed"
+      },
+      {
+        "original": "EU-Kanada-Gipfel: EU-Kanada-Gipfel: Vertane Chance in Montreal?",
+        "translation": "EU-Canada Summit: EU-Canada Summit: Missing opportunity in Montreal?"
+      },
+      {
+        "original": "Weltkunstausstellung: Documenta 16 stellt erweitertes Kuratorenteam vor",
+        "translation": "World Art Exhibition: Documenta 16 presents expanded curator team"
+      },
+      {
+        "original": "EZB-Präsidentin: Christine Lagarde hört vorzeitig als EZB-Präsidentin auf",
+        "translation": "ECB President: Christine Lagarde quits early as ECB President"
+      },
+      {
+        "original": "Drohnenangriff auf Handelsschiff: Bulgarien meldet Untergang von Handelsschiff nach Drohnenangriff",
+        "translation": "Drone attack on merchant ship: Bulgaria reports sinking of merchant ship after drone attack"
+      },
+      {
+        "original": "Parlamentswahl in Serbien: Serbische Studentenliste fordert nach Wahlsieg baldige Machtübergabe",
+        "translation": "Serbian Parliamentary Election: Serbian Student List calls for the surrender of power soon after election victory"
+      },
+      {
+        "original": "Kathleen Kennedy: Ehemalige Lucasfilm-Chefin wird Olympiazeremonien 2028 produzieren",
+        "translation": "Kathleen Kennedy: Former Lucasfilm CEO will produce Olympic ceremonies 2028"
+      },
+      {
+        "original": "Sabotagevorwürfe in Litauen: Mutmaßliche Starlink-Saboteure in Deutschland in U-Haft",
+        "translation": "Sabotage provocations in Lithuania: Probable Starlink saboteurs in Germany in U-Haft"
+      },
+      {
+        "original": "Tod von Elke Sommer: Markus Söder und Wolfgang Weimer würdigen Schauspielerin Elke Sommer",
+        "translation": "Death of Elke Sommer: Markus Söder and Wolfgang Weimer honor actress Elke Sommer"
+      },
+      {
+        "original": "Ebola-Ausbruch: Lässt sich das Virus noch einfangen?",
+        "translation": "Ebola outbreak: Can the virus still be captured?"
+      },
+      {
+        "original": "Steinmeier-Nachfolge: Die Kandidatensuche wird zur Machtfrage",
+        "translation": "Steinmeier's Succession: Candidate Search Becomes a Power Question"
+      },
+      {
+        "original": "Livestream: Die Nachrichten auf tagesschau24",
+        "translation": "Livestream: The news on tagesschau24"
+      },
+      {
+        "original": "Angst nach Zugunglück in Spanien: Reisende zweifeln an der Sicherheit",
+        "translation": "Fear of train accident in Spain: Travellers doubt safety"
+      },
+      {
+        "original": "„Sehr unwahrscheinlich\": ARD-Bahnexperte zu möglichen Zugunglücken in Deutschland",
+        "translation": "\"Very unlikely\": ARD-Bahn expert on possible train gaps in Germany"
+      },
+      {
+        "original": "Hohe Preise: Was hat der „Tankrabatt“ gebracht?",
+        "translation": "High prices: What has the \"tank discount\" brought?"
+      },
+      {
+        "original": "Neues Zentrum für Bevölkerungsschutz eröffnet",
+        "translation": "New Centre for Civil Protection opened"
+      },
+      {
+        "original": "Bundespräsident Steinmeier hält Grundsatzrede bei seinem Besuch in China",
+        "translation": "Federal President Steinmeier gives a keynote speech on his visit to China"
+      },
+      {
+        "original": "Sebastian Kisters, ARD Madrid, zzt. bei Urda, über die Bergungsarbeiten nach Zugunglück in Spanien",
+        "translation": "Sebastian Kisters, ARD Madrid, ct. at Urda, about the rescue work after train accident in Spain"
+      },
+      {
+        "original": "Zehntausende Flüchtlinge aus dem Sudan sind vor dem Bürgerkrieg in den Südsudan geflohren",
+        "translation": "Tens of thousands of refugees from Sudan fled to South Sudan before the civil war"
+      },
+      {
+        "original": "Hohe Spritpreise: Bringt der \"Tankrabatt\" wirklich etwas?",
+        "translation": "High fuel prices: Does the \"tank discount\" really bring something?"
+      },
+      {
+        "original": "Kommentar zum \"Tankrabatt\": Die Regierung schmeißt Milliarden aus dem Fenster",
+        "translation": "Comment on the \"Tank Discount\": The government throws billions out of the window"
+      },
+      {
+        "original": "Afrika-Gipfel in Russland: Putin umwirbt einen ganzen Kontinent",
+        "translation": "Africa Summit in Russia: Putin Recruits an Whole Continent"
+      },
+      {
+        "original": "Wie Kanada unter Trumps Zöllen leidet",
+        "translation": "How Canada Suffers from Trump's Customs"
+      },
+      {
+        "original": "Was bringt eine EU-Allianz mit Kanada den Verbrauchern in Europa?",
+        "translation": "What does an EU alliance with Canada bring to consumers in Europe?"
+      },
+      {
+        "original": "Steinmeier-Rede in China: \"Mit Größe und Macht kommt große Verantwortung\"",
+        "translation": "Steinmeier speech in China: \"With greatness and power comes great responsibility\""
+      }
+    ],
+    "fr": [
+      {
+        "original": "EN DIRECT, guerre en Ukraine : après une série de frappes, qui ont fait au moins 20 morts, l’UE exhorte ses alliés à accentuer la pression sur la Russie",
+        "translation": "IN DIRECT, war in Ukraine: after a series of strikes, which killed at least 20 people, the EU urges its allies to step up pressure on Russia"
+      },
+      {
+        "original": "Ukraine : « L’Union européenne doit devenir le dépositaire des 210 milliards d’euros d’avoirs russes gelés en 2022 »",
+        "translation": "Ukraine: \"The European Union must become the repository of the €210 billion of Russian assets frozen in 2022\""
+      },
+      {
+        "original": "EN DIRECT, midterms 2026 : la croissance accélère à 3,4 %, l’inflation grimpe à 3,6 %, à quelques jours des élections de mi-mandat aux Etats-Unis",
+        "translation": "IN DIRECT, midterms 2026: growth accelerates to 3.4%, inflation rises to 3.6%, just days before mid-term elections in the United States"
+      },
+      {
+        "original": "En Afghanistan, la crise humanitaire s’aggrave sous l’effet de la politique des talibans et faute de financements : « Nous sommes livrés à nous-mêmes »",
+        "translation": "In Afghanistan, the humanitarian crisis is worsening as a result of Taliban policy and lack of funding: \"We are delivered to ourselves\""
+      },
+      {
+        "original": "En Thaïlande, le combat solitaire du lanceur d’alerte Yingcheep Atchanont contre la fraude électorale",
+        "translation": "In Thailand, the lone fight of the whistleblower Yingcheep Atchanont against electoral fraud"
+      },
+      {
+        "original": "Présidentielle au Brésil : Donald Trump juge que l’élection était « honteuse », alors que Flavio Bolsonaro refuse de reconnaître les résultats du vote",
+        "translation": "President in Brazil: Donald Trump considers the election to be \"smoky,\" while Flavio Bolsonaro refuses to recognize the results of the vote"
+      },
+      {
+        "original": "Au Maroc, le long de la « Donald J. Trump Highway », vitrine des ambitions de Rabat au Sahara occidental",
+        "translation": "In Morocco, along the \"Donald J. Trump Highway\", showcases Rabat's ambitions in Western Sahara"
+      },
+      {
+        "original": "En Espagne, la catastrophe ferroviaire d’Urda pose à nouveau la question du développement inconsidéré des trains à grande vitesse",
+        "translation": "In Spain, the rail disaster in Urda again raises the question of the indiscriminate development of high-speed trains"
+      },
+      {
+        "original": "En Israël, Benyamin Nétanyahou accuse les partis arabes de fraude électorale et d’avoir reçu des fonds de l’étranger",
+        "translation": "In Israel, Benyamin Netanyahu accuses Arab parties of electoral fraud and of receiving funds from abroad"
+      },
+      {
+        "original": "Le Mexique soulagé de la réélection de Lula au Brésil",
+        "translation": "Mexico relieved of re-election of Lula in Brazil"
+      },
+      {
+        "original": "Guerre en Ukraine : un drone russe fait 14 morts à la gare de Dnipro",
+        "translation": "War in Ukraine: Russian drone kills 14 at Dnipro station"
+      },
+      {
+        "original": "Le Canada, entre difficile émancipation vis-à-vis des Etats-Unis et rapprochement compliqué avec l’Union européenne",
+        "translation": "Canada, between difficult emancipation from the United States and complicated rapprochement with the European Union"
+      },
+      {
+        "original": "« En Turquie, la mécanique de criminalisation, bien rodée, s’appuie sur le cadre de la “famille” »",
+        "translation": "\"In Turkey, the criminalization mechanism, well-functioning, relies on the framework of the family\""
+      },
+      {
+        "original": "Conforté par ses affaires avec Donald Trump, Vladimir Poutine compte intensifier la guerre en Ukraine",
+        "translation": "Comforted by his business with Donald Trump, Vladimir Putin plans to intensify the war in Ukraine"
+      },
+      {
+        "original": "Midterms aux Etats-Unis : comprendre le « gerrymandering », l’art de modifier la carte électorale à son avantage",
+        "translation": "Midterms in the United States: understanding \"gerrymandering\", the art of changing the electoral map to its advantage"
+      },
+      {
+        "original": "En Arizona, champ de bataille des midterms, le vent tourne en faveur des démocrates : « J’ai honte d’avoir voté pour Trump lors de la dernière élection »",
+        "translation": "In Arizona, the midterms battleground, the wind is turning in favor of the Democrats: \"I'm ashamed of having voted for Trump in the last election\""
+      },
+      {
+        "original": "Au Chili, des aménagements de peine de pédocriminels et de tortionnaires de la dictature plongent l’exécutif dans la tourmente",
+        "translation": "In Chile, the executive is being subjected to the torment of child criminals and torturers of the dictatorship"
+      },
+      {
+        "original": "« Benyamin Nétanyahou ou Gadi Eisenkot, ce n’est pas pareil, et ce n’est pas seulement affaire de style »",
+        "translation": "\"Bonyamin Netanyahu or Gadi Eisenkot, it's not the same, and it's not just a matter of style\""
+      },
+      {
+        "original": "La Syrie et la Jordanie privilégient l’apaisement, après des frictions provoquées par des frappes du royaume hachémite sur le sud de la Syrie",
+        "translation": "Syria and Jordan prefer calming, after friction caused by the Hashemite kingdom strikes on southern Syria"
+      },
+      {
+        "original": "En Italie, Giorgia Meloni s’en prend à la justice après la libération de Youssef Siher désigné comme le « cerveau » des manifestations du 17 octobre à Milan",
+        "translation": "In Italy, Giorgia Meloni sss is taking justice after the release of Youssef Siher as the \"brain\" of the October 17 protests in Milan"
+      }
+    ],
+    "es": [
+      {
+        "original": "Netanyahu trata de desacreditar el resultado electoral",
+        "translation": "Netanyahu tries to discredit the election result"
+      },
+      {
+        "original": "La victoria de los partidos árabes de Israel: récord de escaños frente al racismo y la discriminación",
+        "translation": "The victory of the Arab parties in Israel: a record of seats against racism and discrimination"
+      },
+      {
+        "original": "Al menos 13 muertos en un ataque ruso contra una estación de tren de la ciudad ucrania de Dnipró",
+        "translation": "At least 13 killed in a Russian attack on a train station in the Ukrainian city of Dnipro"
+      },
+      {
+        "original": "Brasil y los dueños del algoritmo",
+        "translation": "Brazil and the owners of the algorithm"
+      },
+      {
+        "original": "Postres variados",
+        "translation": "Variety of desserts"
+      },
+      {
+        "original": "El milagro de los nueve dedos",
+        "translation": "The miracle of the nine fingers"
+      },
+      {
+        "original": "La remontada histórica de Lula es una derrota para Trump",
+        "translation": "Lula's historic retracement is a defeat for Trump"
+      },
+      {
+        "original": "María Corina Machado, el desafío de volver",
+        "translation": "Maria Corina Machado, the challenge of returning"
+      },
+      {
+        "original": "El detenido por disparar a musulmanes y africanos cerca de París admite el móvil racista",
+        "translation": "Arrested for shooting Muslims and Africans near Paris admits racist motive"
+      },
+      {
+        "original": "La candidata de la izquierda en Berlín teme por su vida al oponerse a radicales afines a su partido",
+        "translation": "The leftist candidate in Berlin fears for her life by opposing radicals who are close to her party"
+      },
+      {
+        "original": "Xi Jinping refuerza la disciplina en el Partido Comunista y ratifica la purga de 33 altos cargos",
+        "translation": "Xi Jinping reinforces discipline in the Communist Party and ratifies the purge of 33 senior officials"
+      },
+      {
+        "original": "Corea del Norte lanza más de diez misiles balísticos en plena escalada de tensión con Corea del Sur",
+        "translation": "North Korea launches more than 10 ballistic missiles in full escalation of tension with South Korea"
+      },
+      {
+        "original": "Lavrov viajará a EE UU para la reunión de ministros de Exteriores del G-20 pese a las sanciones",
+        "translation": "Lavrov will travel to the US for the G-20 Foreign Ministers meeting despite sanctions"
+      },
+      {
+        "original": "Obama, de campaña en Georgia: “Trump no se ofende si le llamas corrupto, pero sí por una broma sobre un restaurante”",
+        "translation": "Obama, campaigning in Georgia: “Trump is not offended if you call him corrupt, but for a joke about a restaurant”"
+      },
+      {
+        "original": "El miedo da otra oportunidad a Netanyahu",
+        "translation": "Fear Gives Netanyahu Another Chance"
+      },
+      {
+        "original": "Claves para formar Gobierno en Israel tras las elecciones o regresar a las urnas: consulta del presidente, negociación y votación",
+        "translation": "Keys to forming government in Israel after the elections or returning to the polls: President's consultation, negotiation and voting"
+      },
+      {
+        "original": "La oposición a Netanyahu comienza a dialogar para formar un Gobierno en Israel",
+        "translation": "Opposition to Netanyahu begins to dialogue to form a Government in Israel"
+      },
+      {
+        "original": "La UE y Canadá buscan una alianza histórica tras descartar la fórmula de “miembro asociado”",
+        "translation": "EU and Canada seek historic partnership after discarding the “Associate Member” formula"
+      },
+      {
+        "original": "La derecha brasileña sigue atónita y opta por ignorar la fuga de Flávio Bolsonaro",
+        "translation": "The Brazilian right wing is still stunned and chooses to ignore the escape of Flávio Bolsonaro"
+      },
+      {
+        "original": "Una demanda federal, dos Dan Sullivans y una demócrata poco tradicional: la crucial batalla por el Senado en Alaska",
+        "translation": "A federal lawsuit, two Dan Sullivans and an untraditional Democrat: the crucial battle for the Senate in Alaska"
+      },
+      {
+        "original": "La huida de Flávio Bolsonaro desnuda una alineación ideológica con Trump que prevalece sobre el derecho internacional en Latinoamérica",
+        "translation": "Flávio Bolsonaro's flight naked an ideological alignment with Trump that prevails over international law in Latin America"
+      },
+      {
+        "original": "Muchos cubanoamericanos se sienten estafados por Trump, pero la mayoría votará republicano: “Utilizan el dolor de nosotros”",
+        "translation": "Many Cuban Americans feel swindled by Trump, but most will vote Republican: “They use our pain”"
+      },
+      {
+        "original": "Cómo un referéndum en Montana sobre el ‘dinero oscuro’ puede cambiar las reglas de la democracia estadounidense",
+        "translation": "How a referendum in Montana on ‘dark money’ can change the rules of American democracy"
+      },
+      {
+        "original": "Se intensifica la pelea por los 20.000 votos en California: un juez rechaza apartarlos, pero los fiscales apelan de inmediato",
+        "translation": "Fight for 20,000 votes in California is intensifying: a judge refuses to remove them, but prosecutors appeal immediately"
+      }
+    ],
+    "hi": [
+      {
+        "original": "आईआईपीए: योगी सरकार के सुशासन की राष्ट्रीय स्तर पर चर्चा,  यूपी शाखा को मिला ‘बेस्ट परफॉर्मिंग ब्रांच’ सम्मान",
+        "translation": "IPA: discuss the national level of Susssson of the Federal State, the UP branch received the guest Branch Expliting Respect"
+      },
+      {
+        "original": "केएमसी वार्ड परिसीमन को चुनौती: हाईकोर्ट ने मांगे सरकार और याचिकाकर्ता के हलफनामे; कब होगी सुनवाई?",
+        "translation": "Challenge KMC War War Campman: Highcort asked the government and the lawyer's plow; when will it be hearing?"
+      },
+      {
+        "original": "कर्नाटक में सियासी घमासान: कुमारस्वामी का आरोप, खरगे के बेटे प्रियांक पद और राजनीतिक पहुंच का कर रहे दुरुपयोग",
+        "translation": "Katsu Tssan in Karnataka: The charge of master, son of Sicherzi, and political misuse"
+      },
+      {
+        "original": "चक्रवात अर्नब: आंध्र प्रदेश में सात मौतें, 4,600 करोड़ रुपए के नुकसान का अनुमान",
+        "translation": "BROOD: Seven deaths in the country of Astrophy, an estimated $600 million in damage"
+      },
+      {
+        "original": "महाराष्ट्र की राजनीति: फडणवीस ने उद्धव और राज ठाकरे के साथ साझा किया मंच, कार्टून गैलरी बनाने का किया एलान",
+        "translation": "The Great Nation politics: Fedavis shared the platform with the President and Rajalre, reveal the cartoons they did."
+      },
+      {
+        "original": "करवा चौथ 2026: छिपे रहे चंद्रदेव, कई जगहों पर मोबाइल पर चांद की तस्वीर देख महिलाओं ने खोला व्रत, देखें फोटो",
+        "translation": "Investin 2026: In many places, women saw moon photo on the moon's face, photographing, photographing, hiding moonnails, and other places."
+      },
+      {
+        "original": "बार एसोसिएशनों के विरोध से अटकी रिटायर्ड जजों की नियुक्ति: लंबित मुकदमों पर कैसे लगेगी लगाम? सीजेआई ने बताया",
+        "translation": "I was not able to do anything about the situation. I was very happy to see how much I had been able to do."
+      },
+      {
+        "original": "रेलवे: दिवाली-छठ पर स्टेशनों पर नहीं मचेगी अफरातफरी? यात्रियों की भीड़ को संभालने के लिए बनाया खास प्लान",
+        "translation": "The railway: Ain't going to be on stations at the top of the day?"
+      },
+      {
+        "original": "गुजरात दौरे पर रहेंगे पीएम मोदी: हजारों करोड़ रुपये की विकास कार्यों की देंगे सौगात, एकता दिवस समारोह में भाग",
+        "translation": "Living on the passing trip, Pum Moi: will be able to develop millions of rudiments, share in unity Day celebration"
+      },
+      {
+        "original": "एक्सप्लेनर: किसे सबसे ज्यादा फायदा, किसका बड़ा नुकसान; राज्यवार किस पार्टी को क्या दे गए एमएलसी चुनाव नतीजे?",
+        "translation": "Explorator: Who is the most useful, whose great loss; what has the Court given to the State's party the LMLC Choice results?"
+      },
+      {
+        "original": "तमिलनाडु में दिव्यांगों को राहत: बस में नहीं लगेगा किराया, सहायक भी बिना किराया करेंगे सफर; क्या है नया नियम?",
+        "translation": "To relief the celestial raids in Tamiln: Just won't pay for hires, even helps without rent; what's the new law?"
+      },
+      {
+        "original": "महाराष्ट्र की खबरें: प्रदीप पूर्णेकर हत्याकांड में पांच गिरफ्तार, पूछताछ के बाद मीनाक्षी शिंदे ने दिया इस्तीफा",
+        "translation": "News of the Great Nation: Five arrested the lamp and released the question, The Aventor Kingeeeee Kr"
+      },
+      {
+        "original": "दुर्गा पूजा पास घोटाला: यूनेस्को के नाम पर करोड़ों की कथित हेराफेरी, इंद्रनील सेन पर सात धाराओं में केस दर्ज",
+        "translation": "Milga worship near Masa: Encyclopedic cys, in the name of Usco, in the seven rivers at Ornel"
+      },
+      {
+        "original": "बिना अनुमति धार्मिक प्रचार करना पड़ा भारी: अमेरिकी नागरिक का ओसीआई कार्ड रद्द, हाईकोर्ट ने फैसला रखा बरकरार",
+        "translation": "Religious preaching had to be heavy without permission: The dewi card of American citizens canceled, Highcort maintained a decision"
+      },
+      {
+        "original": "महाराष्ट्र: महायुति के भीतर दरार! एमएलसी चुनाव में हार पर भाजपा ने शिंदे शिवसेना को घेरा, क्या आरोप लगाए?",
+        "translation": "The Great Nation: SCURCH Within the Great Eve! The Red Sea fell on the Red Sea in the Red Sea!"
+      },
+      {
+        "original": "जियो की बंपर लिस्टिंग के बाद बाजार में क्या बदलेगा? निवेशकों के लिए बड़े संकेत | Stock Market",
+        "translation": "What changes in market after JOOO'S listing?"
+      },
+      {
+        "original": "'स्टिंग ऑपरेशन की कहानी मनगढ़ंत': सिद्धारमैया के खिलाफ वीडियो में लगे आरोपों पर पुलिस का बयान; क्या है सच्चाई?",
+        "translation": "The story of the Histing operation: Myth: A video video of the police against Sirmaya describes the charges against the police; what is the truth?"
+      },
+      {
+        "original": "करवा चौथ 2026: दिल्ली-नोएडा से लेकर मुंबई-पंजाब तक, जानिए आपके शहर में कितने बजे निकलेगा चांद?",
+        "translation": "Duck 2026: From Delhi-Na-Na-Nean, to Mumbai-Nhanb, know how many moons will go into your city at noon?"
+      },
+      {
+        "original": "ई-पासपोर्ट: घरेलू-अंतरराष्ट्रीय सफर में काम आएगा डिजी यात्रा; इन एयरपोर्ट पर यात्रियों को मिलेगी ये सुविधा",
+        "translation": "E-passport: The work will be working on the domestic-turbation journey; in airports, the facility will be provided for passengers"
+      },
+      {
+        "original": "साइक्लोन अर्नब: अब किस तरफ बढ़ रहा है चक्रवात अर्नब! जानें क्या है अपडेट",
+        "translation": "Syklonldldnot: What is now heading for the edge of the hypothetical hypothetical life!"
+      },
+      {
+        "original": "Vidya Malvade Exclusive:फॉलोवर्स नहीं तो रोल नहीं चक दे गर्ल विद्या ने बताई बॉलीवुड की एक अलग सच्चाई! Scam 202",
+        "translation": "Vidya McLezech: Not so far, the secretary of the flag, the Girls, did not roll up a different truth of Bruywood!"
+      },
+      {
+        "original": "यूपी एमएलसी चुनाव: वाराणसी में बीजेपी की हार पर क्या बोली कांग्रेस? पीएम मोदी पर साधा निशाना",
+        "translation": "UPLC Choice: What if the Congress was to lose the seedp in the disaster? PMPLC"
+      },
+      {
+        "original": "ईडी: क्रिप्टो ट्रेडिंग के लिए विदेशों तक फैला मुखौटा कंपनियों का जाल, यूं चल रहा था सीमा पार पैसे भेजने का खेल",
+        "translation": "E E E. E. E.: The web of foreign companies was so moving across the border to the Krypton trading game"
+      },
+      {
+        "original": "दिल्ली-एनसीआर में पटाखे बैन?: सुप्रीम कोर्ट की तीखी टिप्पणी; विराट कोहली जैसी हस्तियों को शामिल करने का सुझाव",
+        "translation": "Theatre in Delhi-NeR?: The Supreme Court's silent comments; suggestion to include Vera Cosings like those of everyday nature."
+      },
+      {
+        "original": "एक नवंबर को दिल्ली में जुटेगा विपक्ष: 'वोट देने का अधिकार खतरे में, चुप नहीं रह सकते'; ममता बनर्जी ने की अपील",
+        "translation": "Wormbing one on November: In danger of svol 'to give the right to Delhi, can't hold your peace'; Rasma Homel appealed to"
+      },
+      {
+        "original": "राम मंदिर चंदा चोरी मामला: कांग्रेस ने सरकार पर फिर उठाए सवाल, कहा- बड़े लोगों की जांच कब? चंपत राय को भी घेरा",
+        "translation": "Ram Temple collection stealing: Congress raised the question over the government, said- when did the big people check?"
+      },
+      {
+        "original": "क्या जेल से बाहर आएंगे आजम खान और अब्दुल्ला? दो पैन कार्ड मामले में इलाहाबाद हाई कोर्ट से मिली जमानत",
+        "translation": "Will they come out of prison today and Abdula? Two Pandinal Court Court Court Court Court"
+      },
+      {
+        "original": "महाराष्ट्र: लातूर में रिश्वत लेते ग्रामसेवक गिरफ्तार; पुणे में आईटी कर्मचारी को ब्लैकमेल कर ₹1.77 लाख वसूले",
+        "translation": "The Great Nation: Imperate the megamary to calm.; in Pute, blackening the employee.7 million p.m."
+      },
+      {
+        "original": "केरलम पीएससी भर्ती में गड़बड़ी का आरोप: भाजपा प्रतिनिधिमंडल ने राज्यपाल से की मुलाकात, जांच तेज करने की मांग",
+        "translation": "The confusion at Kerm PSCIIIIIIIIIII: The BRANCH ARCK met the governor asking to win investigations"
+      },
+      {
+        "original": "सुप्रीम कोर्ट ने केंद्र से पूछा: अगर 100% इथेनॉल से चलने वाले वाहनों को अनुमति दें, तो आपूर्ति कैसे की जाएगी?",
+        "translation": "The Supreme Court asked the center: \"If 100% mine allows vehicles to run by the zonium, how will supply be provided?"
+      }
+    ],
+    "ru": [
+      {
+        "original": "Флавиу Болсонару, проигравший выборы президента Бразилии, бежал из страны",
+        "translation": "Flavio Bolsonar, who lost the election of Brazil's president, fled the country"
+      },
+      {
+        "original": "«Гуманизм теперь тоже запретное слово?» Миллиардер Дмитрий Алексеев вступился за арестованного политолога Александра Кынева",
+        "translation": "\"Humanism is now a forbidden word too?\" Billiard Dmitri Alexeyev stood up for the arrested political scientist Alexander Kynev."
+      },
+      {
+        "original": "Россия и Украина остановили огонь в Алешках ради эвакуации жителей. Это украинский город, который оккупировала Россия. Там гуманитарная катастрофа",
+        "translation": "Russia and Ukraine stopped fire in Aleškah to evacuate the inhabitants, a Ukrainian city that occupied Russia, where there was a humanitarian disaster."
+      },
+      {
+        "original": "Илон Маск объяснил, почему для ВСУ ограничили связь Starlink. Потому что Россия может начать сбивать спутники",
+        "translation": "Ilon Mask explained why Starlink was restricted to the US, because Russia could start to shoot down satellites."
+      },
+      {
+        "original": "«Плетеный муж» — редкий пример нетривиальной киносказки с Оливией Колман и Александром Скарсгардом. Одинокая женщина выпрашивает у корзинщика супруга из лозы, а тот оказывается идеальным",
+        "translation": "\"A Flying Husband\" is a rare example of a nontrivial story with Olivia Coleman and Alexander Scarsgard, a single woman who asks a basketter for a wife from a vine, and he turns out to be perfect."
+      },
+      {
+        "original": "Apple представила новый 14-дюймовый MacBook Pro с мощным процессором M6. Он работает без подзарядки до 24 часов и стоит от двух тысяч долларов",
+        "translation": "Apple introduced a new 14-inch MacBook Pro with a powerful M6 processor. It's not recharged for 24 hours, and it's worth $2,000."
+      },
+      {
+        "original": "В 2ГИС в отзывах на пункт отбора на военную службу в Омске появились жалобы, что местных жителей забирают с улиц и отправляют на войну",
+        "translation": "In 2GIS, there were complaints about local residents being taken from the streets and sent to war in response to the Omsk military selection point."
+      },
+      {
+        "original": "Еще одни судьбоносные выборы: голосует Израиль. Скорее всего, победит оппозиция — но это не значит, что Нетаниягу уйдет. Что нужно знать тем, кто следит издалека, — и почему все самое важное произойдет после этих выборов",
+        "translation": "Another fateful election: Israel votes, the opposition is likely to win — but that doesn't mean Netanyagu will leave. What those who watch from afar need to know — and why everything is going to happen after these elections."
+      },
+      {
+        "original": "«Денег осталось на два месяца работы». Издание «Холод» предупредило, что может закрыться из-за нехватки средств",
+        "translation": "\"Money is two months away.\" The publication of Cold warned that it could close for lack of funds."
+      },
+      {
+        "original": "Франция прикроет соседей «ядерным зонтиком». Для защиты от России в странах Европы разместят истребители, способные нести ядерное оружие",
+        "translation": "France will cover its neighbours with a nuclear umbrella."
+      },
+      {
+        "original": "Пользователи нового складного айфона пожаловались на треснувшие экраны. В Apple заявили, что это коснулось небольшого числа устройств",
+        "translation": "The users of the new warehouse iPhone complained about the cracked screens."
+      },
+      {
+        "original": "Война. 1707-й день. Европейские лидеры обсудили с Путиным прекращение войны. Однако в реальности все идет по «эскалационному сценарию», говорят неофициально в Кремле",
+        "translation": "War, 1707, European leaders discussed with Putin the end of the war, but in reality, everything is going according to the \"escalation scenario\" they say informally in the Kremlin."
+      },
+      {
+        "original": "На политолога Александра Кынева составили протокол по «иноагентской» статье. У него сломана нога, но его по-прежнему держат в СИЗО",
+        "translation": "Alexander Kinev's political scientist has a protocol on \"inertial\" articles, his leg broken, but he's still being held in SIZO."
+      },
+      {
+        "original": "Айтишник из Челябинска подписал контракт с Минобороны, чтобы «приносить пользу обществу». Ему обещали службу в войсках БПЛА, но отправили в «мясной полк». Он пропал без вести, а его деньги, считает жена, украли командиры",
+        "translation": "The Iichisnik from Chelyabinsk signed a contract with the DOD to \"help the community,\" and was promised service in the drones, but sent to the \"meat regiment.\" He went missing and his money, his wife thinks, was stolen by commanders."
+      },
+      {
+        "original": "В Украине заявили, что режим прекращения огня в Алешках продлится до 1 ноября",
+        "translation": "In Ukraine, it was stated that the ceasefire in Aleškah would continue until 1 November."
+      },
+      {
+        "original": "Демократы потребовали расследовать связи Трампа с Эпштейном. Они опубликовали доклад, в котором говорится о новом обвинении в изнасиловании в адрес президента",
+        "translation": "The Democrats demanded that Trump's links to Epstein be investigated and published a report that referred to a new charge of rape against the President."
+      },
+      {
+        "original": "Как студенты смогли победить Вучича? И почему сами студенты на самом деле не пойдут во власть? Анализ Александра Баунова",
+        "translation": "How did the students defeat Vuchić, and why would the students themselves not really take over?"
+      },
+      {
+        "original": "Килиан Мбаппе рассказал, что любит мем, где его изображают «китайским диктатором». Теперь китайские компании разрывают с ним сотрудничество, а местный вещатель прекращает трансляции чемпионата Испании (где выступает футболист)",
+        "translation": "Kilina Mbappe said he liked meme, where he was portrayed as \"Chinese dictator.\" Now Chinese companies are breaking up with him, and the local broadcaster is shutting down the Spanish championship (where football player plays)"
+      },
+      {
+        "original": "Дональд Трамп-младший провел два дня в Монголии с Умаром Кремлевым (это бизнесмен, близкий к Кремлю). Они вместе охотились на горных баранов. А до этого Кремлев частично оплатил свадьбу сына президента США",
+        "translation": "Donald Trump Jr. spent two days in Mongolia with Umar Kremlin (a businessman close to the Kremlin) hunting mountain barans together, and the Kremlin had previously paid in part for the wedding of the son of the President of the United States."
+      },
+      {
+        "original": "Роскомнадзор предложил ограничить время в интернете для детей до 14 лет и обязать соцсети проверять возраст пользователей",
+        "translation": "Roscomnadzor suggested that the Internet should be limited to children under 14 and that social media should be required to check the age of users."
+      },
+      {
+        "original": "Лидеры Финляндии и Норвегии поговорили с Путиным по телефону о прекращении войны с Украиной",
+        "translation": "The leaders of Finland and Norway spoke to Putin by telephone about ending the war with Ukraine"
+      },
+      {
+        "original": "В Приморье жителей предупредили о задержках с соцвыплатами — потому что бюджет работает в условиях «повышенной нагрузки» из-за войны",
+        "translation": "In the Sea of the sea, residents were warned of delays in social payments, because the budget was operating under \"high pressure\" due to the war"
+      },
+      {
+        "original": "Приставы взыщут с Анатолия Чубайса почти 20 миллиардов рублей по искам «Роснано»",
+        "translation": "The bailiffs will sue Anatolia Chubais for almost 20 billion rubles in Rosnano claims."
+      },
+      {
+        "original": "Страны Европы с крупнейшими оборонными бюджетами назвали Россию главной угрозой безопасности и пообещали поддерживать Украину",
+        "translation": "Europe's major defense budgets have identified Russia as the main security threat and have pledged to support Ukraine"
+      },
+      {
+        "original": "Instagram начал тестировать загрузку горизонтальных видео до 90 минут",
+        "translation": "Instagram started testing the download of horizontal videos for up to 90 minutes."
+      },
+      {
+        "original": "Рэпер Jay-Z станет хедлайнером шоу в перерыве Супербоула. Организатором выступает его же компания",
+        "translation": "Raper Jay-Z will be the lead-liner of the Super Bowl during the break."
+      },
+      {
+        "original": "В Израиле начались парламентские выборы. Биньямин Нетаниягу по итогам голосования может лишиться поста премьер-министра",
+        "translation": "Parliamentary elections have begun in Israel. Binyamin Netanyagu may be dismissed from the post of Prime Minister by the vote."
+      },
+      {
+        "original": "Сербский телеканал извинился перед зрителями за то, что во времена Вучича «на многое закрывал глаза»",
+        "translation": "Serbian television apologized to the audience for \"silencing a lot of eyes\" in Vuchić's time."
+      },
+      {
+        "original": "Путин поручил изменить выдачу поисковиков при запросах об абортах. Сначала должны показывать сайты про социальную поддержку женщин",
+        "translation": "Putin has instructed that we change the issuance of search engines when requesting abortions."
+      },
+      {
+        "original": "Бывшего главу ФБР Джеймса Коми обвинили в передаче секретной информации газете The New York Times еще во время первого срока Трампа",
+        "translation": "Former FBI head James Comy was accused of passing classified information to The New York Times during Trump's first term."
+      }
+    ],
+    "it": [
+      {
+        "original": "Machado, 'Rubio è stato chiaro, nel 2027 presidenziali in Venezuela' (2)",
+        "translation": "Machado, 'Rubio was clear, in 2027 presidential in Venezuela' (2)"
+      },
+      {
+        "original": "Machado, 'Rubio è stato chiaro, nel 2027 presidenziali in Venezuela'",
+        "translation": "Machado, 'Rubio was clear, in 2027 presidential in Venezuela'"
+      },
+      {
+        "original": "Sindaco di Brcko, 'tre morti e 12 feriti nell'elicottero caduto'",
+        "translation": "Mayor of Brcko, 'three dead and 12 wounded in the fallen helicopter'"
+      },
+      {
+        "original": "++ Machado, 'Rubio è stato chiaro, nel 2027 presidenziali in Venezuela' ++",
+        "translation": "++ Machado, 'Rubio was clear, in 2027 presidential in Venezuela' ++"
+      },
+      {
+        "original": "Media, sale a 74 morti il bilancio dell'incidente ferroviario di Toledo",
+        "translation": "Average, 74 deaths in the train accident in Toledo"
+      },
+      {
+        "original": "Precipita elicottero dell'Eufor in Bosnia, possibili vittime",
+        "translation": "Euphor helicopter crash in Bosnia, possible victims"
+      },
+      {
+        "original": "Milei si congratula con Netanyahu e ribadisce l'alleanza con Israele",
+        "translation": "Milei congratulates Netanyahu and reaffirms the alliance with Israel"
+      },
+      {
+        "original": "Tajani, il prossimo pacchetto di aiuti all'Ucraina è quasi pronto",
+        "translation": "Tajani, the next package of aid to Ukraine is almost ready"
+      },
+      {
+        "original": "Tajani, ho parlato con ferito italiano in Spagna, sua sorella è una delle disperse",
+        "translation": "Tajani, I spoke with Italian wounded in Spain, his sister is one of the scattered"
+      },
+      {
+        "original": "Shin Bet, 'indagine circoscritta, non si accusi un intero settore della società'",
+        "translation": "Shin Bet, 'limited investigation, not to accuse an entire sector of society'"
+      },
+      {
+        "original": "Crolla un 'camino delle fate' in Cappadocia, tre morti e 5 feriti",
+        "translation": "A 'fairy fire' collapses in Cappadocia, three dead and five wounded"
+      },
+      {
+        "original": "In Israele scrutinio completato, blocco Netanyahu 53 seggi, Eisenkot 48",
+        "translation": "In Israel ballot completed, Netanyahu block 53 seats, Eisenkot 48"
+      },
+      {
+        "original": "Da Reggio Emilia a Johannesburg, lo sport unisce giovani e culture",
+        "translation": "From Reggio Emilia to Johannesburg, sport brings together young people and cultures"
+      },
+      {
+        "original": "Von der Leyen, 'con il Canada Alleanza per il futuro e spazio comune'",
+        "translation": "Von der Leyen, 'with Canada Alliance for the Future and Common Space'"
+      },
+      {
+        "original": "Vance, 'la candidata dem in Alaska deve essere indagata per frode elettorale'",
+        "translation": "Vance, 'the candidate dem in Alaska must be investigated for electoral fraud'"
+      },
+      {
+        "original": "'La tempesta dell'election day', in arrivo forti temporali negli Usa alle midterm",
+        "translation": "'The storm of the election day', strong storms coming into the US at midterms"
+      },
+      {
+        "original": "Peled, 'l'Italia è un attore chiave per la pace e la stabilità del Medio Oriente'",
+        "translation": "Peled, 'Italy is a key actor for peace and stability in the Middle East'"
+      },
+      {
+        "original": "Qatar, 'accuse di interferenze nel voto israeliano pericolose e ridicole'",
+        "translation": "Qatar, 'accuse of interference in Israeli vows dangerous and ridiculous'"
+      },
+      {
+        "original": "Herzog su accuse brogli, 'non infangare intera comunità che ha esercitato voto'",
+        "translation": "Herzog on false accusations, 'do not sully entire community who has exercised a vote'"
+      },
+      {
+        "original": "Farnesina, 'individuata una delle 3 italiane disperse in Spagna, sta bene'",
+        "translation": "Farnesina, 'identified one of the 3 Italians scattered in Spain, is well'"
+      },
+      {
+        "original": "Kiev, '13 morti in un attacco russo contro un treno a Dnipro'",
+        "translation": "Kiev, 13 dead in a Russian attack on a train in Dnipro."
+      },
+      {
+        "original": "Polizia Israele, quattro arresti per presunta corruzione elettorale",
+        "translation": "Police Israel, four arrests for alleged electoral corruption"
+      },
+      {
+        "original": "Media, Commissione elettorale chiede inchiesta su soldi da Qatar a elettori arabi",
+        "translation": "Media, Election Commission calls for money survey from Qatar to Arab voters"
+      },
+      {
+        "original": "Russia, 'Ucraina arruola studentesse su Telegram per fini terroristici'",
+        "translation": "Russia, 'Ukraine enlists students on Telegram for terrorist purposes'"
+      },
+      {
+        "original": "Obama, 'a Washington c'è bisogno di persone serie non di reality show'",
+        "translation": "Obama, 'in Washington you need serious people not reality shows'"
+      },
+      {
+        "original": "Morto Cuauhtémoc Cárdenas, leader della sinistra messicana",
+        "translation": "Dead Cuahtémoc Cárdenas, leader of the Mexican left"
+      },
+      {
+        "original": "Arabia Saudita, intercettato e distrutto un missile lanciato dagli Houthi",
+        "translation": "Saudi Arabia, intercepted and destroyed a missile launched by the Houthi"
+      },
+      {
+        "original": "Sheinbaum, 'Le Pen è male informata sui valori del Messico'",
+        "translation": "Sheinbaum, 'Le Pen is misinformed about Mexico's values"
+      },
+      {
+        "original": "Media, El Salvador schiera 1.300 militari ad Haiti",
+        "translation": "Media, El Salvador deploys 1,300 military in Haiti"
+      },
+      {
+        "original": "Messico, l'export cresce di oltre il 30% nei primi nove mesi del 2026",
+        "translation": "Mexico, exports grow by over 30% in the first nine months of 2026"
+      }
+    ],
+    "pt": [
+      {
+        "original": "Saiba quem sï¿½o os 15 primeiros indiciados pela PF sob suspeita de crimes no Banco Master",
+        "translation": "Find out who the first 15 suspects are at the Master Bank under suspicion of crimes"
+      },
+      {
+        "original": "Justiï¿½a determina penhora de imï¿½vel de Renato Aragï¿½o por dï¿½vida de IPTU",
+        "translation": "JustiÃ 1⁄2a determines the imí 1⁄2vel penhora of Renato Aragí 1⁄2o per IPTU life"
+      },
+      {
+        "original": "Nigï¿½ria rastreia contatos apï¿½s caso de ebola ficar 17 dias sem isolamento",
+        "translation": "Nigí¿1⁄2ria tracks contacts apí¿1⁄2s Ebola case stay 17 days without isolation"
+      },
+      {
+        "original": "Flï¿½vio Bolsonaro teve ajuda de Trump e do governo americano para fugir para os Estados Unidos",
+        "translation": "Bolsonaro had help from Trump and the US government to flee to the United States"
+      },
+      {
+        "original": "Disco '3121' de Prince ganha relanï¿½amento com gravaï¿½ï¿½es inï¿½ditas em dezembro",
+        "translation": "Prince's '3121' disc wins rerelease with December's original 1⁄2 1⁄2-inch recording"
+      },
+      {
+        "original": "Dï¿½vida bruta do Brasil se mantï¿½m em 82,9% do PIB em setembro, maior nï¿½vel desde 2021, mostra BC",
+        "translation": "Brazil's gross daily life remains 1⁄2m in 82.9% of GDP in September, highest level since 2021, shows BC"
+      },
+      {
+        "original": "Morte de Hayden Panettiere, atriz de 'Heroes', foi acidental, conclui polï¿½cia",
+        "translation": "Death of Hayden Panettire, actress of 'Heroes', accidental faith, concludes politics 1⁄2cia"
+      },
+      {
+        "original": "Exemplares extras da Folha de 26 de outubro se esgotam",
+        "translation": "Extra copies of the October 26th Leaf are sold out"
+      },
+      {
+        "original": "Lï¿½der de Hong Kong pede desculpas e admite falha do governo apï¿½s um ano do incï¿½ndio que matou 168 pessoas",
+        "translation": "Hong Kong 1⁄2der apologizes and admits government failure a year after the inci 1⁄2ndio who killed 168 people"
+      },
+      {
+        "original": "Aliados de Flï¿½vio Bolsonaro culpam ChatGPT por vaivï¿½m em versï¿½es da carta golpista",
+        "translation": "Allies of Flï ́1⁄2vio Bolsonaro blame ChatGPT for 1⁄2m in versions of the coup card"
+      },
+      {
+        "original": "Dona do Google vï¿½ aï¿½ï¿½es despencarem 13% e perde US$ 500 bilhï¿½es em valor de mercado",
+        "translation": "Google's dona ví¿1⁄2 ai¿1⁄2 1⁄2 1⁄2 will cost 13% and loses $500 billion in market value"
+      },
+      {
+        "original": "Cotado para Fazenda, Fonteles se formou em matemï¿½tica com notas 10 em todas as disciplinas",
+        "translation": "Quoted for Farm, Fonteles graduated in math with 10 notes in all disciplines"
+      },
+      {
+        "original": "MTE envia alerta sobre assï¿½dio eleitoral no trabalho; veja como denunciar",
+        "translation": "MTE sends alert on election attendance at work; see how to report"
+      },
+      {
+        "original": "Exportaï¿½ï¿½es de produtos beneficiados pelo acordo Mercosul-UE crescem 21%, diz governo",
+        "translation": "Exports of Mercosur-EU products are growing 21%, says government"
+      },
+      {
+        "original": "Filha de Neymar se empolga em show do BTS em Sï¿½o Paulo",
+        "translation": "Daughter of Neymar gets excited at BTS show in Sï ́1⁄2o Paulo"
+      },
+      {
+        "original": "Os animais que vocï¿½ pode vencer em uma corrida e os que sï¿½o invencï¿½veis",
+        "translation": "The animals you can win in a race and the ones you are invincible 1⁄2"
+      },
+      {
+        "original": "Pedro Paulo de Souza inaugura exposiï¿½ï¿½o 'Quanta Coisa Bonita no Mundo' em SP",
+        "translation": "Pedro Paulo de Souza inaugurates exhibition \"Quanta Cisa Bonita no Mundo\" in SP"
+      },
+      {
+        "original": "Juros altos freiam construï¿½ï¿½o no 3ï¿½ trimestre, mas infraestrutura sustenta empregos",
+        "translation": "High interest brake build 1⁄2 1⁄2 in the 3rd quarter, but infrastructure sustains jobs"
+      },
+      {
+        "original": "As peripï¿½cias de um Bolsonarinho derrotado",
+        "translation": "The peripí¿1⁄2cias of a defeated Bolsonarinho"
+      },
+      {
+        "original": "Fachin arquiva mais cinco investigaï¿½ï¿½es ligadas a inquï¿½rito das fake news",
+        "translation": "Fachin files five more investigations linked to the investigation of fake news"
+      },
+      {
+        "original": "Morre Elke Sommer, atriz de 'Lisa e o Diabo' e 'Barï¿½o Sanguinï¿½rio', aos 85 anos",
+        "translation": "Elke Sommer dies, actress of 'Lisa and the Devil' and 'Barí'1⁄2o Sanguiní'1⁄2rio', at 85 years old"
+      },
+      {
+        "original": "'Macbeth', texto clï¿½ssico de William Shakespeare, ganha montagem com drag queens",
+        "translation": "'Macbeth', clí ́1⁄2xic text by William Shakespeare, wins montage with drag queens"
+      },
+      {
+        "original": "Derrota de Flï¿½vio dificulta soltura de Jair Bolsonaro por indulto ou por via judicial",
+        "translation": "Fli's defeat makes it difficult to release Jair Bolsonaro by pardon or judicial means"
+      },
+      {
+        "original": "Janones e militï¿½ncia deram impulso decisivo ï¿½ campanha de Lula",
+        "translation": "Janones and militia gave decisive impetus to Lula's campaign"
+      },
+      {
+        "original": "SBT testa campeï¿½ do BBB Fernanda Keulla para reforï¿½ar Fofocalizando apï¿½s baixas",
+        "translation": "SBT campeï¿1⁄2 test of BBB Fernanda Keulla for reinforcement 1⁄2 focusing on low api¿1⁄2"
+      },
+      {
+        "original": "ESPN alcanï¿½a maior ibope da TV paga em 2026 com eliminaï¿½ï¿½o do Flamengo na Libertadores",
+        "translation": "ESPN alcaniÃ 1⁄2a major ibope of the TV paid in 2026 with elimination of the Flamengo in the Liberatores"
+      },
+      {
+        "original": "Martha Nowill prestigia abertura do Festival de Cinema Francï¿½s",
+        "translation": "Martha Nowill prestige opening of the French Film Festival 1⁄2s"
+      },
+      {
+        "original": "Flï¿½vio ignora Senado e nï¿½o comunica saï¿½da do paï¿½s",
+        "translation": "Fli'1⁄2vio ignores Senate and none 1⁄2do communicates out of the country 1⁄2s"
+      },
+      {
+        "original": "Investidores financiam torres de luxo de US$ 817 milhï¿½es em Miami",
+        "translation": "Investors fund luxury towers of US$ 817 million 1⁄2 million in Miami"
+      },
+      {
+        "original": "Investimento estrangeiro no setor de informaï¿½ï¿½o e comunicaï¿½ï¿½o brasileiro bate recorde",
+        "translation": "Foreign investment in the information sector 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2 1⁄2"
+      }
+    ]
+  }
+}

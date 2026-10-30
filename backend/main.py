@@ -15,6 +15,7 @@ from backend.relevance import (
 )
 from models.schemas import AnalyzeResponse
 from backend.jobs import analyze_blocking, create_job, get_job
+from backend.translation_config import HELSINKI_MODELS, NLLB_MODEL, TRANSLATION_BACKEND_BY_LANGUAGE
 
 app = FastAPI(title="FrameLine API")
 app.add_middleware(CORSMiddleware, allow_origins=list(get_settings().cors_origins), allow_credentials=False, allow_methods=["GET", "POST"], allow_headers=["*"])
@@ -64,6 +65,12 @@ def methodology() -> dict[str, str]:
         ),
         "cache": f"Full analysis responses are cached in SQLite for {get_settings().cache_ttl_seconds} seconds (default 24 hours). Cache keys include normalized query, methodology version, and feed configuration hash. Cache hits are marked cached=true; POST /analyze and POST /analyze/jobs accept bypass_cache=true.",
         "job_stages": "connecting_feeds: feed requests begin; retrieving_headlines: feed requests finish and entries are collected; checking_relevance: RSS entries are scored; extracting_text: selected articles are processed; preparing_map: country groups are prepared; done: response is ready; failed: pipeline stopped safely.",
+        "translation": "FrameLine translates article headlines and RSS summaries for display while preserving the original fields and source link. Per-language routing overrides: Hindi, Russian, and Italian use NLLB-200-distilled-600M based on sample quality review; other supported Helsinki languages use OPUS-MT. If an OPUS-MT model is unavailable, NLLB is attempted. Translations are machine generated and may change meaning.",
+        "translation_backend_map": str({**{language: "helsinki" for language in HELSINKI_MODELS}, **TRANSLATION_BACKEND_BY_LANGUAGE}),
+        "translation_fallback": "Languages without a configured Helsinki model use NLLB. If the selected model fails, the other available backend is tried; if both fail, the original remains available and translation_status is failed.",
+        "translation_cache": f"Translated text segments are cached in SQLite for {get_settings().translation_cache_ttl_seconds} seconds. Batch size is {get_settings().translation_batch_size}; inference runs on CPU with num_beams=1.",
+        "translation_licenses": f"Helsinki-NLP OPUS-MT model licenses are per-model: most configured models are Apache-2.0; opus-mt-ru-en is CC-BY-4.0. NLLB model {NLLB_MODEL} is CC-BY-NC-4.0 and is released for research use, not production deployment. Review each model card/license before deployment.",
+        "translation_model_cards": "https://huggingface.co/Helsinki-NLP/opus-mt-de-en; https://huggingface.co/Helsinki-NLP/opus-mt-fr-en; https://huggingface.co/Helsinki-NLP/opus-mt-es-en; https://huggingface.co/Helsinki-NLP/opus-mt-ru-en; https://huggingface.co/Helsinki-NLP/opus-mt-hi-en; https://huggingface.co/Helsinki-NLP/opus-mt-it-en; https://huggingface.co/Helsinki-NLP/opus-mt-ROMANCE-en; https://huggingface.co/facebook/nllb-200-distilled-600M",
     }
 
 

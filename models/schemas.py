@@ -19,6 +19,9 @@ class Article(BaseModel):
     extraction_status: str
     language: str
     translation_status: str = "not_requested"
+    translated_title: str | None = None
+    translated_summary: str | None = None
+    translation_backend: str | None = None
     matched_terms: list[str] = Field(default_factory=list)
     relevance_score: float | None = None
     relevance_components: dict[str, float] = Field(default_factory=dict)
@@ -47,6 +50,20 @@ class Signal(BaseModel):
     limitations: list[str] = Field(default_factory=list)
 
 
+class TranslationStats(BaseModel):
+    status: str = "not_requested"
+    elapsed_seconds: float = 0
+    model_load_seconds: float = 0
+    articles_total: int = 0
+    articles_translated: int = 0
+    articles_failed: int = 0
+    text_segments: int = 0
+    cache_hits: int = 0
+    fallback_segments: int = 0
+    backend_counts: dict[str, int] = Field(default_factory=dict)
+    language_counts: dict[str, int] = Field(default_factory=dict)
+
+
 class CountryGroup(BaseModel):
     iso_code: str
     region: str
@@ -65,6 +82,7 @@ class AnalyzeResponse(BaseModel):
     articles: list[Article] = Field(default_factory=list)
     country_groups: dict[str, CountryGroup] = Field(default_factory=dict)
     signals: list[Signal] = Field(default_factory=list)
+    translation_stats: TranslationStats = Field(default_factory=TranslationStats)
     methodology_version: str
     relevance_method: Literal["hybrid", "lexical_fallback"] = "hybrid"
     development_only: bool = False

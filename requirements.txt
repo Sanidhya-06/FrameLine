@@ -4,3 +4,5 @@ pydantic==2.14.1
 requests==2.34.2
 trafilatura==2.2.0
 sentence-transformers>=5.1,<6
+transformers>=4.45,<6
+sentencepiece>=0.2,<1
